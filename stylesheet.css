@@ -1,0 +1,66 @@
+/* 导航栏基本样式 */
+nav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav ul {
+    display: flex;            /* 启用 flexbox */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around; /* 等分空间 */
+}
+
+
+nav ul li {
+    flex: 1;  /* 分配相同的空间给每个元素 */
+    text-align: center; /* 使文本在每个元素内居中 */
+}
+
+nav ul li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+/* 悬停效果 */
+nav ul li a:hover, .dropdown:hover .dropbtn {
+    background-color: #555;
+    display: block; /* 填充整个列表项 */
+}
+
+
+/* 下拉菜单样式 */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 100%; 
+}
+
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+/* 显示下拉菜单 */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
