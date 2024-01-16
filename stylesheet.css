@@ -1,7 +1,13 @@
 /* 导航栏基本样式 */
 nav {
-    overflow: hidden;
+    position: fixed; /* 固定导航栏在页面顶部 */
+    top: 0; /* 顶部对齐 */
+    left: 0; /* 左侧对齐 */
+    width: 100%; /* 导航栏宽度占据整个视口宽度 */
     background-color: #333;
+    overflow: hidden;
+z-index: 1000; /* 确保导航栏位于页面其他元素之上 /
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); / 可选：为导航栏添加阴影以提升视觉效果 */
 }
 
 nav ul {
