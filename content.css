@@ -8,7 +8,7 @@
     background-color: #f9f9f9; /* 背景颜色 */
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* 阴影效果 */
     padding: 10px;
-    z-index: 1000; /* 确保目录在其他内容之上 */
+    z-index: 11; /* 确保目录在其他内容之上 */
   }
   
   #sidebar ul {
