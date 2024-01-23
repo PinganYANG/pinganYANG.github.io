@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="img.css">
+<title>Photography Portfolio</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* 导航栏样式 */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+
+  .navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  /* 横幅样式 */
+  .banner {
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* 画廊样式 */
+/* 画廊样式 */
+    .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 每行3个图片 */
+    grid-gap: 10px;
+    padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 屏幕较小时，每行2个图片 */
+    }
+    }
+
+    @media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr; /* 更小屏幕时，每行1个图片 */
+    }
+    }
+
+    .gallery img {
+  width: 100%; /* 让图片宽度与容器相同 */
+  height: 100%; /* 设置高度与容器相同 */
+  object-fit: cover; /* 覆盖容器，必要时进行裁剪 */
+}
+  /* 页脚样式 */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+  }
+
+  /* 加载更多图片提示 */
+  #loading {
+    text-align: center;
+    padding: 10px;
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <!-- 导航链接 -->
+</div>
+
+<div class="banner" style="background-image: url('photos/DSC_1837.jpg');">
+  <h1>Welcome to My Portfolio</h1>
+</div>
+
+<div id="myModal" class="modal">
+    <!-- 模态框内容 -->
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
+
+<div class="gallery" id="gallery">
+  <!-- 初始图片 -->
+  <img src="photos/DSC_1765.jpg" alt="Photo 1">
+  <img src="photos/DSC_1786.jpg" alt="Photo 2">
+  <img src="photos/DSC_1812.jpg" alt="Photo 3">
+  <!-- 更多图片将被加载 -->
+</div>
+
+<div id="loading">
+  <p>Loading more photos...</p>
+</div>
+
+<footer>
+  <!-- 页脚信息 -->
+</footer>
+<script>
+  // 获取画廊和加载提示的元素
+  const gallery = document.getElementById('gallery');
+  const loading = document.getElementById('loading');
+
+  // 假设这是从服务器获取更多图片的函数
+  async function loadMorePhotos() {
+    try {
+        // 替换以下URL为您GitHub Pages的实际URL
+        const photosPath = 'https://pinganyang.github.io/photos/';
+        const response = await fetch(photosPath);
+
+        if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const text = await response.text();
+        const parser = new DOMParser();
+        const htmlDocument = parser.parseFromString(text, "text/html");
+        const imageElements = htmlDocument.querySelectorAll("a");
+
+        // 假定所有图片都是jpg格式
+        const jpgFiles = Array.from(imageElements)
+        .map(link => link.href)
+        .filter(href => href.endsWith('.jpg'));
+
+        // 创建新的图片元素并添加到画廊中
+        jpgFiles.forEach(photoHref => {
+        const img = document.createElement('img');
+        img.src = photoHref;
+        img.alt = 'Photo';
+        gallery.appendChild(img);
+        });
+    } catch (error) {
+        console.error('Loading photos failed:', error);
+    }
+    }
+
+//   function loadMorePhotos() {
+//     // 模拟的文件数组
+//     const newPhotos = [
+//         'DSC_1765.jpg',
+//         'DSC_1786.jpg',
+//         'DSC_1812.jpg',
+//         'DSC_1824.jpg',
+//         'DSC_1786.jpg',
+//         'DSC_1812.jpg',
+//         'DSC_1765.jpg',
+//         'DSC_1786.jpg',
+//         'DSC_1812.jpg',
+//         'DSC_1765.jpg',
+//         'DSC_1786.jpg',
+//         'DSC_1812.jpg',
+//         // ... 更多图片文件名
+//     ];
+
+//     // 创建新的图片元素并添加到画廊中
+//     newPhotos.forEach(photoFilename => {
+//         const img = document.createElement('img');
+//         // 如果您在本地服务器上，这里的路径可能是 '/photos/' + photoFilename
+//         img.src = 'photos/' + photoFilename;
+//         img.alt = 'Photo';
+//         gallery.appendChild(img);
+//     });
+//     }
+
+  // 监听滚动事件来加载更多图片
+  window.addEventListener('scroll', () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      // 当滚动到页面底部时，显示加载提示
+      loading.style.display = 'block';
+
+      // 模拟网络延迟
+      setTimeout(() => {
+        loadMorePhotos();
+        loading.style.display = 'none';
+      }, 1500);
+    }
+  });
+  // 当文档加载完成后执行
+    document.addEventListener('DOMContentLoaded', function () {
+    // 获取模态框元素
+    var modal = document.getElementById('myModal');
+    // 获取模态框图片元素
+    var modalImg = document.getElementById('img01');
+    // 获取模态框的关闭按钮元素
+    var captionText = document.getElementById('caption');
+    var span = document.getElementsByClassName('close')[0];
+
+    // 为每张图片添加点击事件
+    document.getElementById('gallery').addEventListener('click', function(event) {
+  // 检查被点击的元素是否是图片
+    if (event.target && event.target.nodeName === "IMG") {
+        modal.style.display = "block";
+        modalImg.src = event.target.src;
+        captionText.innerHTML = event.target.alt;
+    }
+    });
+
+    // 点击模态框任意位置关闭
+    modal.addEventListener('click', function (event) {
+        if (event.target !== modalImg && event.target !== captionText) {
+        modal.style.display = "none";
+        }
+    });
+
+    // 点击关闭按钮关闭模态框
+    span.addEventListener('click', function() {
+        modal.style.display = "none";
+    });
+    });
+
+</script>
+
+</body>
+</html>
