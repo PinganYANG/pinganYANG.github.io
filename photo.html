@@ -77,20 +77,20 @@
 
     /* 图片信息的容器样式 */
     .image-info {
-  pointer-events: none; /* 阻止鼠标事件 */
-  position: absolute; /* 绝对定位 */
-  top: 10px; /* 定位到容器的底部 */
+  pointer-events: auto; /* 允许鼠标事件 */
+  position: absolute;
+  top: 10px;
   left:10px;
   right: 10px;
-  height: 100px; /* 宽度充满容器 */
-  background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
-  color: white; /* 文本颜色 */
-  display: none; /* 默认不显示 */
-  padding: 10px; /* 内边距 */
-  text-align: right; /* 文本靠右对齐 */
-  font-size: 0.2em; /* 缩小字体大小 */
-  line-height: 0.9; /* 减小行距 */
-  margin: -10px; /* 移除外边距，如果有的话 */
+  height: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: none;
+  padding: 10px;
+  text-align: right;
+  font-size: 0.2em;
+  line-height: 0.9;
+  margin: -10px;
 }
 
 .image-container {
@@ -225,22 +225,30 @@
 
       imgContainer.appendChild(img);
       imgContainer.appendChild(info);
+      document.querySelectorAll('.gallery .image-container').forEach(container => {
+    let timeoutId_blur, timeoutId_info;
 
-      let timeoutId_blur, timeoutId_info;
-      imgContainer.onmouseover = function() {
-        timeoutId_blur = setTimeout(() => {
-          img.style.filter = 'blur(4px)';
-        }, 1000);
-        timeoutId_info = setTimeout(() => {
-          info.style.display = 'block';
-        }, 1000);
-      };
-      imgContainer.onmouseout = function() {
+    container.addEventListener('mouseover', () => {
         clearTimeout(timeoutId_blur);
         clearTimeout(timeoutId_info);
-        img.style.filter = '';
-        info.style.display = 'none';
-      };
+
+        timeoutId_blur = setTimeout(() => {
+            container.querySelector('img').style.filter = 'blur(4px)';
+        }, 1000);
+        timeoutId_info = setTimeout(() => {
+            container.querySelector('.image-info').style.display = 'block';
+        }, 1000);
+    });
+
+    container.addEventListener('mouseout', (event) => {
+        if (!container.contains(event.relatedTarget)) {
+            clearTimeout(timeoutId_blur);
+            clearTimeout(timeoutId_info);
+            container.querySelector('img').style.filter = '';
+            container.querySelector('.image-info').style.display = 'none';
+        }
+    });
+});
 
       document.querySelector('.gallery').appendChild(imgContainer);
     });
