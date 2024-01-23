@@ -10,7 +10,7 @@ image_files = [f for f in os.listdir(photos_dir) if f.lower().endswith('.jpg')]
 
 # 创建图片元素的HTML字符串
 image_elements = '\n'.join(
-    f'<img src="{os.path.join(photos_dir, filename)}" alt="{filename}">'
+    f'<img src="{os.path.join(filename)}" alt="{filename}">'
     for filename in image_files
 )
 
