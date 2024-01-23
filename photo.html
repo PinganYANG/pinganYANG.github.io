@@ -90,15 +90,9 @@
   pointer-events: none; /* Prevent mouse events on the info itself */
 }
 
-.image-info .title,
 .image-info .description {
   flex-basis: 100%; /* 让每个子元素占满整行 */
   margin: 0; /* 如果需要，可以移除外边距 */
-}
-
-.image-info .title {
-  font-size: 1.2em; /* 或者使用更具体的大小，如 '14px' */
-  margin-bottom: 0em; /* 为标题和描述之间添加一些空间 */
 }
 
 .image-info .description {
@@ -185,15 +179,15 @@
 
       const img = document.createElement('img');
       img.src = `https://pinganyang.github.io/photos/${photo.filename}`;
-      img.alt = photo.title;
+    //   img.alt = photo.title;
 
       const info = document.createElement('div');
       info.className = 'image-info';
 
       // 创建标题和描述元素，然后插入到 info 容器中
-      const titleDiv = document.createElement('div');
-      titleDiv.className = 'title';
-      titleDiv.textContent = photo.title; // 文本内容只对文本节点使用
+    //   const titleDiv = document.createElement('div');
+    //   titleDiv.className = 'title';
+    //   titleDiv.textContent = photo.title; // 文本内容只对文本节点使用
     
     
       console.log(photo.CameraModel);
@@ -211,7 +205,7 @@
         `;
 
       // 将标题和描述添加到 info 容器中
-      info.appendChild(titleDiv);
+    //   info.appendChild(titleDiv);
       info.appendChild(descriptionDiv);
 
       imgContainer.appendChild(img);
