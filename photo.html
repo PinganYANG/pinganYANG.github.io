@@ -47,12 +47,12 @@
 
   /* 画廊样式 */
 /* 画廊样式 */
-    .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 每行3个图片 */
-    grid-gap: 10px;
-    padding: 20px;
-    }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)); /* 适应内容的宽度 */
+  grid-auto-rows: minmax(150px, auto); /* 至少150px的行高，但可以根据内容增长 */
+  grid-gap: 10px; /* 网格间隙 */
+}
 
     @media (max-width: 768px) {
     .gallery {
@@ -76,30 +76,39 @@
 
     /* 图片信息的容器样式 */
     .image-info {
-  display: none;
-  justify-content: space-between; /* Align children on both ends */
-  align-items: flex-start; /* Align children at the top */
-  position: absolute;
-  width: 100%;
-  top: 0;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  color: white;
-  padding: 10px;
-  box-sizing: border-box;
-  transition: opacity 0.3s;
-  pointer-events: none; /* Prevent mouse events on the info itself */
+  pointer-events: none; /* 阻止鼠标事件 */
+  position: absolute; /* 绝对定位 */
+  top: 10px; /* 定位到容器的底部 */
+  left:10px;
+  right: 10px;
+  height: 100px; /* 宽度充满容器 */
+  background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+  color: white; /* 文本颜色 */
+  display: none; /* 默认不显示 */
+  padding: 10px; /* 内边距 */
+  text-align: right; /* 文本靠右对齐 */
+  font-size: 0.2em; /* 缩小字体大小 */
+  line-height: 0.9; /* 减小行距 */
+  margin: -10px; /* 移除外边距，如果有的话 */
 }
 
-.image-info .description {
-  flex-basis: 100%; /* 让每个子元素占满整行 */
-  margin: 0; /* 如果需要，可以移除外边距 */
+.image-container {
+  /* 如果需要，根据图片的宽高比设置跨列和跨行 */
+  grid-column: span 1;
+  grid-row: span 2; /* 可能需要根据图片实际情况进行调整 */
+}
+.image-container img {
+  width: 100%; /* 设置图片宽度为容器的100% */
+  height: 100%; /* 设置图片高度为容器的100% */
+  object-fit: cover; /* 裁剪并填充整个容器，保持宽高比 */
 }
 
 .image-info .description {
   text-align: right; /* 文本靠右对齐 */
   font-size: 0.2em; /* 缩小字体大小 */
-  line-height: 0.7; /* 减小行距 */
+  line-height: 0.2; /* 减小行距 */
   margin: 0; /* 移除外边距，如果有的话 */
+  
 }
     /* 鼠标悬停时显示图片信息 */
     .gallery div:hover .image-info {
@@ -161,40 +170,45 @@
 
     async function loadPhotos() {
   try {
-    // 指定JSON文件的URL
     const photosJsonUrl = 'https://pinganyang.github.io/photos/photos_info.json';
-
-    // 获取JSON文件
     const response = await fetch(photosJsonUrl);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const photos = await response.json();
 
-    // 创建图片和信息元素
     photos.forEach(photo => {
       const imgContainer = document.createElement('div');
       imgContainer.className = 'image-container';
       imgContainer.style.position = 'relative';
 
+      // 假设竖版图片的文件名中包含 "_v"
+      if (photo.filename.includes('_v')) {
+        imgContainer.style.gridColumn = 'span 1'; // 占据一列
+        imgContainer.style.gridRow = 'span 2'; // 占据两行
+      } else {
+        imgContainer.style.gridColumn = 'span 1'; // 占据一列
+        imgContainer.style.gridRow = 'span 1'; // 占据一行
+      }
+
       const img = document.createElement('img');
       img.src = `https://pinganyang.github.io/photos/${photo.filename}`;
-    //   img.alt = photo.title;
+      img.alt = photo.title;
+      img.onload = () => {
+        // 图片加载后，可以获取其尺寸
+        const aspectRatio = img.naturalWidth / img.naturalHeight;
+        if (aspectRatio > 1) {
+            // 横向图片，可以在这里设置跨多列如果需要
+            imgContainer.style.gridColumn = 'span 1';
+        } else {
+            // 竖向图片
+            imgContainer.style.gridRow = 'span 2'; // 确保竖版图片跨足够的行
+        }
+      };
 
       const info = document.createElement('div');
       info.className = 'image-info';
-
-      // 创建标题和描述元素，然后插入到 info 容器中
-    //   const titleDiv = document.createElement('div');
-    //   titleDiv.className = 'title';
-    //   titleDiv.textContent = photo.title; // 文本内容只对文本节点使用
-    
-    
-      console.log(photo.CameraModel);
-      const descriptionDiv = document.createElement('div');
-        descriptionDiv.className = 'description';
-        // 使用模板字符串来分行
-        descriptionDiv.innerHTML = `
+      info.innerHTML = `
         <p>Camera Model: ${photo.CameraModel}</p>
         <p>Aperture: ${photo.Aperture}</p>
         <p>Exposure Time: ${photo.ExposureTime}</p>
@@ -202,29 +216,24 @@
         <p>Exposure Bias Value: ${photo.ExposureBiasValue}</p>
         <p>Focal Length: ${photo.FocalLength}</p>
         <p>Location: ${photo.Location}</p>
-        `;
-
-      // 将标题和描述添加到 info 容器中
-    //   info.appendChild(titleDiv);
-      info.appendChild(descriptionDiv);
+      `;
 
       imgContainer.appendChild(img);
       imgContainer.appendChild(info);
 
-      // 悬停事件监听器
       let timeoutId_blur, timeoutId_info;
       imgContainer.onmouseover = function() {
         timeoutId_blur = setTimeout(() => {
-          img.style.filter = 'blur(4px)'; // 应用模糊效果
-        }, 1000); // 1秒后应用模糊效果
+          img.style.filter = 'blur(4px)';
+        }, 1000);
         timeoutId_info = setTimeout(() => {
           info.style.display = 'block';
-        }, 1000); // 1秒后显示信息
+        }, 1000);
       };
       imgContainer.onmouseout = function() {
-        clearTimeout(timeoutId_blur); // 取消悬停时的延时
-        clearTimeout(timeoutId_info); // 取消悬停时的延时
-        img.style.filter = ''; // 移除模糊效果
+        clearTimeout(timeoutId_blur);
+        clearTimeout(timeoutId_info);
+        img.style.filter = '';
         info.style.display = 'none';
       };
 
@@ -236,67 +245,6 @@
 }
 
 loadPhotos();
-
-//   // 假设这是从服务器获取更多图片的函数
-//   async function loadMorePhotos() {
-//     try {
-//         // 替换以下URL为您GitHub Pages的实际URL
-//         const photosPath = 'https://pinganyang.github.io/photos';
-//         const response = await fetch(photosPath);
-
-//         if (!response.ok) {
-//         throw new Error(`HTTP error! status: ${response.status}`);
-//         }
-
-//         const text = await response.text();
-//         const parser = new DOMParser();
-//         const htmlDocument = parser.parseFromString(text, "text/html");
-//         const imageElements = htmlDocument.querySelectorAll("a");
-
-//         // 假定所有图片都是jpg格式
-//         const jpgFiles = Array.from(imageElements)
-//         .map(link => link.href)
-//         .filter(href => href.endsWith('.jpg'));
-
-//         // 创建新的图片元素并添加到画廊中
-//         jpgFiles.forEach(photoHref => {
-//         const img = document.createElement('img');
-//         img.src = photoHref;
-//         img.alt = 'Photo';
-//         gallery.appendChild(img);
-//         });
-//     } catch (error) {
-//         console.error('Loading photos failed:', error);
-//     }
-//     }
-
-//   function loadMorePhotos() {
-//     // 模拟的文件数组
-//     const newPhotos = [
-//         'DSC_1765.jpg',
-//         'DSC_1786.jpg',
-//         'DSC_1812.jpg',
-//         'DSC_1824.jpg',
-//         'DSC_1786.jpg',
-//         'DSC_1812.jpg',
-//         'DSC_1765.jpg',
-//         'DSC_1786.jpg',
-//         'DSC_1812.jpg',
-//         'DSC_1765.jpg',
-//         'DSC_1786.jpg',
-//         'DSC_1812.jpg',
-//         // ... 更多图片文件名
-//     ];
-
-//     // 创建新的图片元素并添加到画廊中
-//     newPhotos.forEach(photoFilename => {
-//         const img = document.createElement('img');
-//         // 如果您在本地服务器上，这里的路径可能是 '/photos/' + photoFilename
-//         img.src = 'photos/' + photoFilename;
-//         img.alt = 'Photo';
-//         gallery.appendChild(img);
-//     });
-//     }
 
   // 监听滚动事件来加载更多图片
   window.addEventListener('scroll', () => {
