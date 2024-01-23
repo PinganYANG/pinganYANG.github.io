@@ -67,11 +67,12 @@
     }
 
 /* 图片的基础样式 */
-    .gallery img {
-    width: 100%;
-    height: auto;
-    transition: filter 0.3s; /* 平滑过渡效果 */
-    }
+.gallery img {
+  width: 100%; /* 图片宽度填满容器 */
+  height: 300px; /* 设置一个固定高度或根据比例 */
+  object-fit: cover; /* 覆盖整个容器，多余的部分会被裁减 */
+  transition: filter 1s ease; /* 平滑过渡效果，持续1秒 */
+}
 
     /* 图片信息的容器样式 */
     .image-info {
@@ -127,10 +128,6 @@
 
 <div class="gallery" id="gallery">
   <!-- 初始图片 -->
-  <img src="photos/DSC_1765.jpg" alt="Photo 1">
-  <img src="photos/DSC_1786.jpg" alt="Photo 2">
-  <img src="photos/DSC_1812.jpg" alt="Photo 3">
-  <!-- 更多图片将被加载 -->
 </div>
 
 <div id="loading">
@@ -180,16 +177,19 @@
       // 悬停事件
       let timeoutId;
       imgContainer.onmouseover = function() {
-        timeoutId = setTimeout(() => {
-          img.style.filter = 'blur(2px)'; // 应用模糊效果
-          info.style.display = 'block';
-        }, 1000); // 1秒后显示信息
-      };
-      imgContainer.onmouseout = function() {
-        clearTimeout(timeoutId); // 取消悬停时的延时
+        timeoutId_blur = setTimeout(() => {
+            img.style.filter = 'blur(4px)'; // 应用模糊效果
+        }, 1000); // 在1秒后显示信息和应用模糊效果
+        timeoutId_info = setTimeout(() => {
+            info.style.display = 'block';
+        }, 10); // 在1秒后显示信息和应用模糊效果
+        };
+        imgContainer.onmouseout = function() {
+        clearTimeout(timeoutId_blur); // 取消悬停时的延时
+        clearTimeout(timeoutId_info); // 取消悬停时的延时
         img.style.filter = ''; // 移除模糊效果
         info.style.display = 'none';
-      };
+        };
 
       document.querySelector('.gallery').appendChild(imgContainer);
     });

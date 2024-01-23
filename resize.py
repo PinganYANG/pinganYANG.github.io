@@ -1,4 +1,4 @@
-from PIL import Image
+from PIL import Image, ExifTags
 import os
 
 # 要压缩图片的文件夹路径
@@ -16,17 +16,28 @@ for file_name in os.listdir(input_folder):
     if file_name.lower().endswith('.jpg'):  # 检查文件扩展名
         file_path = os.path.join(input_folder, file_name)
         img = Image.open(file_path)
-        
+
+        # 保留原始图片的 EXIF 数据
+        if hasattr(img, '_getexif'):
+            exif = img._getexif()
+        else:
+            exif = None
+
         # 计算新的尺寸（宽度和高度减半）
         new_size = (img.width // 3, img.height // 3)
         
         # 调整图片到新的尺寸
         compressed_img = img.resize(new_size, Image.Resampling.LANCZOS)
-        
+
+        # 如果有 EXIF 数据，添加到新图片
+        if exif:
+            exif_data = { ExifTags.TAGS[k]: v for k, v in exif.items() if k in ExifTags.TAGS }
+            compressed_img.info['exif'] = exif
+
         # 构建输出文件路径
         output_file_path = os.path.join(output_folder, file_name)
         
         # 保存压缩后的图片
-        compressed_img.save(output_file_path)
+        compressed_img.save(output_file_path, "JPEG", exif=img.info.get('exif'))
 
 print("所有图片压缩完成，并保存到了 '{}' 文件夹中。".format(output_folder))
