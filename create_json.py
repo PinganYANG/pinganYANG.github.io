@@ -36,10 +36,10 @@ for filename in os.listdir(photos_folder):
         photo_info = {
             'filename': filename,
             'title': f'{file_title} Title',
-            'description': f'Camera Model: {camera_model}, Aperture: {aperture}, '
-                            f'Exposure Time: {exposure_time}, ISO: {iso}, '
-                            f'Exposure Compensation: {exposure_compensation}, '
-                            f'Focal Length: {focal_length}. Location: 斯德哥尔摩'
+            'description': f'Camera Model: {camera_model}\nAperture: {aperture}\n'
+                            f'Exposure Time: {exposure_time}\nISO: {iso}\n'
+                            f'Exposure Compensation: {exposure_compensation}\n'
+                            f'Focal Length: {focal_length}\nLocation: 斯德哥尔摩'
         }
         
         # 将图片信息添加到列表中

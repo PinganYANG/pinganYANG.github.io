@@ -76,17 +76,32 @@
 
     /* 图片信息的容器样式 */
     .image-info {
-    display: none;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
-    color: white;
-    padding: 10px;
-    box-sizing: border-box;
-    transition: opacity 0.3s;
-    }
+  display: none;
+  justify-content: space-between; /* Align children on both ends */
+  align-items: flex-start; /* Align children at the top */
+  position: absolute;
+  width: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: opacity 0.3s;
+  pointer-events: none; /* Prevent mouse events on the info itself */
+}
 
+.image-info .title,
+.image-info .description {
+  flex-basis: 50%; /* Give each child 50% of the space */
+}
+
+.image-info .title {
+  text-align: left; /* Align the title to the left */
+}
+
+.image-info .description {
+  text-align: right; /* Align the description to the right */
+}
     /* 鼠标悬停时显示图片信息 */
     .gallery div:hover .image-info {
     display: block;
@@ -159,39 +174,36 @@
 
     // 创建图片和信息元素
     photos.forEach(photo => {
-      const imgContainer = document.createElement('div');
-      imgContainer.className = 'image-container';
-      imgContainer.style.position = 'relative';
+    const imgContainer = document.createElement('div');
+    imgContainer.className = 'image-container';
+    imgContainer.style.position = 'relative';
 
-      const img = document.createElement('img');
-      img.src = `https://pinganyang.github.io/photos/${photo.filename}`;
-      img.alt = photo.title;
+    const img = document.createElement('img');
+    img.src = `https://pinganyang.github.io/photos/${photo.filename}`;
+    img.alt = photo.title;
 
-      const info = document.createElement('div');
-      info.className = 'image-info';
-      info.innerHTML = `<h3>${photo.title}</h3><p>${photo.description}</p>`;
+    const info = document.createElement('div');
+    info.className = 'image-info';
 
-      imgContainer.appendChild(img);
-      imgContainer.appendChild(info);
+    // Create title and description elements inside the info div
+    const titleDiv = document.createElement('div');
+    titleDiv.className = 'title';
+    titleDiv.textContent = photo.title; // Use textContent for text-only nodes
+    
+    const descriptionDiv = document.createElement('div');
+    descriptionDiv.className = 'description';
+    descriptionDiv.textContent = photo.description; // Use textContent for text-only nodes
 
-      // 悬停事件
-      let timeoutId;
-      imgContainer.onmouseover = function() {
-        timeoutId_blur = setTimeout(() => {
-            img.style.filter = 'blur(4px)'; // 应用模糊效果
-        }, 1000); // 在1秒后显示信息和应用模糊效果
-        timeoutId_info = setTimeout(() => {
-            info.style.display = 'block';
-        }, 10); // 在1秒后显示信息和应用模糊效果
-        };
-        imgContainer.onmouseout = function() {
-        clearTimeout(timeoutId_blur); // 取消悬停时的延时
-        clearTimeout(timeoutId_info); // 取消悬停时的延时
-        img.style.filter = ''; // 移除模糊效果
-        info.style.display = 'none';
-        };
+    // Append title and description to the info div
+    info.appendChild(titleDiv);
+    info.appendChild(descriptionDiv);
 
-      document.querySelector('.gallery').appendChild(imgContainer);
+    imgContainer.appendChild(img);
+    imgContainer.appendChild(info);
+
+    // ... hover event listeners ...
+
+    document.querySelector('.gallery').appendChild(imgContainer);
     });
   } catch (error) {
     console.error('Loading photos failed:', error);
