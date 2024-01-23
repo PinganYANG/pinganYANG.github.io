@@ -1,6 +1,7 @@
 import os
 import json
 from PIL import Image, ExifTags
+from PIL.ExifTags import TAGS
 
 # 指定照片文件夹的路径
 photos_folder = 'photos'
@@ -10,6 +11,17 @@ photo_info_list = []
 
 # 为了方便提取EXIF信息，需要创建一个反向映射
 exif_tags = {v: k for k, v in ExifTags.TAGS.items()}
+
+def get_exif_data(image_path):
+    image = Image.open(image_path)
+    exif_data = {}
+    if hasattr(image, '_getexif'):  # 检查图片是否包含EXIF数据
+        exif_info = image._getexif()
+        if exif_info is not None:
+            for tag, value in exif_info.items():
+                decoded_tag = TAGS.get(tag, tag)
+                exif_data[decoded_tag] = value
+    return exif_data
 
 # 遍历照片文件夹中的文件
 for filename in os.listdir(photos_folder):
@@ -21,25 +33,20 @@ for filename in os.listdir(photos_folder):
         file_path = os.path.join(photos_folder, filename)
         img = Image.open(file_path)
 
-        # 获取EXIF数据
-        exif_data = img._getexif()
 
-        # 提取所需的EXIF信息
-        camera_model = exif_data.get(exif_tags.get('Model'), 'Unknown')
-        aperture = exif_data.get(exif_tags.get('ApertureValue'), 'Unknown')
-        exposure_time = exif_data.get(exif_tags.get('ExposureTime'), 'Unknown')
-        iso = exif_data.get(exif_tags.get('ISOSpeedRatings'), 'Unknown')
-        exposure_compensation = exif_data.get(exif_tags.get('ExposureBiasValue'), 'Unknown')
-        focal_length = exif_data.get(exif_tags.get('FocalLength'), 'Unknown')
+        exif_metadata = get_exif_data(file_path)
 
         # 创建包含文件信息的字典
         photo_info = {
             'filename': filename,
             'title': f'{file_title} Title',
-            'description': f'Camera Model: {camera_model}\nAperture: {aperture}\n'
-                            f'Exposure Time: {exposure_time}\nISO: {iso}\n'
-                            f'Exposure Compensation: {exposure_compensation}\n'
-                            f'Focal Length: {focal_length}\nLocation: 斯德哥尔摩'
+            'description': f'Camera Model: {exif_metadata["Model"]}\n'
+                           f'Aperture: f/{round(2 ** (exif_metadata["ApertureValue"] / 2), 1) }\n'
+                           f'Exposure Time: {exif_metadata["ExposureTime"].numerator}/{exif_metadata["ExposureTime"].denominator}\n'
+                           f'ISO: {exif_metadata["ISOSpeedRatings"]}\n'
+                            f'ExposureBiasValue: {exif_metadata["ExposureBiasValue"]}\n'
+                            f'Focal Length: {exif_metadata["FocalLength"]}\n'
+                            f'Location: 斯德哥尔摩'
         }
         
         # 将图片信息添加到列表中

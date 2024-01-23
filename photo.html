@@ -202,7 +202,21 @@
     imgContainer.appendChild(info);
 
     // ... hover event listeners ...
-
+    let timeoutId;
+    imgContainer.onmouseover = function() {
+    timeoutId_blur = setTimeout(() => {
+        img.style.filter = 'blur(4px)'; // 应用模糊效果
+    }, 1000); // 在1秒后显示信息和应用模糊效果
+    timeoutId_info = setTimeout(() => {
+        info.style.display = 'block';
+    }, 10); // 在1秒后显示信息和应用模糊效果
+    };
+    imgContainer.onmouseout = function() {
+    clearTimeout(timeoutId_blur); // 取消悬停时的延时
+    clearTimeout(timeoutId_info); // 取消悬停时的延时
+    img.style.filter = ''; // 移除模糊效果
+    info.style.display = 'none';
+    };
     document.querySelector('.gallery').appendChild(imgContainer);
     });
   } catch (error) {
