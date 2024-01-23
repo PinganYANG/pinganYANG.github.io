@@ -125,38 +125,80 @@
   const gallery = document.getElementById('gallery');
   const loading = document.getElementById('loading');
 
-  // 假设这是从服务器获取更多图片的函数
-  async function loadMorePhotos() {
+  let loadingPhotos = false;
+    let loadedPhotos = [];
+
+    async function loadMorePhotos() {
+    if (loadingPhotos) return; // 如果已经在加载中，则退出函数
+    loadingPhotos = true; // 设置加载标志
+
     try {
         // 替换以下URL为您GitHub Pages的实际URL
         const photosPath = 'https://pinganyang.github.io/photos';
-        const response = await fetch(photosPath);
+        // 这里可以是一个API调用，或是静态的JSON文件，列出所有图片的文件名
+        const response = await fetch(photosPath + '/photos.json');
 
         if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        const text = await response.text();
-        const parser = new DOMParser();
-        const htmlDocument = parser.parseFromString(text, "text/html");
-        const imageElements = htmlDocument.querySelectorAll("a");
+        const photoFilenames = await response.json();
 
-        // 假定所有图片都是jpg格式
-        const jpgFiles = Array.from(imageElements)
-        .map(link => link.href)
-        .filter(href => href.endsWith('.jpg'));
+        // 过滤掉已加载的图片
+        const newPhotos = photoFilenames.filter(name => !loadedPhotos.includes(name));
 
         // 创建新的图片元素并添加到画廊中
-        jpgFiles.forEach(photoHref => {
+        newPhotos.forEach(photoFilename => {
         const img = document.createElement('img');
-        img.src = photoHref;
-        img.alt = 'Photo';
+        img.src = photosPath + '/' + photoFilename;
+        img.alt = photoFilename;
+        img.onload = () => { loadingPhotos = false; }; // 加载完成后重置加载标志
+        img.onerror = () => { loadingPhotos = false; }; // 加载失败后重置加载标志
         gallery.appendChild(img);
+        loadedPhotos.push(photoFilename); // 将文件名添加到已加载列表
         });
     } catch (error) {
         console.error('Loading photos failed:', error);
+        loadingPhotos = false; // 出错后重置加载标志
     }
     }
+
+    // 初始调用或滚动事件调用
+    loadMorePhotos();
+
+
+//   // 假设这是从服务器获取更多图片的函数
+//   async function loadMorePhotos() {
+//     try {
+//         // 替换以下URL为您GitHub Pages的实际URL
+//         const photosPath = 'https://pinganyang.github.io/photos';
+//         const response = await fetch(photosPath);
+
+//         if (!response.ok) {
+//         throw new Error(`HTTP error! status: ${response.status}`);
+//         }
+
+//         const text = await response.text();
+//         const parser = new DOMParser();
+//         const htmlDocument = parser.parseFromString(text, "text/html");
+//         const imageElements = htmlDocument.querySelectorAll("a");
+
+//         // 假定所有图片都是jpg格式
+//         const jpgFiles = Array.from(imageElements)
+//         .map(link => link.href)
+//         .filter(href => href.endsWith('.jpg'));
+
+//         // 创建新的图片元素并添加到画廊中
+//         jpgFiles.forEach(photoHref => {
+//         const img = document.createElement('img');
+//         img.src = photoHref;
+//         img.alt = 'Photo';
+//         gallery.appendChild(img);
+//         });
+//     } catch (error) {
+//         console.error('Loading photos failed:', error);
+//     }
+//     }
 
 //   function loadMorePhotos() {
 //     // 模拟的文件数组
