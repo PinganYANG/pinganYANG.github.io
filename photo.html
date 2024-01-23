@@ -92,15 +92,19 @@
 
 .image-info .title,
 .image-info .description {
-  flex-basis: 50%; /* Give each child 50% of the space */
+  flex-basis: 100%; /* 让每个子元素占满整行 */
+  margin: 0; /* 如果需要，可以移除外边距 */
 }
 
 .image-info .title {
-  text-align: left; /* Align the title to the left */
+  font-size: 1.2em; /* 或者使用更具体的大小，如 '14px' */
+  margin-bottom: 0.5em; /* 为标题和描述之间添加一些空间 */
 }
 
 .image-info .description {
-  text-align: right; /* Align the description to the right */
+  font-size: 1em; /* 描述的字体大小小于标题 */
+  text-align: left; /* 所有文本左对齐 */
+  white-space: pre-wrap; /* 保持空白符，允许文本自然换行 */
 }
     /* 鼠标悬停时显示图片信息 */
     .gallery div:hover .image-info {
@@ -192,7 +196,16 @@
     
     const descriptionDiv = document.createElement('div');
     descriptionDiv.className = 'description';
-    descriptionDiv.textContent = photo.description; // Use textContent for text-only nodes
+    // 使用 <br> 或 <p> 分行
+    descriptionDiv.innerHTML = `
+    <p>Camera Model: ${photo.CameraModel}</p>
+    <p>Aperture: ${photo.Aperture}</p>
+    <p>Exposure Time: ${photo.ExposureTime}</p>
+    <p>ISO: ${photo.iso}</p>
+    <p>ExposureBiasValue: ${photo.exposureCompensation}</p>
+    <p>FocalLength: ${photo.focalLength}</p>
+    <p>Location: ${photo.location}</p>
+    `;
 
     // Append title and description to the info div
     info.appendChild(titleDiv);

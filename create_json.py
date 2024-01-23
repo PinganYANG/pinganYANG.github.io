@@ -40,13 +40,13 @@ for filename in os.listdir(photos_folder):
         photo_info = {
             'filename': filename,
             'title': f'{file_title} Title',
-            'description': f'Camera Model: {exif_metadata["Model"]}\n'
-                           f'Aperture: f/{round(2 ** (exif_metadata["ApertureValue"] / 2), 1) }\n'
-                           f'Exposure Time: {exif_metadata["ExposureTime"].numerator}/{exif_metadata["ExposureTime"].denominator}\n'
-                           f'ISO: {exif_metadata["ISOSpeedRatings"]}\n'
-                            f'ExposureBiasValue: {exif_metadata["ExposureBiasValue"]}\n'
-                            f'Focal Length: {exif_metadata["FocalLength"]}\n'
-                            f'Location: 斯德哥尔摩'
+            'CameraModel': f'{exif_metadata["Model"]}\n',
+            'Aperture': f'f/{round(2 ** (exif_metadata["ApertureValue"] / 2), 1) }\n',
+            'ExposureTime': f'{exif_metadata["ExposureTime"].numerator}/{exif_metadata["ExposureTime"].denominator}\n',
+            'ISO':f'{exif_metadata["ISOSpeedRatings"]}\n',
+            'ExposureBiasValue': f'{exif_metadata["ExposureBiasValue"]}\n',
+            'FocalLength': f'{exif_metadata["FocalLength"]}\n',
+            'Location': '斯德哥尔摩'
         }
         
         # 将图片信息添加到列表中
