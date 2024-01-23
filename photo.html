@@ -66,11 +66,31 @@
     }
     }
 
+/* 图片的基础样式 */
     .gallery img {
-  width: 100%; /* 让图片宽度与容器相同 */
-  height: 100%; /* 设置高度与容器相同 */
-  object-fit: cover; /* 覆盖容器，必要时进行裁剪 */
-}
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s; /* 平滑过渡效果 */
+    }
+
+    /* 图片信息的容器样式 */
+    .image-info {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 0.3s;
+    }
+
+    /* 鼠标悬停时显示图片信息 */
+    .gallery div:hover .image-info {
+    display: block;
+    opacity: 0.8; /* 透明度 */
+    }
   /* 页脚样式 */
   footer {
     background-color: #333;
@@ -128,43 +148,58 @@
   let loadingPhotos = false;
     let loadedPhotos = [];
 
-    async function loadMorePhotos() {
-    if (loadingPhotos) return; // 如果已经在加载中，则退出函数
-    loadingPhotos = true; // 设置加载标志
-
-    try {
-        // 替换以下URL为您GitHub Pages的实际URL
-        const photosPath = 'https://pinganyang.github.io/photos';
-        // 这里可以是一个API调用，或是静态的JSON文件，列出所有图片的文件名
-        const response = await fetch(photosPath + '/photos.json');
-
-        if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const photoFilenames = await response.json();
-
-        // 过滤掉已加载的图片
-        const newPhotos = photoFilenames.filter(name => !loadedPhotos.includes(name));
-
-        // 创建新的图片元素并添加到画廊中
-        newPhotos.forEach(photoFilename => {
-        const img = document.createElement('img');
-        img.src = photosPath + '/' + photoFilename;
-        img.alt = photoFilename;
-        img.onload = () => { loadingPhotos = false; }; // 加载完成后重置加载标志
-        img.onerror = () => { loadingPhotos = false; }; // 加载失败后重置加载标志
-        gallery.appendChild(img);
-        loadedPhotos.push(photoFilename); // 将文件名添加到已加载列表
-        });
-    } catch (error) {
-        console.error('Loading photos failed:', error);
-        loadingPhotos = false; // 出错后重置加载标志
+    async function loadPhotos() {
+  try {
+    // 指定JSON文件的URL
+    const photosJsonUrl = 'https://pinganyang.github.io/photos_info.json';
+    
+    // 获取JSON文件
+    const response = await fetch(photosJsonUrl);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
-    }
+    const photos = await response.json();
 
-    // 初始调用或滚动事件调用
-    loadMorePhotos();
+    // 创建图片和信息元素
+    photos.forEach(photo => {
+      const imgContainer = document.createElement('div');
+      imgContainer.className = 'image-container';
+      imgContainer.style.position = 'relative';
+
+      const img = document.createElement('img');
+      img.src = `https://pinganyang.github.io/photos/${photo.filename}`;
+      img.alt = photo.title;
+
+      const info = document.createElement('div');
+      info.className = 'image-info';
+      info.innerHTML = `<h3>${photo.title}</h3><p>${photo.description}</p>`;
+
+      imgContainer.appendChild(img);
+      imgContainer.appendChild(info);
+
+      // 悬停事件
+      let timeoutId;
+      imgContainer.onmouseover = function() {
+        timeoutId = setTimeout(() => {
+          img.style.filter = 'blur(2px)'; // 应用模糊效果
+          info.style.display = 'block';
+        }, 1000); // 1秒后显示信息
+      };
+      imgContainer.onmouseout = function() {
+        clearTimeout(timeoutId); // 取消悬停时的延时
+        img.style.filter = ''; // 移除模糊效果
+        info.style.display = 'none';
+      };
+
+      document.querySelector('.gallery').appendChild(imgContainer);
+    });
+  } catch (error) {
+    console.error('Loading photos failed:', error);
+  }
+}
+
+// 调用函数来加载图片
+loadPhotos();
 
 
 //   // 假设这是从服务器获取更多图片的函数
