@@ -46,7 +46,8 @@ for filename in os.listdir(photos_folder):
             'ISO':f'{exif_metadata["ISOSpeedRatings"]}\n',
             'ExposureBiasValue': f'{exif_metadata["ExposureBiasValue"]}\n',
             'FocalLength': f'{exif_metadata["FocalLength"]}\n',
-            'Location': '斯德哥尔摩'
+            'Location': '斯德哥尔摩',
+            "Link": "https://www.google.fr/maps"
         }
         
         # 将图片信息添加到列表中

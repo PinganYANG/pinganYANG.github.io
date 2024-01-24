@@ -179,8 +179,8 @@
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    const photos = await response.json();
-
+    let  photos = await response.json();
+    photos = photos.sort(() => Math.random() - 0.5);
     photos.forEach(photo => {
       const imgContainer = document.createElement('div');
       imgContainer.className = 'image-container';
