@@ -2,7 +2,7 @@ from PIL import Image, ExifTags
 import os
 
 # 要压缩图片的文件夹路径
-input_folder = 'photo_/'
+input_folder = 'photoss/'
 
 # 压缩后的图片将保存的文件夹路径
 output_folder = 'compressed/'
