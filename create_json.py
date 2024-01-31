@@ -7,7 +7,7 @@ from geopy.geocoders import Nominatim
 import time
 
 # 指定照片文件夹的路径
-photos_folder = 'photoss'
+photos_folder = 'photos'
 
 # 初始化一个空的图片信息列表
 photo_info_list = []

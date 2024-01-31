@@ -1,0 +1,50 @@
+[
+    {
+        "filename": "DSC_2597.jpg",
+        "title": "DSC_2597.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/5.6\n",
+        "ExposureTime": "1/8\n",
+        "ISO": "2000\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "24.0\n",
+        "Location": "photo_museum",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_2616.jpg",
+        "title": "DSC_2616.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/5.6\n",
+        "ExposureTime": "1/4\n",
+        "ISO": "640\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "44.0\n",
+        "Location": "photo_museum",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_2625.jpg",
+        "title": "DSC_2625.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/5.6\n",
+        "ExposureTime": "1/8\n",
+        "ISO": "1250\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "24.0\n",
+        "Location": "photo_museum",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_2645.jpg",
+        "title": "DSC_2645.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/4\n",
+        "ExposureTime": "1/60\n",
+        "ISO": "640\n",
+        "ExposureBiasValue": "-1.0\n",
+        "FocalLength": "24.0\n",
+        "Location": "photo_museum",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    }
+]

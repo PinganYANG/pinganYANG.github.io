@@ -1,0 +1,86 @@
+[
+    {
+        "filename": "DSC_0704.jpg",
+        "title": "DSC_0704.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/6.0\n",
+        "ExposureTime": "1/80\n",
+        "ISO": "5000\n",
+        "ExposureBiasValue": "-1.3333333333333333\n",
+        "FocalLength": "65.0\n",
+        "Location": "Design_Museum",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_0711.jpg",
+        "title": "DSC_0711.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/13.0\n",
+        "ExposureTime": "1/25\n",
+        "ISO": "450\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "24.0\n",
+        "Location": "Design_Museum",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_0723.jpg",
+        "title": "DSC_0723.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/8\n",
+        "ExposureTime": "1/40\n",
+        "ISO": "6400\n",
+        "ExposureBiasValue": "1.3333333333333333\n",
+        "FocalLength": "24.0\n",
+        "Location": "Design_Museum",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_0729.jpg",
+        "title": "DSC_0729.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/8\n",
+        "ExposureTime": "1/100\n",
+        "ISO": "6400\n",
+        "ExposureBiasValue": "-1.0\n",
+        "FocalLength": "24.0\n",
+        "Location": "Design_Museum",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_0732.jpg",
+        "title": "DSC_0732.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/8\n",
+        "ExposureTime": "1/6400\n",
+        "ISO": "6400\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "24.0\n",
+        "Location": "Design_Museum",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_0741.jpg",
+        "title": "DSC_0741.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/8\n",
+        "ExposureTime": "1/50\n",
+        "ISO": "10000\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "42.0\n",
+        "Location": "Design_Museum",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_0746.jpg",
+        "title": "DSC_0746.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/8\n",
+        "ExposureTime": "1/100\n",
+        "ISO": "6400\n",
+        "ExposureBiasValue": "-0.6666666666666666\n",
+        "FocalLength": "43.0\n",
+        "Location": "Design_Museum",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    }
+]

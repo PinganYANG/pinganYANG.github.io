@@ -1,0 +1,50 @@
+[
+    {
+        "filename": "DSC_0505.jpg",
+        "title": "DSC_0505.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/6.3\n",
+        "ExposureTime": "1/400\n",
+        "ISO": "400\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "155.0\n",
+        "Location": "Tullerie",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_0509.jpg",
+        "title": "DSC_0509.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/6.3\n",
+        "ExposureTime": "1/250\n",
+        "ISO": "250\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "95.0\n",
+        "Location": "Tullerie",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_0511.jpg",
+        "title": "DSC_0511.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/5.6\n",
+        "ExposureTime": "1/250\n",
+        "ISO": "200\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "32.0\n",
+        "Location": "Tullerie",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_0514.jpg",
+        "title": "DSC_0514.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/6.3\n",
+        "ExposureTime": "1/250\n",
+        "ISO": "500\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "160.0\n",
+        "Location": "Tullerie",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    }
+]

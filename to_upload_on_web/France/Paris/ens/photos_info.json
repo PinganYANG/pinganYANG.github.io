@@ -1,0 +1,38 @@
+[
+    {
+        "filename": "DSC_0303.jpg",
+        "title": "DSC_0303.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/6.3\n",
+        "ExposureTime": "1/160\n",
+        "ISO": "3200\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "145.0\n",
+        "Location": "ens",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_0310.jpg",
+        "title": "DSC_0310.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/5.0\n",
+        "ExposureTime": "1/60\n",
+        "ISO": "11400\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "38.0\n",
+        "Location": "ens",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_0311.jpg",
+        "title": "DSC_0311.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/6.0\n",
+        "ExposureTime": "1/60\n",
+        "ISO": "12800\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "72.0\n",
+        "Location": "ens",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    }
+]

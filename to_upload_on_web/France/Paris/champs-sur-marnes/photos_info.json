@@ -1,0 +1,38 @@
+[
+    {
+        "filename": "DSC_0066.jpg",
+        "title": "DSC_0066.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/6.3\n",
+        "ExposureTime": "1/400\n",
+        "ISO": "400\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "140.0\n",
+        "Location": "champs-sur-marnes",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_0079.jpg",
+        "title": "DSC_0079.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/6.3\n",
+        "ExposureTime": "1/500\n",
+        "ISO": "400\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "200.0\n",
+        "Location": "champs-sur-marnes",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_0350.jpg",
+        "title": "DSC_0350.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/6.3\n",
+        "ExposureTime": "1/125\n",
+        "ISO": "1100\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "130.0\n",
+        "Location": "champs-sur-marnes",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    }
+]

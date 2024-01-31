@@ -1,0 +1,62 @@
+[
+    {
+        "filename": "DSC_0693.jpg",
+        "title": "DSC_0693.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/4\n",
+        "ExposureTime": "1/25\n",
+        "ISO": "4000\n",
+        "ExposureBiasValue": "-1.3333333333333333\n",
+        "FocalLength": "24.5\n",
+        "Location": "Church",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_0695.jpg",
+        "title": "DSC_0695.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/4\n",
+        "ExposureTime": "1/25\n",
+        "ISO": "4500\n",
+        "ExposureBiasValue": "-1.3333333333333333\n",
+        "FocalLength": "24.5\n",
+        "Location": "Church",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_0700.jpg",
+        "title": "DSC_0700.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/4\n",
+        "ExposureTime": "1/25\n",
+        "ISO": "6400\n",
+        "ExposureBiasValue": "-1.6666666666666667\n",
+        "FocalLength": "24.0\n",
+        "Location": "Church",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_0702.jpg",
+        "title": "DSC_0702.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/6.3\n",
+        "ExposureTime": "1/160\n",
+        "ISO": "11400\n",
+        "ExposureBiasValue": "-1.6666666666666667\n",
+        "FocalLength": "150.0\n",
+        "Location": "Church",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_1460.jpg",
+        "title": "DSC_1460.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/4\n",
+        "ExposureTime": "1/250\n",
+        "ISO": "100\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "24.0\n",
+        "Location": "Church",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    }
+]
