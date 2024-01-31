@@ -17,7 +17,7 @@ def list_all_files(root_folder):
     return files
 
 def build_html_menu(root_folder):
-    html_menu = '<nav>\n  <ul class="top-level-menu">\n    <li><a href="/index.html">首页</a></li>\n    <li><a href="/to_upload_on_web/photo.html">国家</a>\n'
+    html_menu = '<nav>\n  <ul class="top-level-menu">\n    <li><a href="/index.html">首页</a></li>\n    <li><a href="/My_Gallery/photo.html">国家</a>\n'
     previous_level = 0
     previous_dirs = ['1']
 
@@ -64,7 +64,7 @@ def build_html_menu(root_folder):
 
 
 
-root_folder = "D:\\Lr\\to_upload_on_web"
+root_folder = "D:\\Lr\\My_Gallery"
 html_menu = build_html_menu(root_folder)
 # 将HTML内容写入到index.html文件
 with open("html_menu.txt", 'w', encoding='utf-8') as file:
