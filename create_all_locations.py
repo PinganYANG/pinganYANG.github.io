@@ -157,6 +157,7 @@ def create_photo_htmls(photos,output_folder,level):
     folders = '/'.join(output_folder.split('\\'))
     # 创建整个HTML页面的内容
     first = photos[0].split("\\")[-1]
+    location = output_folder.split('\\')[-1]
     with open("html_menu.txt", 'r', encoding='utf-8') as file:
         cat = file.read()
     html_content = f"""<!DOCTYPE html>
@@ -189,7 +190,7 @@ def create_photo_htmls(photos,output_folder,level):
         <a href="https://www.google.fr/maps" target="_blank">点击查看更多</a>
     </div>
     <div class="banner" style="background-image: url('{level * "../"}photos/{first}');">
-    <h1>Welcome to My Portfolio</h1>
+    <h1>Welcome to {location}</h1>
     </div>
 
     <div id="myModal" class="modal">
