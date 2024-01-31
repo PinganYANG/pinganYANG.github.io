@@ -234,7 +234,7 @@ def create_photo_htmls(photos,output_folder,level):
 
 
 
-root_folder = "D:\\Lr\\to_upload_on_web"
+root_folder = "D:\\Lr\\My_Gallery"
 folder_name_dict = {}
 for dirpath, dirnames, filenames in os.walk(root_folder):
     # 先打印当前目录
