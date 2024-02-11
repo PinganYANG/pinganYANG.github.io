@@ -46,5 +46,65 @@
         "FocalLength": "24.0\n",
         "Location": "Arc",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+    },
+    {
+        "filename": "DSC_3408.jpg",
+        "title": "DSC_3408.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/6.3\n",
+        "ExposureTime": "1/8\n",
+        "ISO": "1250\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "93.0\n",
+        "Location": "Arc",
+        "Link": "https://www.google.com/maps?q=48.87855166666667,2.305135"
+    },
+    {
+        "filename": "DSC_3416.jpg",
+        "title": "DSC_3416.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/6.3\n",
+        "ExposureTime": "1/8\n",
+        "ISO": "1250\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "115.0\n",
+        "Location": "Arc",
+        "Link": "https://www.google.com/maps?q=48.87855166666667,2.305135"
+    },
+    {
+        "filename": "DSC_3424.jpg",
+        "title": "DSC_3424.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/6.0\n",
+        "ExposureTime": "1/8\n",
+        "ISO": "1250\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "75.0\n",
+        "Location": "Arc",
+        "Link": "https://www.google.com/maps?q=48.87855166666667,2.305135"
+    },
+    {
+        "filename": "DSC_3437.jpg",
+        "title": "DSC_3437.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/6.3\n",
+        "ExposureTime": "1/8\n",
+        "ISO": "1250\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "200.0\n",
+        "Location": "Arc",
+        "Link": "https://www.google.com/maps?q=48.87827333333333,2.305755"
+    },
+    {
+        "filename": "DSC_3445.jpg",
+        "title": "DSC_3445.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/6.3\n",
+        "ExposureTime": "1/8\n",
+        "ISO": "1250\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "180.0\n",
+        "Location": "Arc",
+        "Link": "https://www.google.com/maps?q=48.87827333333333,2.305755"
     }
 ]
