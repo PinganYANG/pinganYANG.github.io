@@ -21,7 +21,11 @@
   </li>
     <li><a href="/My_Gallery/France/photo.html">France</a>
       <ul class="third-level-menu">
-       <li><a href="/My_Gallery/France/Paris/photo.html">Paris</a>
+       <li><a href="/My_Gallery/France/Dijon/photo.html">Dijon</a></li>
+      <li><a href="/My_Gallery/France/Dunkerque/photo.html">Dunkerque</a>
+      </li>
+      <li><a href="/My_Gallery/France/Paris/photo.html">Paris</a>
+      
         <ul class="fourth-level-menu">
          <li><a href="/My_Gallery/France/Paris/Arc/photo.html">Arc</a></li>
         <li><a href="/My_Gallery/France/Paris/Caodong/photo.html">Caodong</a></li>
