@@ -1,6 +1,43 @@
 import os
 from collections import Counter
 
+LOCATION_MAPPING = {
+"Danmark":"丹麦",
+"Kobenhaven":"哥本哈根",
+"Church":"教堂",
+"Church_organ":"风琴教堂",
+"Design_Museum":"设计博物馆",
+"Louisanna":"路易斯安娜博物馆",
+"New_Museum":"新艺术博物馆",
+"New_Quai":"新港",
+"Sea":"海边",
+"France":"法国",
+"Dijon":"第戎",
+"Dunkerque":"敦刻尔克",
+"Paris":"巴黎",
+"Arc":"凯旋门",
+"Caodong":"草东",
+"centre":"市中心",
+"champs-sur-marnes":"田野马恩河",
+"chatelet":"夏特雷",
+"Eiffel_Tower":"埃菲尔铁塔",
+"ens":"巴黎高师",
+"Hotel_de_Ville":"市政厅",
+"Lib_de_paris":"巴黎图书馆",
+"Musee_Orsay":"奥赛博物馆",
+"Notre_dame":"巴黎圣母院",
+"Pere_lachaise":"拉夫雪兹神父墓地",
+"Sacre_coeur":"圣心大教堂",
+"Seine":"塞纳河",
+"Tullerie":"杜乐丽公园",
+"Sweden":"瑞典",
+"Goteborg":"哥德堡",
+"Stok":"斯德哥尔摩",
+"Centre":"市中心",
+"photo_museum":"照片博物馆",
+"Subway":"地铁"
+}
+
 def create_menu_item(path, name):
     """ 根据给定的路径和名称创建一个HTML菜单项 """
     p = "/".join(path.split("\\")[2:])
@@ -29,6 +66,7 @@ def build_html_menu(root_folder):
         indent = '  ' * (level + 1)
         path_parts = root.split(os.sep)
         name = path_parts[-1]  # 文件夹名称
+        name = LOCATION_MAPPING[name]
         menu_item = create_menu_item(root, name)
 
         # 检查是否需要关闭之前的菜单项

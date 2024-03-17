@@ -3,58 +3,58 @@
     <li><a href="/index.html">首页</a></li>
     <li><a href="/My_Gallery/photo.html">国家</a>
 <ul class="second-level-menu">
-     <li><a href="/My_Gallery/Danmark/photo.html">Danmark</a>
+     <li><a href="/My_Gallery/Danmark/photo.html">丹麦</a>
       <ul class="third-level-menu">
-       <li><a href="/My_Gallery/Danmark/Kobenhaven/photo.html">Kobenhaven</a>
+       <li><a href="/My_Gallery/Danmark/Kobenhaven/photo.html">哥本哈根</a>
         <ul class="fourth-level-menu">
-         <li><a href="/My_Gallery/Danmark/Kobenhaven/Centre/photo.html">Centre</a></li>
-        <li><a href="/My_Gallery/Danmark/Kobenhaven/Church/photo.html">Church</a></li>
-        <li><a href="/My_Gallery/Danmark/Kobenhaven/Church_organ/photo.html">Church_organ</a></li>
-        <li><a href="/My_Gallery/Danmark/Kobenhaven/Design_Museum/photo.html">Design_Museum</a></li>
-        <li><a href="/My_Gallery/Danmark/Kobenhaven/Louisanna/photo.html">Louisanna</a></li>
-        <li><a href="/My_Gallery/Danmark/Kobenhaven/New_Museum/photo.html">New_Museum</a></li>
-        <li><a href="/My_Gallery/Danmark/Kobenhaven/New_Quai/photo.html">New_Quai</a></li>
-        <li><a href="/My_Gallery/Danmark/Kobenhaven/Sea/photo.html">Sea</a></li>
+         <li><a href="/My_Gallery/Danmark/Kobenhaven/Centre/photo.html">市中心</a></li>
+        <li><a href="/My_Gallery/Danmark/Kobenhaven/Church/photo.html">教堂</a></li>
+        <li><a href="/My_Gallery/Danmark/Kobenhaven/Church_organ/photo.html">风琴教堂</a></li>
+        <li><a href="/My_Gallery/Danmark/Kobenhaven/Design_Museum/photo.html">设计博物馆</a></li>
+        <li><a href="/My_Gallery/Danmark/Kobenhaven/Louisanna/photo.html">路易斯安娜博物馆</a></li>
+        <li><a href="/My_Gallery/Danmark/Kobenhaven/New_Museum/photo.html">新艺术博物馆</a></li>
+        <li><a href="/My_Gallery/Danmark/Kobenhaven/New_Quai/photo.html">新港</a></li>
+        <li><a href="/My_Gallery/Danmark/Kobenhaven/Sea/photo.html">海边</a></li>
       </ul>
     </li>
     </ul>
   </li>
-    <li><a href="/My_Gallery/France/photo.html">France</a>
+    <li><a href="/My_Gallery/France/photo.html">法国</a>
       <ul class="third-level-menu">
-       <li><a href="/My_Gallery/France/Dijon/photo.html">Dijon</a></li>
-      <li><a href="/My_Gallery/France/Dunkerque/photo.html">Dunkerque</a>
+       <li><a href="/My_Gallery/France/Dijon/photo.html">第戎</a></li>
+      <li><a href="/My_Gallery/France/Dunkerque/photo.html">敦刻尔克</a>
       </li>
-      <li><a href="/My_Gallery/France/Paris/photo.html">Paris</a>
+      <li><a href="/My_Gallery/France/Paris/photo.html">巴黎</a>
       
         <ul class="fourth-level-menu">
-         <li><a href="/My_Gallery/France/Paris/Arc/photo.html">Arc</a></li>
-        <li><a href="/My_Gallery/France/Paris/Caodong/photo.html">Caodong</a></li>
-        <li><a href="/My_Gallery/France/Paris/centre/photo.html">centre</a></li>
-        <li><a href="/My_Gallery/France/Paris/champs-sur-marnes/photo.html">champs-sur-marnes</a></li>
-        <li><a href="/My_Gallery/France/Paris/chatelet/photo.html">chatelet</a></li>
-        <li><a href="/My_Gallery/France/Paris/Eiffel_Tower/photo.html">Eiffel_Tower</a></li>
-        <li><a href="/My_Gallery/France/Paris/ens/photo.html">ens</a></li>
-        <li><a href="/My_Gallery/France/Paris/Hotel_de_Ville/photo.html">Hotel_de_Ville</a></li>
-        <li><a href="/My_Gallery/France/Paris/Lib_de_paris/photo.html">Lib_de_paris</a></li>
-        <li><a href="/My_Gallery/France/Paris/Musee_Orsay/photo.html">Musee_Orsay</a></li>
-        <li><a href="/My_Gallery/France/Paris/Notre_dame/photo.html">Notre_dame</a></li>
-        <li><a href="/My_Gallery/France/Paris/Pere_lachaise/photo.html">Pere_lachaise</a></li>
-        <li><a href="/My_Gallery/France/Paris/Sacre_coeur/photo.html">Sacre_coeur</a></li>
-        <li><a href="/My_Gallery/France/Paris/Seine/photo.html">Seine</a></li>
-        <li><a href="/My_Gallery/France/Paris/Tullerie/photo.html">Tullerie</a></li>
+         <li><a href="/My_Gallery/France/Paris/Arc/photo.html">凯旋门</a></li>
+        <li><a href="/My_Gallery/France/Paris/Caodong/photo.html">草东</a></li>
+        <li><a href="/My_Gallery/France/Paris/centre/photo.html">市中心</a></li>
+        <li><a href="/My_Gallery/France/Paris/champs-sur-marnes/photo.html">田野马恩河</a></li>
+        <li><a href="/My_Gallery/France/Paris/chatelet/photo.html">夏特雷</a></li>
+        <li><a href="/My_Gallery/France/Paris/Eiffel_Tower/photo.html">埃菲尔铁塔</a></li>
+        <li><a href="/My_Gallery/France/Paris/ens/photo.html">巴黎高师</a></li>
+        <li><a href="/My_Gallery/France/Paris/Hotel_de_Ville/photo.html">市政厅</a></li>
+        <li><a href="/My_Gallery/France/Paris/Lib_de_paris/photo.html">巴黎图书馆</a></li>
+        <li><a href="/My_Gallery/France/Paris/Musee_Orsay/photo.html">奥赛博物馆</a></li>
+        <li><a href="/My_Gallery/France/Paris/Notre_dame/photo.html">巴黎圣母院</a></li>
+        <li><a href="/My_Gallery/France/Paris/Pere_lachaise/photo.html">拉夫雪兹神父墓地</a></li>
+        <li><a href="/My_Gallery/France/Paris/Sacre_coeur/photo.html">圣心大教堂</a></li>
+        <li><a href="/My_Gallery/France/Paris/Seine/photo.html">塞纳河</a></li>
+        <li><a href="/My_Gallery/France/Paris/Tullerie/photo.html">杜乐丽公园</a></li>
       </ul>
     </li>
     </ul>
   </li>
-    <li><a href="/My_Gallery/Sweden/photo.html">Sweden</a>
+    <li><a href="/My_Gallery/Sweden/photo.html">瑞典</a>
       <ul class="third-level-menu">
-       <li><a href="/My_Gallery/Sweden/Goteborg/photo.html">Goteborg</a></li>
-      <li><a href="/My_Gallery/Sweden/Stok/photo.html">Stok</a>
+       <li><a href="/My_Gallery/Sweden/Goteborg/photo.html">哥德堡</a></li>
+      <li><a href="/My_Gallery/Sweden/Stok/photo.html">斯德哥尔摩</a>
       
         <ul class="fourth-level-menu">
-         <li><a href="/My_Gallery/Sweden/Stok/Centre/photo.html">Centre</a></li>
-        <li><a href="/My_Gallery/Sweden/Stok/photo_museum/photo.html">photo_museum</a></li>
-        <li><a href="/My_Gallery/Sweden/Stok/Subway/photo.html">Subway</a></li>
+         <li><a href="/My_Gallery/Sweden/Stok/Centre/photo.html">市中心</a></li>
+        <li><a href="/My_Gallery/Sweden/Stok/photo_museum/photo.html">照片博物馆</a></li>
+        <li><a href="/My_Gallery/Sweden/Stok/Subway/photo.html">地铁</a></li>
       </ul>
     </li>
     </ul>
