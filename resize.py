@@ -38,6 +38,9 @@ for file_name in os.listdir(input_folder):
         output_file_path = os.path.join(output_folder, file_name)
         
         # 保存压缩后的图片
-        compressed_img.save(output_file_path, "JPEG", exif=img.info.get('exif'))
+        if img.info.get('exif'):
+            compressed_img.save(output_file_path, "JPEG", exif=img.info.get('exif'))
+        else:
+            compressed_img.save(output_file_path, "JPEG")
 
 print("所有图片压缩完成，并保存到了 '{}' 文件夹中。".format(output_folder))

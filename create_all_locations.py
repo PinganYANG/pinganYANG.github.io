@@ -73,19 +73,33 @@ def create_json_files(folder_path,photos):
             location = folder_path.split("\\")[-1]
         filenames = file.split('\\')
         # 创建包含文件信息的字典
-        photo_info = {
-            'filename': filenames[-1],
-            'title': filenames[-1],
-            'CameraModel': f'{exif_metadata["Model"]}\n',
-            'Aperture': f'f/{round(2 ** (exif_metadata["ApertureValue"] / 2), 1) }\n',
-            'ExposureTime': f'{exif_metadata["ExposureTime"].numerator}/{exif_metadata["ExposureTime"].denominator}\n',
-            'ISO':f'{exif_metadata["ISOSpeedRatings"]}\n',
-            'ExposureBiasValue': f'{exif_metadata["ExposureBiasValue"]}\n',
-            'FocalLength': f'{exif_metadata["FocalLength"]}\n',
-            'Location': f'{location}',
-            "Link": f"https://www.google.com/maps?q={lat},{lon}"
-        }
-        
+        if exif_metadata != {}:
+
+            photo_info = {
+                'filename': filenames[-1],
+                'title': filenames[-1],
+                'CameraModel': f'{exif_metadata["Model"]}\n',
+                'Aperture': f'f/{round(2 ** (exif_metadata["ApertureValue"] / 2), 1) }\n',
+                'ExposureTime': f'{exif_metadata["ExposureTime"].numerator}/{exif_metadata["ExposureTime"].denominator}\n',
+                'ISO':f'{exif_metadata["ISOSpeedRatings"]}\n',
+                'ExposureBiasValue': f'{exif_metadata["ExposureBiasValue"]}\n',
+                'FocalLength': f'{exif_metadata["FocalLength"]}\n',
+                'Location': f'{location}',
+                "Link": f"https://www.google.com/maps?q={lat},{lon}"
+            }
+        else:
+            photo_info = {
+                'filename':None,
+                'title':None,
+                'CameraModel':None,
+                'Aperture':None,
+                'ExposureTime':None,
+                'ISO':None,
+                'ExposureBiasValue':None,
+                'FocalLength':None,
+                'Location':None,
+                "Link":None
+            }
         # 将图片信息添加到列表中
         photo_info_list.append(photo_info)
 

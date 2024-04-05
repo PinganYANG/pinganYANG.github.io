@@ -35,7 +35,10 @@ LOCATION_MAPPING = {
 "Stok":"斯德哥尔摩",
 "Centre":"市中心",
 "photo_museum":"照片博物馆",
-"Subway":"地铁"
+"Subway":"地铁",
+"Bordeaux":'波尔多',
+"Parc_floral":'鲜花公园',
+"Lille":'里尔'
 }
 
 def create_menu_item(path, name):

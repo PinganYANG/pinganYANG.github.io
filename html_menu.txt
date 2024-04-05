@@ -21,8 +21,12 @@
   </li>
     <li><a href="/My_Gallery/France/photo.html">法国</a>
       <ul class="third-level-menu">
-       <li><a href="/My_Gallery/France/Dijon/photo.html">第戎</a></li>
+       <li><a href="/My_Gallery/France/Bordeaux/photo.html">波尔多</a></li>
+      <li><a href="/My_Gallery/France/Dijon/photo.html">第戎</a>
+      </li>
       <li><a href="/My_Gallery/France/Dunkerque/photo.html">敦刻尔克</a>
+      </li>
+      <li><a href="/My_Gallery/France/Lille/photo.html">里尔</a>
       </li>
       <li><a href="/My_Gallery/France/Paris/photo.html">巴黎</a>
       
@@ -38,6 +42,7 @@
         <li><a href="/My_Gallery/France/Paris/Lib_de_paris/photo.html">巴黎图书馆</a></li>
         <li><a href="/My_Gallery/France/Paris/Musee_Orsay/photo.html">奥赛博物馆</a></li>
         <li><a href="/My_Gallery/France/Paris/Notre_dame/photo.html">巴黎圣母院</a></li>
+        <li><a href="/My_Gallery/France/Paris/Parc_floral/photo.html">鲜花公园</a></li>
         <li><a href="/My_Gallery/France/Paris/Pere_lachaise/photo.html">拉夫雪兹神父墓地</a></li>
         <li><a href="/My_Gallery/France/Paris/Sacre_coeur/photo.html">圣心大教堂</a></li>
         <li><a href="/My_Gallery/France/Paris/Seine/photo.html">塞纳河</a></li>
