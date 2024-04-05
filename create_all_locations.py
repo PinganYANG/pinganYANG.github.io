@@ -89,16 +89,16 @@ def create_json_files(folder_path,photos):
             }
         else:
             photo_info = {
-                'filename':None,
-                'title':None,
-                'CameraModel':None,
-                'Aperture':None,
-                'ExposureTime':None,
-                'ISO':None,
-                'ExposureBiasValue':None,
-                'FocalLength':None,
-                'Location':None,
-                "Link":None
+                'filename': filenames[-1],
+                'title': filenames[-1],
+                "CameraModel": "NIKON Z 5\n",
+                "Aperture": "f/4.8\n",
+                "ExposureTime": "1/10\n",
+                "ISO": "1250\n",
+                "ExposureBiasValue": "0.0\n",
+                "FocalLength": "33.0\n",
+                "Location": "Sweden",
+                "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
             }
         # 将图片信息添加到列表中
         photo_info_list.append(photo_info)

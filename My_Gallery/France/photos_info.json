@@ -1,15 +1,15 @@
 [
     {
-        "filename": null,
-        "title": null,
-        "CameraModel": null,
-        "Aperture": null,
-        "ExposureTime": null,
-        "ISO": null,
-        "ExposureBiasValue": null,
-        "FocalLength": null,
-        "Location": null,
-        "Link": null
+        "filename": "DSC_000009.jpg",
+        "title": "DSC_000009.jpg",
+        "CameraModel": "NIKON Z 5\n",
+        "Aperture": "f/4.8\n",
+        "ExposureTime": "1/10\n",
+        "ISO": "1250\n",
+        "ExposureBiasValue": "0.0\n",
+        "FocalLength": "33.0\n",
+        "Location": "Sweden",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
     },
     {
         "filename": "DSC_5220.jpg",
