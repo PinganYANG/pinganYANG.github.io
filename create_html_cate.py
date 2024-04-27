@@ -38,7 +38,12 @@ LOCATION_MAPPING = {
 "Subway":"地铁",
 "Bordeaux":'波尔多',
 "Parc_floral":'鲜花公园',
-"Lille":'里尔'
+"Lille":'里尔',
+"Italy":"意大利",
+"Naples":"那不勒斯",
+"Amalfi_coach":"阿马尔菲海岸",
+"Pompee":"庞贝古城",
+"naples_city":"那不勒斯城区"
 }
 
 def create_menu_item(path, name):

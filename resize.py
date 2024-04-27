@@ -24,7 +24,10 @@ for file_name in os.listdir(input_folder):
             exif = None
 
         # 计算新的尺寸（宽度和高度减半）
-        new_size = (img.width // 3, img.height // 3)
+        if img.width <= 1000 or img.width <= 1000:
+            new_size = (img.width, img.height)
+        else:
+            new_size = (img.width // 3, img.height // 3)
         
         # 调整图片到新的尺寸
         compressed_img = img.resize(new_size, Image.Resampling.LANCZOS)
