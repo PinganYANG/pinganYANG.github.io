@@ -4,6 +4,8 @@ import os
 # 要压缩图片的文件夹路径
 input_folder = 'D:/Lr/up_to_web'
 
+day_of_pics = #"2024_04_13"
+
 # 压缩后的图片将保存的文件夹路径
 output_folder = 'compressed/'
 
@@ -38,11 +40,11 @@ for file_name in os.listdir(input_folder):
             compressed_img.info['exif'] = exif
 
         # 构建输出文件路径
-        output_file_path = os.path.join(output_folder, file_name)
+        output_file_path = os.path.join(output_folder, day_of_pics+'_'+file_name)
         
         # 保存压缩后的图片
         if img.info.get('exif'):
-            compressed_img.save(output_file_path, "JPEG", exif=img.info.get('exif'))
+            compressed_img.save(output_file_path,"JPEG", exif=img.info.get('exif'))
         else:
             compressed_img.save(output_file_path, "JPEG")
 

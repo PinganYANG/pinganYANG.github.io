@@ -43,7 +43,8 @@ LOCATION_MAPPING = {
 "Naples":"那不勒斯",
 "Amalfi_coach":"阿马尔菲海岸",
 "Pompee":"庞贝古城",
-"naples_city":"那不勒斯城区"
+"naples_city":"那不勒斯城区",
+"Luxembourg":"卢森堡"
 }
 
 def create_menu_item(path, name):
