@@ -4,7 +4,7 @@ import os
 # 要压缩图片的文件夹路径
 input_folder = 'D:/Lr/up_to_web'
 
-day_of_pics = #"2024_04_13"
+day_of_pics = "2024_05_01"
 
 # 压缩后的图片将保存的文件夹路径
 output_folder = 'compressed/'
