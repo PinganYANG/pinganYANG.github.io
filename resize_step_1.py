@@ -5,9 +5,11 @@ import os
 input_folder = 'D:/Lr/up_to_web'
 
 day_of_pics = "2024_05_01"
+ 
 
 # 压缩后的图片将保存的文件夹路径
 output_folder = 'compressed/'
+
 
 # 创建输出文件夹，如果它不存在的话
 if not os.path.exists(output_folder):
@@ -45,7 +47,9 @@ for file_name in os.listdir(input_folder):
         # 保存压缩后的图片
         if img.info.get('exif'):
             compressed_img.save(output_file_path,"JPEG", exif=img.info.get('exif'))
+
         else:
             compressed_img.save(output_file_path, "JPEG")
+
 
 print("所有图片压缩完成，并保存到了 '{}' 文件夹中。".format(output_folder))
