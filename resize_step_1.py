@@ -1,10 +1,11 @@
 from PIL import Image, ExifTags
 import os
+import tqdm
 
 # 要压缩图片的文件夹路径
 input_folder = 'D:/Lr/up_to_web'
 
-day_of_pics = "2024_05_01"
+day_of_pics = "2024_05_07"
  
 
 # 压缩后的图片将保存的文件夹路径
@@ -16,7 +17,7 @@ if not os.path.exists(output_folder):
     os.makedirs(output_folder)
 
 # 遍历文件夹中的所有文件
-for file_name in os.listdir(input_folder):
+for file_name in tqdm(os.listdir(input_folder)):
     if file_name.lower().endswith('.jpg'):  # 检查文件扩展名
         file_path = os.path.join(input_folder, file_name)
         img = Image.open(file_path)

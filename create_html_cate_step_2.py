@@ -46,7 +46,9 @@ LOCATION_MAPPING = {
 "naples_city":"那不勒斯城区",
 "Luxembourg":"卢森堡",
 "Croatia":"克罗地亚",
-"Zagreb":"萨格勒布"
+"Zagreb":"萨格勒布",
+'BosniaAndHerzegovina':'波黑',
+'Sarajevo':'萨拉热窝'
 }
 
 def create_menu_item(path, name):
