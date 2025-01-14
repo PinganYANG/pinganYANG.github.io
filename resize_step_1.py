@@ -1,12 +1,11 @@
 from PIL import Image, ExifTags
 import os
-import tqdm
+from tqdm import tqdm
 
 # 要压缩图片的文件夹路径
 input_folder = 'D:/Lr/up_to_web'
 
-day_of_pics = "2024_05_07"
- 
+day_of_pics = "2024_05_06"
 
 # 压缩后的图片将保存的文件夹路径
 output_folder = 'compressed/'
