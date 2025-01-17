@@ -29,6 +29,18 @@
     </li>
     </ul>
   </li>
+    <li><a href="/My_Gallery/Egypt/photo.html">埃及</a>
+      <ul class="third-level-menu">
+       <li><a href="/My_Gallery/Egypt/Alexandria/photo.html">亚历山大</a></li>
+      <li><a href="/My_Gallery/Egypt/Aswan/photo.html">阿斯旺</a>
+      </li>
+      <li><a href="/My_Gallery/Egypt/Cairo/photo.html">开罗</a>
+      </li>
+      <li><a href="/My_Gallery/Egypt/Hurghada/photo.html">赫尔格达</a>
+      </li>
+      <li><a href="/My_Gallery/Egypt/Luxor/photo.html">卢克索</a>
+          </ul>
+  </li>
     <li><a href="/My_Gallery/France/photo.html">法国</a>
       <ul class="third-level-menu">
        <li><a href="/My_Gallery/France/Bordeaux/photo.html">波尔多</a></li>

@@ -170,6 +170,7 @@ def create_photo_htmls(photos,output_folder,level):
     output_html = output_folder+"\\"+"photo.html"
     folders = '/'.join(output_folder.split('\\'))
     # 创建整个HTML页面的内容
+    
     first = photos[0].split("\\")[-1]
     location = output_folder.split('\\')[-1]
     with open("html_menu.txt", 'r', encoding='utf-8') as file:

@@ -49,7 +49,13 @@ LOCATION_MAPPING = {
 "Zagreb":"萨格勒布",
 'BosniaAndHerzegovina':'波黑',
 'Sarajevo':'萨拉热窝',
-'Sarajevo_in_melancholy':'绿调萨拉热窝'
+'Sarajevo_in_melancholy':'绿调萨拉热窝',
+'Egypt':'埃及',
+'Alexandria':'亚历山大',
+'Luxor':'卢克索',
+'Cairo':'开罗',
+'Aswan':'阿斯旺',
+'Hurghada':'赫尔格达'
 }
 
 def create_menu_item(path, name):
