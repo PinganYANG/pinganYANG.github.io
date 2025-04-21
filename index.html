@@ -11,6 +11,61 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="stylesheet" type="text/css" href="content.css">
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul.nav li a,
+    nav ul.nav li a:focus,
+    nav ul.nav li a:active {
+      display: block;
+      padding: 14px 20px;
+      color: #fff;
+      text-decoration: none;
+      background: #333;
+      outline: none; /* 确保移除默认轮廓 */
+      border-left: 3px solid transparent; /* 预留空间防止布局偏移 */
+    }
+
+    nav ul.nav li:hover > a {
+      background: #444;
+      border-left: 3px solid #1e90ff; /* 添加自定义悬停指示器 */
+    }
+
+    /* 下拉菜单内容 */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #f9f9f9;
+      /* min-width: 160px; */
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 99;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* 鼠标悬停时显示下拉菜单 */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+
 </head>
 
 
@@ -24,38 +79,34 @@
 </div>
 
 
-
 <nav>
   <ul>
-      <li><a href="#home">首页</a></li>
-      <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn">照片</a>
-          <div class="dropdown-content">
-              <a href="/to_upload_on_web/photo.html">gallery</a>
-              <a href="#link2">子链接2</a>
-              <!-- 更多子链接 -->
-          </div>
-      </li>
-      <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">课程笔记</a>
-        <div class="dropdown-content">
-            <a href="#link1">子链接1</a>
-            <a href="#link2">子链接2</a>
-            <!-- 更多子链接 -->
-        </div>
-      </li>
-      <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Langue</a>
-        <div class="dropdown-content">
-            <a href="index_cn.html">中文</a>
-            <a href="#link2">English</a>
-            <!-- 更多子链接 -->
-        </div>
-      </li>
-
-      <!-- 更多选项 -->
+    <li><a href="#home">首页</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0)">照片</a>
+      <div class="dropdown-content">
+        <a href="/to_upload_on_web/photo.html">gallery</a>
+        <a href="#">子链接2</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)">课程笔记</a>
+      <div class="dropdown-content">
+        <a href="#">子链接1</a>
+        <a href="#">子链接2</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)">Langue</a>
+      <div class="dropdown-content">
+        <a href="index_cn.html">中文</a>
+        <a href="#">English</a>
+      </div>
+    </li>
   </ul>
 </nav>
+
+
 
 <body>
   <!-- 页面内容 -->
