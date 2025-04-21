@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <title>Pingan YANG</title>
   
@@ -7,39 +7,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="content.css">
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 修正后的导航栏样式 */
+    nav ul {
+      list-style: none;
+      background: #333;
+      display: flex;
+      overflow: visible;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 14px 20px;
+      color: #fff;
+      text-decoration: none;
+      background: #333;
+      /* 彻底清除轮廓线 */
+      outline: none !important;
+      box-shadow: none !important;
+      /* 处理边框偏移问题 */
+      border-left: 3px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    /* 统一所有交互状态 */
+    nav ul li a:hover,
+    nav ul li a:focus,
+    nav ul li a:active {
+      background: #444;
+      /* 移除所有边框样式 */
+      border-left: 3px solid transparent !important;
+    }
+
+    /* 下拉菜单修正 */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #f9f9f9;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      background: #f9f9f9;
+      border-left: none !important; /* 确保下拉菜单无边框 */
+    }
+
+    .dropdown-content a:hover {
+      background: #f1f1f1;
+    }
+</style>
 </head>
+
+
+<!-- <div id="sidebar">
+  <ul>
+    <li><a href="#main-title">主标题</a></li>
+    <li><a href="#sub-title">次级标题</a></li>
+    <li><a href="#section3">第三级标题</a></li>
+  </ul>
+</div> -->
+
+
 <nav>
   <ul>
-      <li><a href="#home">首页</a></li>
-      <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn">选项1</a>
-          <div class="dropdown-content">
-              <a href="#link1">子链接1</a>
-              <a href="#link2">子链接2</a>
-              <!-- 更多子链接 -->
-          </div>
-      </li>
-      <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">笔记</a>
-        <div class="dropdown-content">
-            <a href="凸优化.html">凸优化</a>
-            <a href="#link2">子链接2</a>
-            <!-- 更多子链接 -->
-        </div>
-      </li>
-      <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">语言</a>
-        <div class="dropdown-content">
-            <a href="index.html">Francais</a>
-            <a href="#link2">English</a>
-            <!-- 更多子链接 -->
-        </div>
-      </li>
-
-      <!-- 更多选项 -->
+    <li><a href="#home">首页</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0)">照片</a>
+      <div class="dropdown-content">
+        <a href="/My_Gallery/photo.html">gallery</a>
+        <a href="#">子链接2</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)">课程笔记</a>
+      <div class="dropdown-content">
+        <a href="凸优化.html">凸优化</a>
+        <a href="高效能人士的七个习惯.html">高效能人士的七个习惯</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)">Langue</a>
+      <div class="dropdown-content">
+        <a href="index_cn.html">中文</a>
+        <a href="#">English</a>
+      </div>
+    </li>
   </ul>
 </nav>
+
 
 <body>
   <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
