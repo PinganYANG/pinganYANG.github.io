@@ -19,64 +19,78 @@
       padding: 0;
     }
 
-    nav ul.nav li a,
-    nav ul.nav li a:focus,
-    nav ul.nav li a:active {
+    /* 修正后的导航栏样式 */
+    nav ul {
+      list-style: none;
+      background: #333;
+      display: flex;
+      overflow: visible;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
       display: block;
       padding: 14px 20px;
       color: #fff;
       text-decoration: none;
       background: #333;
-      outline: none; /* 确保移除默认轮廓 */
-      border-left: 3px solid transparent; /* 预留空间防止布局偏移 */
+      /* 彻底清除轮廓线 */
+      outline: none !important;
+      box-shadow: none !important;
+      /* 处理边框偏移问题 */
+      border-left: 3px solid transparent;
+      transition: all 0.3s ease;
     }
 
-    nav ul.nav li:hover > a {
+    /* 统一所有交互状态 */
+    nav ul li a:hover,
+    nav ul li a:focus,
+    nav ul li a:active {
       background: #444;
-      border-left: 3px solid #1e90ff; /* 添加自定义悬停指示器 */
+      /* 移除所有边框样式 */
+      border-left: 3px solid transparent !important;
     }
 
-    /* 下拉菜单内容 */
+    /* 下拉菜单修正 */
     .dropdown-content {
       display: none;
       position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
-      background-color: #f9f9f9;
-      /* min-width: 160px; */
+      background: #f9f9f9;
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      z-index: 99;
+      z-index: 999;
     }
 
-    .dropdown-content a {
-      color: black;
-      padding: 10px 14px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #f1f1f1;
-    }
-
-    /* 鼠标悬停时显示下拉菜单 */
     .dropdown:hover .dropdown-content {
       display: block;
     }
-  </style>
 
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      background: #f9f9f9;
+      border-left: none !important; /* 确保下拉菜单无边框 */
+    }
+
+    .dropdown-content a:hover {
+      background: #f1f1f1;
+    }
+</style>
 </head>
 
 
-<div id="sidebar">
+<!-- <div id="sidebar">
   <ul>
     <li><a href="#main-title">主标题</a></li>
     <li><a href="#sub-title">次级标题</a></li>
     <li><a href="#section3">第三级标题</a></li>
-    <!-- 更多目录项 -->
   </ul>
-</div>
+</div> -->
 
 
 <nav>
