@@ -1,12 +1,13 @@
 from bs4 import BeautifulSoup
 from deep_translator import GoogleTranslator
 import re
-
+import time
 
 def translate_text(text):
     translator = GoogleTranslator(source="zh-CN", target="en")
     translation = translator.translate(text)
     print(translation)
+    time.sleep(1)
     return re.sub(r"\W+", "", translation)
 
 
