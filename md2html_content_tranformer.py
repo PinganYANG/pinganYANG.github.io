@@ -15,7 +15,8 @@ def extract_titles(html_file):
         content = file.read()
 
     soup = BeautifulSoup(content, "lxml")
-    sidebar_html = '<div id="sidebar">\n  <h2>目录</h2>\n  <ul>\n'
+    sidebar_html = '<link href="content_note.css" rel="stylesheet" type="text/css"/>\n</head>\n<body>\n<button id="sidebar-toggle"></button>'
+    sidebar_html += '<div id="sidebar">\n  <h2>目录</h2>\n  <ul>\n'
     last_level = 1
 
     for header in soup.find_all(["h1", "h2", "h3", "h4", "h5", "h6"]):
@@ -36,7 +37,7 @@ def extract_titles(html_file):
         )
         last_level = level
 
-    sidebar_html += " " * (4 * last_level) + "</ul>\n</div>"
+    sidebar_html += " " * (4 * last_level) + "</ul>\n</div>"+'\n<script src="sidebar.js"></script>'
 
     # 将更新后的HTML内容写回文件
     with open(html_file, "w", encoding="utf-8") as file:
