@@ -48,5 +48,5 @@ def extract_titles(html_file):
 
 
 # 使用示例
-html_directory = extract_titles("麦肯锡高效工作法.html")
+html_directory = extract_titles("卓越供应链计划.html")
 print(html_directory)
