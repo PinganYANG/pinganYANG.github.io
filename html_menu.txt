@@ -85,7 +85,11 @@
     </ul>
   </li>
     <li><a href="/My_Gallery/Luxembourg/photo.html">卢森堡</a>
-          <li><a href="/My_Gallery/Sweden/photo.html">瑞典</a>
+          <li><a href="/My_Gallery/Servia/photo.html">塞尔维亚</a>
+      <ul class="third-level-menu">
+       <li><a href="/My_Gallery/Servia/Belgrad/photo.html">贝尔格莱德</a>    </ul>
+  </li>
+    <li><a href="/My_Gallery/Sweden/photo.html">瑞典</a>
       <ul class="third-level-menu">
        <li><a href="/My_Gallery/Sweden/Goteborg/photo.html">哥德堡</a></li>
       <li><a href="/My_Gallery/Sweden/Stok/photo.html">斯德哥尔摩</a>

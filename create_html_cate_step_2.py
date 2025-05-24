@@ -55,7 +55,10 @@ LOCATION_MAPPING = {
 'Luxor':'卢克索',
 'Cairo':'开罗',
 'Aswan':'阿斯旺',
-'Hurghada':'赫尔格达'
+'Hurghada':'赫尔格达',
+'Servia':'塞尔维亚',
+'Belgrad':'贝尔格莱德',
+
 }
 
 def create_menu_item(path, name):
@@ -122,7 +125,7 @@ def build_html_menu(root_folder):
 
 
 
-root_folder = "D:\\Lr\\My_Gallery"
+root_folder = "D:\\LR\\My_Gallery"
 html_menu = build_html_menu(root_folder)
 # 将HTML内容写入到index.html文件
 with open("html_menu.txt", 'w', encoding='utf-8') as file:
