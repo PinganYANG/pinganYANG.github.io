@@ -5,7 +5,7 @@ from tqdm import tqdm
 # 要压缩图片的文件夹路径
 input_folder = 'D:/LR/upload'
 
-day_of_pics = "2024_05_0708"
+day_of_pics = "2024_05_0910"
 
 # 压缩后的图片将保存的文件夹路径
 output_folder = 'compressed/'

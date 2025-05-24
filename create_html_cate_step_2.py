@@ -58,7 +58,8 @@ LOCATION_MAPPING = {
 'Hurghada':'赫尔格达',
 'Servia':'塞尔维亚',
 'Belgrad':'贝尔格莱德',
-
+'Hungry':'匈牙利',
+'Budapest':'布达佩斯',
 }
 
 def create_menu_item(path, name):
