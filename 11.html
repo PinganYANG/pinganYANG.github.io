@@ -179,6 +179,7 @@
 
     #hand.hand-open {
       cursor: default;
+      z-index: 1;
     }
 
     .hand-blur-anim {
@@ -198,6 +199,27 @@
 
       color: rgba(255, 255, 255, 0.8);
       font-size: 16px;
+      /* 治愈系字体可以稍微大一点点 */
+      letter-spacing: 1px;
+      /* 增加字间距更有呼吸感 */
+
+      pointer-events: none;
+      z-index: 100;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      transition: opacity 0.3s;
+    }
+
+    #tip-1 {
+      position: absolute;
+      bottom: 75%;
+      width: 100%;
+      text-align: center;
+
+      /* --- 关键修改：应用字体 --- */
+      font-family: "LXGW WenKai Screen", sans-serif;
+
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 10px;
       /* 治愈系字体可以稍微大一点点 */
       letter-spacing: 1px;
       /* 增加字间距更有呼吸感 */
@@ -242,7 +264,9 @@
     <div id="firework-trail"></div>
     <div id="firework-explosion"></div>
 
-    <div id="tip">垂直向上拖动手掌<br>给自己放一个烟花吧</div>
+    <div id="tip">你如果，缓缓把手举起来，<br>举到顶，<br>再突然张开五指，<br>那恭喜你，<br>你刚刚给自己放了一个烟花。</div>
+    <div id="tip-1"><br>《一次最多放两个》 杨一午</div>
+
     <button id="reset-btn">再放一个</button>
 
     <div id="character-container">
@@ -283,9 +307,9 @@
       boneLengths: { upper: 150, fore: 170 },
       anchors: {
         upper: { pivot: { x: 15, y: 20 }, link: { x: -20, y: 160 } },
-        fore: { pivot: { x: 0, y: 0 }, link: { x: 0, y: 185 } },
+        fore: { pivot: { x: 0, y: 20 }, link: { x: 0, y: 185 } },
         hand: { pivot: { x: -10, y: 0 } },
-        handOpen: { pivot: { x: 10, y: 0 } }
+        handOpen: { pivot: { x: 8, y: 5 } }
       },
       torsoAnchor: { x: 140, y: 350 }
     };
@@ -314,6 +338,8 @@
     const forearm = document.getElementById('forearm');
     const hand = document.getElementById('hand');
     const tip = document.getElementById('tip');
+    const tip_1 = document.getElementById('tip-1');
+
     const resetBtn = document.getElementById('reset-btn');
     // 获取新元素
     const fireworkTrail = document.getElementById('firework-trail');
@@ -354,7 +380,7 @@
       fireworkExplosion.style.display = 'none';
       fireworkExplosion.style.backgroundImage = ''; // 清除GIF以确保下次重新加载
 
-      resetBtn.style.display = 'none'; tip.style.opacity = 1;
+      resetBtn.style.display = 'none'; tip.style.opacity = 1; tip_1.style.opacity = 1;
       state.targetX = state.w / 2; state.targetY = state.h * 0.75;
       updateSystem();
     }
@@ -409,6 +435,8 @@
 
       // 3. UI 更新
       tip.style.opacity = 0;
+      tip_1.style.opacity = 0;
+
       // 延迟显示重置按钮，等待烟花放完
       setTimeout(() => { resetBtn.style.display = 'block'; }, SYS_CONFIG.firework.trailDuration + 500);
     }
