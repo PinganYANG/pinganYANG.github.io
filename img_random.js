@@ -4,7 +4,7 @@ const loading = document.getElementById('loading');
 // --- 配置参数 ---
 
 
-const IDEAL_COL_WIDTH = 300;
+const IDEAL_COL_WIDTH = 450;
 const BATCH_SIZE = 20;
 const MAX_HEIGHT_DIFF = 50;
 
