@@ -57,40 +57,83 @@ def find_location(lat, lon):
     geolocator = Nominatim(user_agent="geoapiExercises")
     location = geolocator.reverse((lat, lon), language='en',addressdetails=False)
     return location
+import os
+import json
+from PIL import Image  # 引入 Pillow 库用于读取图片尺寸
 
-def create_json_files(folder_path,photos):
+def create_json_files(folder_path, photos):
     photo_info_list = []
+    
     # 遍历照片文件夹中的文件
     for file in photos:
-        exif_metadata = get_exif_data(file)
-        lat, lon = get_gps_coordinates(exif_metadata)
+        # --- 新增部分：获取图片宽和高 ---
+        try:
+            # Image.open 是懒加载，只读取文件头获取尺寸，速度很快，不会加载整张图
+            with Image.open(file) as img:
+                width, height = img.size
+        except Exception as e:
+            print(f"Error reading image size for {file}: {e}")
+            width = 0
+            height = 0
+        # -----------------------------
+
+        exif_metadata = get_exif_data(file) # 假设你已经有了这个函数
+        lat, lon = get_gps_coordinates(exif_metadata) # 假设你已经有了这个函数
+        
+        # 默认坐标处理
         if lat is None and lon is None:
             lat = 48.8481
             lon = 2.3958766666666667
+            
+        # 路径处理 (处理 Windows 反斜杠)
         if len(folder_path.split("\\")) == 1:
             location = ""
         else:
             location = folder_path.split("\\")[-1]
+            
         filenames = file.split('\\')
+        filename = filenames[-1]
+
         # 创建包含文件信息的字典
         if exif_metadata != {}:
+            # 安全获取 EXIF 数据的辅助逻辑 (防止报错)
+            model = exif_metadata.get("Model", "Unknown Camera")
+            
+            # 光圈处理
+            try:
+                aperture_val = exif_metadata.get("ApertureValue", 0)
+                aperture = f'f/{round(2 ** (aperture_val / 2), 1)}'
+            except:
+                aperture = ""
+
+            # 快门处理
+            exp_time_raw = exif_metadata.get("ExposureTime", "")
+            if hasattr(exp_time_raw, 'numerator') and hasattr(exp_time_raw, 'denominator'):
+                exposure_time = f'{exp_time_raw.numerator}/{exp_time_raw.denominator}'
+            else:
+                exposure_time = str(exp_time_raw)
 
             photo_info = {
-                'filename': filenames[-1],
-                'title': filenames[-1],
-                'CameraModel': f'{exif_metadata["Model"]}\n',
-                'Aperture': f'f/{round(2 ** (exif_metadata["ApertureValue"] / 2), 1) }\n',
-                'ExposureTime': f'{exif_metadata["ExposureTime"].numerator}/{exif_metadata["ExposureTime"].denominator}\n',
-                'ISO':f'{exif_metadata["ISOSpeedRatings"]}\n',
-                'ExposureBiasValue': f'{exif_metadata["ExposureBiasValue"]}\n',
-                'FocalLength': f'{exif_metadata["FocalLength"]}\n',
+                'filename': filename,
+                'width': width,   # <--- 新增
+                'height': height, # <--- 新增
+                'title': filename,
+                'CameraModel': f'{model}\n',
+                'Aperture': f'{aperture}\n',
+                'ExposureTime': f'{exposure_time}\n',
+                'ISO': f'{exif_metadata.get("ISOSpeedRatings", "")}\n',
+                'ExposureBiasValue': f'{exif_metadata.get("ExposureBiasValue", "")}\n',
+                'FocalLength': f'{exif_metadata.get("FocalLength", "")}\n',
                 'Location': f'{location}',
                 "Link": f"https://www.google.com/maps?q={lat},{lon}"
             }
         else:
+            # 没有 EXIF 时的默认值
             photo_info = {
-                'filename': filenames[-1],
-                'title': filenames[-1],
+                'filename': filename,
+                'width': width,   # <--- 新增
+                'height': height, # <--- 新增
+                'title': filename,
                 "CameraModel": "NIKON Z 5\n",
                 "Aperture": "f/4.8\n",
                 "ExposureTime": "1/10\n",
@@ -100,14 +143,16 @@ def create_json_files(folder_path,photos):
                 "Location": "Sweden",
                 "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
             }
+            
         # 将图片信息添加到列表中
         photo_info_list.append(photo_info)
 
     # 将图片信息列表保存为JSON文件
-    json_filename = os.path.join(folder_path,'photos_info.json')
-    with open(json_filename, 'w') as json_file:
-        json.dump(photo_info_list, json_file, indent=4)
+    json_filename = os.path.join(folder_path, 'photos_info.json')
+    with open(json_filename, 'w', encoding='utf-8') as json_file: # 建议加上 encoding='utf-8'
+        json.dump(photo_info_list, json_file, indent=4, ensure_ascii=False) # ensure_ascii=False 防止中文乱码
 
+    print(f"JSON generated at: {json_filename}")
 
 import os
 

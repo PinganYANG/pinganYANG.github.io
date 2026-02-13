@@ -1,6 +1,8 @@
 [
     {
         "filename": "DSC_4326.jpg",
+        "width": 1650,
+        "height": 928,
         "title": "DSC_4326.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.0\n",
@@ -13,6 +15,8 @@
     },
     {
         "filename": "DSC_4328.jpg",
+        "width": 1189,
+        "height": 1781,
         "title": "DSC_4328.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
@@ -25,6 +29,8 @@
     },
     {
         "filename": "DSC_4331.jpg",
+        "width": 1222,
+        "height": 1629,
         "title": "DSC_4331.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
@@ -37,6 +43,8 @@
     },
     {
         "filename": "DSC_4332.jpg",
+        "width": 2005,
+        "height": 1128,
         "title": "DSC_4332.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
@@ -49,6 +57,8 @@
     },
     {
         "filename": "DSC_4338.jpg",
+        "width": 1068,
+        "height": 1600,
         "title": "DSC_4338.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
@@ -61,6 +71,8 @@
     },
     {
         "filename": "DSC_4369.jpg",
+        "width": 980,
+        "height": 1468,
         "title": "DSC_4369.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.0\n",
@@ -73,6 +85,8 @@
     },
     {
         "filename": "DSC_4398.jpg",
+        "width": 1839,
+        "height": 1034,
         "title": "DSC_4398.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.0\n",
@@ -85,6 +99,8 @@
     },
     {
         "filename": "DSC_4405.jpg",
+        "width": 1504,
+        "height": 846,
         "title": "DSC_4405.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4\n",
@@ -97,6 +113,8 @@
     },
     {
         "filename": "DSC_4407.jpg",
+        "width": 1338,
+        "height": 2005,
         "title": "DSC_4407.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.0\n",
@@ -109,6 +127,8 @@
     },
     {
         "filename": "DSC_4410.jpg",
+        "width": 1766,
+        "height": 993,
         "title": "DSC_4410.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.6\n",
@@ -121,6 +141,8 @@
     },
     {
         "filename": "DSC_4426.jpg",
+        "width": 1996,
+        "height": 1122,
         "title": "DSC_4426.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.0\n",
@@ -133,6 +155,8 @@
     },
     {
         "filename": "DSC_4445.jpg",
+        "width": 859,
+        "height": 1287,
         "title": "DSC_4445.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.0\n",
@@ -145,6 +169,8 @@
     },
     {
         "filename": "DSC_4459.jpg",
+        "width": 1074,
+        "height": 1609,
         "title": "DSC_4459.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
@@ -157,6 +183,8 @@
     },
     {
         "filename": "DSC_4463.jpg",
+        "width": 1972,
+        "height": 1109,
         "title": "DSC_4463.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.0\n",
@@ -169,6 +197,8 @@
     },
     {
         "filename": "DSC_4467.jpg",
+        "width": 633,
+        "height": 949,
         "title": "DSC_4467.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.0\n",
@@ -181,6 +211,8 @@
     },
     {
         "filename": "DSC_4469.jpg",
+        "width": 1956,
+        "height": 1100,
         "title": "DSC_4469.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.0\n",
@@ -193,6 +225,8 @@
     },
     {
         "filename": "DSC_4473.jpg",
+        "width": 1873,
+        "height": 1054,
         "title": "DSC_4473.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4\n",
@@ -205,6 +239,8 @@
     },
     {
         "filename": "DSC_4487.jpg",
+        "width": 1307,
+        "height": 1958,
         "title": "DSC_4487.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.6\n",
@@ -217,6 +253,8 @@
     },
     {
         "filename": "DSC_4497.jpg",
+        "width": 1111,
+        "height": 1664,
         "title": "DSC_4497.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.6\n",
@@ -229,6 +267,8 @@
     },
     {
         "filename": "DSC_4498.jpg",
+        "width": 893,
+        "height": 1338,
         "title": "DSC_4498.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4.5\n",
@@ -241,6 +281,8 @@
     },
     {
         "filename": "DSC_4526.jpg",
+        "width": 1683,
+        "height": 947,
         "title": "DSC_4526.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4.2\n",
@@ -253,6 +295,8 @@
     },
     {
         "filename": "DSC_4536.jpg",
+        "width": 1177,
+        "height": 1763,
         "title": "DSC_4536.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4\n",
@@ -265,6 +309,8 @@
     },
     {
         "filename": "DSC_4540.jpg",
+        "width": 641,
+        "height": 961,
         "title": "DSC_4540.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
@@ -277,6 +323,8 @@
     },
     {
         "filename": "DSC_4545.jpg",
+        "width": 1291,
+        "height": 1934,
         "title": "DSC_4545.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
@@ -289,6 +337,8 @@
     },
     {
         "filename": "DSC_4546.jpg",
+        "width": 1746,
+        "height": 982,
         "title": "DSC_4546.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
@@ -301,6 +351,8 @@
     },
     {
         "filename": "DSC_4550.jpg",
+        "width": 1338,
+        "height": 1338,
         "title": "DSC_4550.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.0\n",
@@ -313,6 +365,8 @@
     },
     {
         "filename": "DSC_4551.jpg",
+        "width": 1313,
+        "height": 1967,
         "title": "DSC_4551.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
@@ -325,6 +379,8 @@
     },
     {
         "filename": "DSC_4558.jpg",
+        "width": 1919,
+        "height": 1079,
         "title": "DSC_4558.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.6\n",
@@ -337,6 +393,8 @@
     },
     {
         "filename": "DSC_4586.jpg",
+        "width": 1219,
+        "height": 1826,
         "title": "DSC_4586.jpg",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
