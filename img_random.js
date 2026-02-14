@@ -2,27 +2,29 @@ const gallery = document.getElementById('gallery');
 const loading = document.getElementById('loading');
 
 // --- 配置参数 ---
+const IDEAL_COL_WIDTH = 480;  // 480px 左右通常在电脑上显示 4 栏
+const BATCH_SIZE = 20;        // 每次渲染 20 张
+const MAX_HEIGHT_DIFF = 50;   // 填缝高度容差
 
-
-const IDEAL_COL_WIDTH = 450;
-const BATCH_SIZE = 20;
-const MAX_HEIGHT_DIFF = 50;
-
-// 【普通缝隙】随机素材池 (竖构图或方构图)
-// 建议放 3-5 个不同的旋转石膏像 GIF
+// --- 填充素材配置 ---
 const FILLER_GIFS_NORMAL = [
   'https://pinganyang.github.io/assets/Cinematic_3d_animation_202602132254.gif',
   'https://pinganyang.github.io/assets/Constraint_use_the_202602132217.gif',
   'https://pinganyang.github.io/assets/Constraint_use_the_202602132242.gif',
-  'https://pinganyang.github.io/assets/Constraint_use_the_202602132249.gif'
+  'https://pinganyang.github.io/assets/Constraint_use_the_202602132249.gif',
+  'https://pinganyang.github.io/assets/veiled_virgin.gif',
+  'https://pinganyang.github.io/assets/veiled_virgin.gif',
+  'https://pinganyang.github.io/assets/veiled_virgin.gif',
 ];
 
 // 【扁平缝隙】专用素材 (横构图)
 // 比如一个卧倒的石膏像，或者流动的纹理，适合高度较小的缝隙
-const FILLER_GIF_FLAT = 'https://pinganyang.github.io/assets/Cinematic_3d_animation_202602132259.gif';
-
-// 【扁平阈值】
-// 如果缝隙的高度小于宽度的 0.6 倍，就认为是“扁缝隙”
+const FILLER_GIF_FLAT = [
+  'https://pinganyang.github.io/assets/Cinematic_3d_animation_202602132259.gif',
+  'https://pinganyang.github.io/assets/veiled_virgin.gif',
+  'https://pinganyang.github.io/assets/trident.gif',
+  'https://pinganyang.github.io/assets/Constraint_use_the_202602132217.gif',
+];
 const FLAT_GAP_THRESHOLD = 0.6;
 
 // 状态变量
@@ -55,6 +57,49 @@ function calculateLayout() {
   }
 }
 
+// --- 【核心修改】按颜色/标签分组排序函数 ---
+function organizeByTag(allPhotos) {
+  const groups = {};
+
+  // 颜色优先级：我们希望优先按这些强烈的颜色分组，而不是按 "High Key" 这种氛围分组
+  const colorPriority = ['Red', 'Orange', 'Yellow', 'Green', 'Cyan', 'Blue', 'Purple', 'Magenta', 'B&W'];
+
+  allPhotos.forEach(photo => {
+    let bestTag = 'Others'; // 默认分组
+
+    if (photo.tags && photo.tags.length > 0) {
+      // 策略：尝试在 tags 里找有没有上面的优先颜色
+      const priorityTag = photo.tags.find(t => colorPriority.includes(t));
+
+      if (priorityTag) {
+        bestTag = priorityTag; // 如果有颜色，就用颜色分组
+      } else {
+        bestTag = photo.tags[0]; // 如果没有颜色（比如只有 Cool），就用第一个标签
+      }
+    }
+
+    if (!groups[bestTag]) {
+      groups[bestTag] = [];
+    }
+    groups[bestTag].push(photo);
+  });
+
+  // 1. 组间打乱 (随机决定先看蓝色组，还是先看红色组)
+  const groupNames = Object.keys(groups);
+  groupNames.sort(() => Math.random() - 0.5);
+
+  console.log("本次加载顺序:", groupNames); // 调试用，看看这次随到了什么顺序
+
+  // 2. 组内打乱 (蓝色组里的照片也要随机排序) 并合并
+  let organizedPhotos = [];
+  groupNames.forEach(key => {
+    const photosInGroup = groups[key].sort(() => Math.random() - 0.5);
+    organizedPhotos = organizedPhotos.concat(photosInGroup);
+  });
+
+  return organizedPhotos;
+}
+
 async function loadPhotos() {
   if (loading.getAttribute('data-loading') === 'true') return;
   loading.setAttribute('data-loading', 'true');
@@ -62,9 +107,12 @@ async function loadPhotos() {
 
   try {
     if (photosData.length === 0) {
-      const res = await fetch('./photos_info.json?v=' + new Date().getTime());
-      photosData = await res.json();
-      photosData.sort(() => Math.random() - 0.5);
+      // 加上时间戳防止缓存
+      const res = await fetch('./photos_info.json');
+      let rawData = await res.json();
+
+      // --- 【核心修改】调用分组排序 ---
+      photosData = organizeByTag(rawData);
     }
     renderBatch();
   } catch (e) {
@@ -73,7 +121,6 @@ async function loadPhotos() {
   } finally {
     if (loadedCount >= photosData.length) {
       loading.innerText = '--- End ---';
-      // 大结局：再次确保所有缝隙都被填满
       fillAllRemainingGaps();
     } else {
       loading.style.display = 'none';
@@ -88,7 +135,6 @@ function renderBatch() {
 
   const batch = photosData.slice(loadedCount, end);
 
-  // 1. 先让照片挑位置
   batch.forEach(photo => {
     let w = photo.width;
     let h = photo.height;
@@ -109,8 +155,7 @@ function renderBatch() {
 
   loadedCount += batch.length;
 
-  // 2. 【核心修改】照片挑剩下的缝隙，立刻全部用 GIF 填满
-  // 不再等待，不再挑剔缝隙大小，统统填上
+  // 每次加载完一批，立刻尝试用 GIF 填缝
   fillAllRemainingGaps();
 
   if (Math.min(...colHeights) < window.innerHeight) {
@@ -118,68 +163,56 @@ function renderBatch() {
   }
 }
 
-// 【核心修改】无差别填缝函数
-// 【核心修改】智能填缝函数
+// --- 填缝逻辑 (保持不变) ---
 function fillAllRemainingGaps() {
   if (gaps.length === 0) return;
 
-  // 倒序遍历
   for (let i = gaps.length - 1; i >= 0; i--) {
     const gap = gaps[i];
-
-    // 只要有高度就填
     if (gap.height > 0) {
       const div = document.createElement('div');
       div.className = 'image-container filler-item';
 
-      // --- 智能选择逻辑 ---
       let selectedSrc = '';
-
-      // 计算缝隙比例 (高度 / 宽度)
       const gapRatio = gap.height / colWidth;
 
       if (gapRatio < FLAT_GAP_THRESHOLD) {
-        // 情况 A: 缝隙很扁 -> 使用专用素材
-        selectedSrc = FILLER_GIF_FLAT;
-        console.log(`填充扁缝隙 (H:${Math.round(gap.height)}px)`);
+        // 扁缝隙
+        const randomIndex1 = Math.floor(Math.random() * FILLER_GIF_FLAT.length);
+        selectedSrc = FILLER_GIF_FLAT[randomIndex1];
       } else {
-        // 情况 B: 普通缝隙 -> 从数组中随机选一个
+        // 普通缝隙，随机选一个
         const randomIndex = Math.floor(Math.random() * FILLER_GIFS_NORMAL.length);
         selectedSrc = FILLER_GIFS_NORMAL[randomIndex];
       }
 
-      // 生成 DOM
+      // 注意：这里需要 onerror 处理，防止 GIF 链接失效导致报错
       div.innerHTML = `
                 <div class="image-content-wrapper">
                     <img src="${selectedSrc}" alt="decoration" 
-                         style="width: 100%; height: 100%; object-fit: contain;">
+                         style="width: 100%; height: 100%; object-fit: contain;"
+                         onerror="this.style.display='none'"> 
                 </div>
             `;
 
       setStyles(div, gap.col * colWidth, gap.top, colWidth, gap.height);
-
-      // 填完移除
       gaps.splice(i, 1);
     }
   }
 }
 
-// 排版逻辑
+// --- 排版逻辑 (保持不变) ---
 function placeItem(item) {
   let bestGapIndex = -1;
   let minGapDiff = Infinity;
 
-  // 【核心修改】移除了“清理扁缝隙”的代码
-  // 之前这里会删除 MIN_GAP_ASPECT_RATIO < 0.5 的缝隙
-  // 现在保留它们，照片填不进去没关系，后面会有 GIF 来填
-
+  // 不再剔除扁缝隙，留给 GIF
   if (!item.isWide && gaps.length > 0) {
     for (let i = 0; i < gaps.length; i++) {
       const gap = gaps[i];
       const imgIdealHeight = colWidth / item.ratio;
       const diff = Math.abs(imgIdealHeight - gap.height);
 
-      // 照片依然保持挑剔，只进合适的坑
       if (diff <= MAX_HEIGHT_DIFF) {
         if (diff < minGapDiff) {
           minGapDiff = diff;
@@ -254,15 +287,19 @@ function createItemElement(data, ratio, isWide) {
   div.dataset.ratio = ratio;
   div.dataset.isWide = isWide;
   const imgSrc = `https://pinganyang.github.io/photos/${data.filename}`;
+
+  // 使用 tags 里的第一个标签作为图片说明的一部分，可选
+  const tagText = (data.tags && data.tags.length > 0) ? ` - ${data.tags.join(', ')}` : '';
+
   div.innerHTML = `
         <div class="image-content-wrapper" style="background-color: #eee;">
-            <img src="${imgSrc}" loading="lazy" alt="${data.title || ''}" style="opacity:0;transition:opacity 0.5s ease;" onload="this.style.opacity=1" onerror="this.parentElement.style.backgroundColor='#f8d7da'">
+            <img src="${imgSrc}" loading="lazy" alt="${(data.title || '') + tagText}" style="opacity:0;transition:opacity 0.5s ease;" onload="this.style.opacity=1" onerror="this.parentElement.style.backgroundColor='#f8d7da'">
         </div>`;
   div.addEventListener('click', () => openLightbox(data, imgSrc));
   return div;
 }
 
-// 灯箱逻辑
+// --- 灯箱逻辑 (保持不变) ---
 function createLightboxDOM() {
   if (document.getElementById('lightbox')) return;
   const lightbox = document.createElement('div');
@@ -284,6 +321,12 @@ function openLightbox(data, src) {
   if (data.Aperture) metaParts.push(data.Aperture.trim());
   if (data.ExposureTime) metaParts.push(data.ExposureTime.trim());
   if (data.ISO) metaParts.push("ISO " + data.ISO.trim());
+
+  // 在灯箱里也显示标签
+  if (data.tags && data.tags.length > 0) {
+    metaParts.push(data.tags.join(', '));
+  }
+
   meta.innerText = metaParts.join('  |  ');
   lightbox.classList.add('active');
   document.body.style.overflow = 'hidden';

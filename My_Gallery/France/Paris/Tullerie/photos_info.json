@@ -4,55 +4,74 @@
         "width": 4016,
         "height": 6016,
         "title": "DSC_0505.jpg",
+        "tags": [
+            "Warm",
+            "Orange",
+            "High Contrast"
+        ],
+        "Location": "Tullerie",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/400\n",
         "ISO": "400\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "155.0\n",
-        "Location": "Tullerie",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "155.0\n"
     },
     {
         "filename": "DSC_0509.jpg",
         "width": 6016,
         "height": 4016,
         "title": "DSC_0509.jpg",
+        "tags": [
+            "Cool",
+            "Muted",
+            "Cyan"
+        ],
+        "Location": "Tullerie",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/250\n",
         "ISO": "250\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "95.0\n",
-        "Location": "Tullerie",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "95.0\n"
     },
     {
         "filename": "DSC_0511.jpg",
         "width": 3019,
         "height": 3019,
         "title": "DSC_0511.jpg",
+        "tags": [
+            "Cool",
+            "Soft",
+            "Cyan"
+        ],
+        "Location": "Tullerie",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.6\n",
         "ExposureTime": "1/250\n",
         "ISO": "200\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "32.0\n",
-        "Location": "Tullerie",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "32.0\n"
     },
     {
         "filename": "DSC_0514.jpg",
         "width": 2999,
         "height": 4492,
         "title": "DSC_0514.jpg",
+        "tags": [
+            "Warm",
+            "Orange"
+        ],
+        "Location": "Tullerie",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/250\n",
         "ISO": "500\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "160.0\n",
-        "Location": "Tullerie",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "160.0\n"
     }
 ]

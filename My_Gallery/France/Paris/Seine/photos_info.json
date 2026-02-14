@@ -4,55 +4,76 @@
         "width": 6016,
         "height": 4016,
         "title": "DSC_0218.jpg",
+        "tags": [
+            "Cool",
+            "Purple",
+            "Muted",
+            "High Contrast"
+        ],
+        "Location": "Seine",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.0\n",
         "ExposureTime": "1/125\n",
         "ISO": "800\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "63.0\n",
-        "Location": "Seine",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "63.0\n"
     },
     {
         "filename": "DSC_0231.jpg",
         "width": 4016,
         "height": 6016,
         "title": "DSC_0231.jpg",
+        "tags": [
+            "Purple",
+            "Cool",
+            "High Contrast"
+        ],
+        "Location": "Seine",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.0\n",
         "ExposureTime": "1/125\n",
         "ISO": "640\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "63.0\n",
-        "Location": "Seine",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "63.0\n"
     },
     {
         "filename": "DSC_0233.jpg",
         "width": 5835,
         "height": 3282,
         "title": "DSC_0233.jpg",
+        "tags": [
+            "Cool",
+            "Blue",
+            "High Contrast"
+        ],
+        "Location": "Seine",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4\n",
         "ExposureTime": "1/100\n",
         "ISO": "3200\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "24.0\n",
-        "Location": "Seine",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "24.0\n"
     },
     {
         "filename": "DSC_0244.jpg",
         "width": 3223,
         "height": 5153,
         "title": "DSC_0244.jpg",
+        "tags": [
+            "Purple",
+            "Cool",
+            "High Contrast"
+        ],
+        "Location": "Seine",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/60\n",
         "ISO": "7200\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "89.0\n",
-        "Location": "Seine",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "89.0\n"
     }
 ]

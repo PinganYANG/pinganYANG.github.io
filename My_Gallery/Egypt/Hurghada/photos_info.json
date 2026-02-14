@@ -4,69 +4,95 @@
         "width": 2160,
         "height": 1620,
         "title": "2024_05_06_DSCN0688.jpg",
+        "tags": [
+            "Cool",
+            "Blue",
+            "High Contrast"
+        ],
+        "Location": "Hurghada",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "COOLPIX S8000\n",
         "Aperture": "f/4.4\n",
         "ExposureTime": "1/800\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "16.0\n",
-        "Location": "Hurghada",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "16.0\n"
     },
     {
         "filename": "2024_05_06_DSCN0690.jpg",
         "width": 2160,
         "height": 1620,
         "title": "2024_05_06_DSCN0690.jpg",
+        "tags": [
+            "Soft",
+            "Vivid",
+            "High Key",
+            "Blue",
+            "Cool"
+        ],
+        "Location": "Hurghada",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "COOLPIX S8000\n",
         "Aperture": "f/3.5\n",
         "ExposureTime": "1/500\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "5.4\n",
-        "Location": "Hurghada",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "5.4\n"
     },
     {
         "filename": "2024_05_06_DSCN0691.jpg",
         "width": 2160,
         "height": 1620,
         "title": "2024_05_06_DSCN0691.jpg",
+        "tags": [
+            "Cool",
+            "High Key",
+            "Blue"
+        ],
+        "Location": "Hurghada",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "COOLPIX S8000\n",
         "Aperture": "f/3.5\n",
         "ExposureTime": "1/640\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "5.4\n",
-        "Location": "Hurghada",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "5.4\n"
     },
     {
         "filename": "2024_05_06_DSCN0693.jpg",
         "width": 2160,
         "height": 1620,
         "title": "2024_05_06_DSCN0693.jpg",
+        "tags": [
+            "Cool",
+            "Blue"
+        ],
+        "Location": "Hurghada",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "COOLPIX S8000\n",
         "Aperture": "f/4.4\n",
         "ExposureTime": "1/800\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "16.0\n",
-        "Location": "Hurghada",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "16.0\n"
     },
     {
         "filename": "2024_05_06_DSCN0694.jpg",
         "width": 2160,
         "height": 1620,
         "title": "2024_05_06_DSCN0694.jpg",
+        "tags": [
+            "Warm",
+            "High Contrast",
+            "Red"
+        ],
+        "Location": "Hurghada",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "COOLPIX S8000\n",
         "Aperture": "f/4.6\n",
         "ExposureTime": "1/200\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "20.9\n",
-        "Location": "Hurghada",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "20.9\n"
     }
 ]

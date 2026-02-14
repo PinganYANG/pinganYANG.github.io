@@ -4,83 +4,111 @@
         "width": 6016,
         "height": 4016,
         "title": "DSC_0175.jpg",
+        "tags": [
+            "Warm",
+            "Red"
+        ],
+        "Location": "Hotel_de_Ville",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.0\n",
         "ExposureTime": "1/125\n",
         "ISO": "2200\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "41.0\n",
-        "Location": "Hotel_de_Ville",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "41.0\n"
     },
     {
         "filename": "DSC_0181.jpg",
         "width": 6016,
         "height": 4016,
         "title": "DSC_0181.jpg",
+        "tags": [
+            "Cool",
+            "Blue",
+            "High Contrast"
+        ],
+        "Location": "Hotel_de_Ville",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4.5\n",
         "ExposureTime": "1/125\n",
         "ISO": "1000\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "31.0\n",
-        "Location": "Hotel_de_Ville",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "31.0\n"
     },
     {
         "filename": "DSC_0184.jpg",
         "width": 4016,
         "height": 6016,
         "title": "DSC_0184.jpg",
+        "tags": [
+            "Cool",
+            "Blue",
+            "High Contrast"
+        ],
+        "Location": "Hotel_de_Ville",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4.8\n",
         "ExposureTime": "1/125\n",
         "ISO": "1000\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "35.0\n",
-        "Location": "Hotel_de_Ville",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "35.0\n"
     },
     {
         "filename": "DSC_0193.jpg",
         "width": 6016,
         "height": 4016,
         "title": "DSC_0193.jpg",
+        "tags": [
+            "Cool",
+            "Blue",
+            "High Contrast"
+        ],
+        "Location": "Hotel_de_Ville",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4\n",
         "ExposureTime": "1/125\n",
         "ISO": "900\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "24.0\n",
-        "Location": "Hotel_de_Ville",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "24.0\n"
     },
     {
         "filename": "DSC_0195.jpg",
         "width": 6012,
         "height": 3382,
         "title": "DSC_0195.jpg",
+        "tags": [
+            "Warm",
+            "Red"
+        ],
+        "Location": "Hotel_de_Ville",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.6\n",
         "ExposureTime": "1/125\n",
         "ISO": "3200\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "52.0\n",
-        "Location": "Hotel_de_Ville",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "52.0\n"
     },
     {
         "filename": "DSC_0206.jpg",
         "width": 6016,
         "height": 4016,
         "title": "DSC_0206.jpg",
+        "tags": [
+            "Cool",
+            "Blue",
+            "High Contrast"
+        ],
+        "Location": "Hotel_de_Ville",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/100\n",
         "ISO": "25600\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "145.0\n",
-        "Location": "Hotel_de_Ville",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "145.0\n"
     }
 ]

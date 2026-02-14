@@ -4,83 +4,112 @@
         "width": 3811,
         "height": 5709,
         "title": "DSC_3363.jpg",
+        "tags": [
+            "Cool",
+            "Blue",
+            "Muted"
+        ],
+        "Location": "centre",
+        "Link": "https://www.google.com/maps?q=48.876866666666665,2.22545",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/250\n",
         "ISO": "500\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "200.0\n",
-        "Location": "centre",
-        "Link": "https://www.google.com/maps?q=48.876866666666665,2.22545"
+        "FocalLength": "200.0\n"
     },
     {
         "filename": "DSC_3365.jpg",
         "width": 3045,
         "height": 4562,
         "title": "DSC_3365.jpg",
+        "tags": [
+            "Monochrome",
+            "B&W"
+        ],
+        "Location": "centre",
+        "Link": "https://www.google.com/maps?q=48.876866666666665,2.22545",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/250\n",
         "ISO": "500\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "200.0\n",
-        "Location": "centre",
-        "Link": "https://www.google.com/maps?q=48.876866666666665,2.22545"
+        "FocalLength": "200.0\n"
     },
     {
         "filename": "DSC_3372.jpg",
         "width": 4834,
         "height": 2719,
         "title": "DSC_3372.jpg",
+        "tags": [
+            "Monochrome",
+            "B&W"
+        ],
+        "Location": "centre",
+        "Link": "https://www.google.com/maps?q=48.876668333333335,2.2257883333333335",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/80\n",
         "ISO": "125\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "170.0\n",
-        "Location": "centre",
-        "Link": "https://www.google.com/maps?q=48.876668333333335,2.2257883333333335"
+        "FocalLength": "170.0\n"
     },
     {
         "filename": "DSC_3374.jpg",
         "width": 4342,
         "height": 2442,
         "title": "DSC_3374.jpg",
+        "tags": [
+            "Cool",
+            "Blue",
+            "Muted",
+            "High Contrast"
+        ],
+        "Location": "centre",
+        "Link": "https://www.google.com/maps?q=48.876668333333335,2.2257883333333335",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/80\n",
         "ISO": "125\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "200.0\n",
-        "Location": "centre",
-        "Link": "https://www.google.com/maps?q=48.876668333333335,2.2257883333333335"
+        "FocalLength": "200.0\n"
     },
     {
         "filename": "DSC_3375.jpg",
         "width": 2358,
         "height": 3532,
         "title": "DSC_3375.jpg",
+        "tags": [
+            "Cool",
+            "Blue",
+            "Muted",
+            "High Contrast"
+        ],
+        "Location": "centre",
+        "Link": "https://www.google.com/maps?q=48.876668333333335,2.2257883333333335",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/80\n",
         "ISO": "125\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "165.0\n",
-        "Location": "centre",
-        "Link": "https://www.google.com/maps?q=48.876668333333335,2.2257883333333335"
+        "FocalLength": "165.0\n"
     },
     {
         "filename": "DSC_3384.jpg",
         "width": 5350,
         "height": 3009,
         "title": "DSC_3384.jpg",
+        "tags": [
+            "Cool",
+            "Blue"
+        ],
+        "Location": "centre",
+        "Link": "https://www.google.com/maps?q=48.898923333333336,2.21432",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4\n",
         "ExposureTime": "1/15\n",
         "ISO": "125\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "24.0\n",
-        "Location": "centre",
-        "Link": "https://www.google.com/maps?q=48.898923333333336,2.21432"
+        "FocalLength": "24.0\n"
     }
 ]

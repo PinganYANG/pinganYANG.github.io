@@ -4,405 +4,548 @@
         "width": 1650,
         "height": 928,
         "title": "DSC_4326.jpg",
+        "tags": [
+            "Cool",
+            "Blue"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.0\n",
         "ExposureTime": "1/200\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "38.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "38.0\n"
     },
     {
         "filename": "DSC_4328.jpg",
         "width": 1189,
         "height": 1781,
         "title": "DSC_4328.jpg",
+        "tags": [
+            "Warm",
+            "Muted",
+            "Red"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/200\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "105.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "105.0\n"
     },
     {
         "filename": "DSC_4331.jpg",
         "width": 1222,
         "height": 1629,
         "title": "DSC_4331.jpg",
+        "tags": [
+            "Cool",
+            "Blue",
+            "Muted"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.32462833333334,5.027138333333333",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/250\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "140.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.32462833333334,5.027138333333333"
+        "FocalLength": "140.0\n"
     },
     {
         "filename": "DSC_4332.jpg",
         "width": 2005,
         "height": 1128,
         "title": "DSC_4332.jpg",
+        "tags": [
+            "Warm",
+            "Yellow",
+            "Muted"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.32462833333334,5.027138333333333",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/250\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "140.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.32462833333334,5.027138333333333"
+        "FocalLength": "140.0\n"
     },
     {
         "filename": "DSC_4338.jpg",
         "width": 1068,
         "height": 1600,
         "title": "DSC_4338.jpg",
+        "tags": [
+            "Warm",
+            "Muted",
+            "High Contrast",
+            "Red"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.32446,5.02587",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/400\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "125.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.32446,5.02587"
+        "FocalLength": "125.0\n"
     },
     {
         "filename": "DSC_4369.jpg",
         "width": 980,
         "height": 1468,
         "title": "DSC_4369.jpg",
+        "tags": [
+            "Cool",
+            "Blue",
+            "Muted"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.32446,5.02587",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.0\n",
         "ExposureTime": "1/320\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "40.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.32446,5.02587"
+        "FocalLength": "40.0\n"
     },
     {
         "filename": "DSC_4398.jpg",
         "width": 1839,
         "height": 1034,
         "title": "DSC_4398.jpg",
+        "tags": [
+            "Cool",
+            "Blue",
+            "High Contrast"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.32446,5.02587",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.0\n",
         "ExposureTime": "1/100\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "42.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.32446,5.02587"
+        "FocalLength": "42.0\n"
     },
     {
         "filename": "DSC_4405.jpg",
         "width": 1504,
         "height": 846,
         "title": "DSC_4405.jpg",
+        "tags": [
+            "Cool",
+            "Blue"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.32446,5.02587",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4\n",
         "ExposureTime": "1/250\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "24.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.32446,5.02587"
+        "FocalLength": "24.0\n"
     },
     {
         "filename": "DSC_4407.jpg",
         "width": 1338,
         "height": 2005,
         "title": "DSC_4407.jpg",
+        "tags": [
+            "Cool",
+            "Blue",
+            "Muted"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.32446,5.02587",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.0\n",
         "ExposureTime": "1/250\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "63.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.32446,5.02587"
+        "FocalLength": "63.0\n"
     },
     {
         "filename": "DSC_4410.jpg",
         "width": 1766,
         "height": 993,
         "title": "DSC_4410.jpg",
+        "tags": [
+            "Cool",
+            "Blue",
+            "Muted"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.32446,5.02587",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.6\n",
         "ExposureTime": "1/250\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "51.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.32446,5.02587"
+        "FocalLength": "51.0\n"
     },
     {
         "filename": "DSC_4426.jpg",
         "width": 1996,
         "height": 1122,
         "title": "DSC_4426.jpg",
+        "tags": [
+            "Warm",
+            "Muted",
+            "Red"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.32446,5.02587",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.0\n",
         "ExposureTime": "1/200\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "41.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.32446,5.02587"
+        "FocalLength": "41.0\n"
     },
     {
         "filename": "DSC_4445.jpg",
         "width": 859,
         "height": 1287,
         "title": "DSC_4445.jpg",
+        "tags": [
+            "Cool",
+            "Blue"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.32446,5.02587",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.0\n",
         "ExposureTime": "1/15\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "67.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.32446,5.02587"
+        "FocalLength": "67.0\n"
     },
     {
         "filename": "DSC_4459.jpg",
         "width": 1074,
         "height": 1609,
         "title": "DSC_4459.jpg",
+        "tags": [
+            "Cool",
+            "Cyan"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.32446,5.02587",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/8\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "88.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.32446,5.02587"
+        "FocalLength": "88.0\n"
     },
     {
         "filename": "DSC_4463.jpg",
         "width": 1972,
         "height": 1109,
         "title": "DSC_4463.jpg",
+        "tags": [
+            "Warm",
+            "Orange"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.32446,5.02587",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.0\n",
         "ExposureTime": "1/13\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "59.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.32446,5.02587"
+        "FocalLength": "59.0\n"
     },
     {
         "filename": "DSC_4467.jpg",
         "width": 633,
         "height": 949,
         "title": "DSC_4467.jpg",
+        "tags": [
+            "Warm",
+            "High Contrast",
+            "Red"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.0\n",
         "ExposureTime": "1/160\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "77.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667"
+        "FocalLength": "77.0\n"
     },
     {
         "filename": "DSC_4469.jpg",
         "width": 1956,
         "height": 1100,
         "title": "DSC_4469.jpg",
+        "tags": [
+            "Warm",
+            "Muted",
+            "Red"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.0\n",
         "ExposureTime": "1/125\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "66.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667"
+        "FocalLength": "66.0\n"
     },
     {
         "filename": "DSC_4473.jpg",
         "width": 1873,
         "height": 1054,
         "title": "DSC_4473.jpg",
+        "tags": [
+            "Cool",
+            "Muted",
+            "Cyan"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4\n",
         "ExposureTime": "1/200\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "24.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667"
+        "FocalLength": "24.0\n"
     },
     {
         "filename": "DSC_4487.jpg",
         "width": 1307,
         "height": 1958,
         "title": "DSC_4487.jpg",
+        "tags": [
+            "Warm",
+            "Orange",
+            "Low Key",
+            "Dark"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.6\n",
         "ExposureTime": "1/4\n",
         "ISO": "250\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "54.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667"
+        "FocalLength": "54.0\n"
     },
     {
         "filename": "DSC_4497.jpg",
         "width": 1111,
         "height": 1664,
         "title": "DSC_4497.jpg",
+        "tags": [
+            "Cool",
+            "Blue",
+            "Low Key",
+            "Dark"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.6\n",
         "ExposureTime": "1/8\n",
         "ISO": "500\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "55.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667"
+        "FocalLength": "55.0\n"
     },
     {
         "filename": "DSC_4498.jpg",
         "width": 893,
         "height": 1338,
         "title": "DSC_4498.jpg",
+        "tags": [
+            "Warm",
+            "Orange",
+            "Low Key",
+            "Dark"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4.5\n",
         "ExposureTime": "1/13\n",
         "ISO": "500\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "30.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667"
+        "FocalLength": "30.0\n"
     },
     {
         "filename": "DSC_4526.jpg",
         "width": 1683,
         "height": 947,
         "title": "DSC_4526.jpg",
+        "tags": [
+            "Monochrome",
+            "B&W"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4.2\n",
         "ExposureTime": "1/400\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "26.5\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667"
+        "FocalLength": "26.5\n"
     },
     {
         "filename": "DSC_4536.jpg",
         "width": 1177,
         "height": 1763,
         "title": "DSC_4536.jpg",
+        "tags": [
+            "Warm",
+            "High Contrast",
+            "Red"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4\n",
         "ExposureTime": "1/320\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "24.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667"
+        "FocalLength": "24.0\n"
     },
     {
         "filename": "DSC_4540.jpg",
         "width": 641,
         "height": 961,
         "title": "DSC_4540.jpg",
+        "tags": [
+            "Monochrome",
+            "B&W"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/100\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "145.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667"
+        "FocalLength": "145.0\n"
     },
     {
         "filename": "DSC_4545.jpg",
         "width": 1291,
         "height": 1934,
         "title": "DSC_4545.jpg",
+        "tags": [
+            "Warm",
+            "Red"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/60\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "145.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667"
+        "FocalLength": "145.0\n"
     },
     {
         "filename": "DSC_4546.jpg",
         "width": 1746,
         "height": 982,
         "title": "DSC_4546.jpg",
+        "tags": [
+            "Warm",
+            "Red"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/100\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "145.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667"
+        "FocalLength": "145.0\n"
     },
     {
         "filename": "DSC_4550.jpg",
         "width": 1338,
         "height": 1338,
         "title": "DSC_4550.jpg",
+        "tags": [
+            "Cool",
+            "Green",
+            "Muted",
+            "High Contrast"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.0\n",
         "ExposureTime": "1/160\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "59.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667"
+        "FocalLength": "59.0\n"
     },
     {
         "filename": "DSC_4551.jpg",
         "width": 1313,
         "height": 1967,
         "title": "DSC_4551.jpg",
+        "tags": [
+            "Cool",
+            "Green",
+            "Muted"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/80\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "103.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667"
+        "FocalLength": "103.0\n"
     },
     {
         "filename": "DSC_4558.jpg",
         "width": 1919,
         "height": 1079,
         "title": "DSC_4558.jpg",
+        "tags": [
+            "Cool",
+            "Blue",
+            "High Key",
+            "Muted"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.6\n",
         "ExposureTime": "1/250\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "49.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=47.323843333333336,5.040326666666667"
+        "FocalLength": "49.0\n"
     },
     {
         "filename": "DSC_4586.jpg",
         "width": 1219,
         "height": 1826,
         "title": "DSC_4586.jpg",
+        "tags": [
+            "Warm",
+            "Muted",
+            "High Contrast",
+            "Red"
+        ],
+        "Location": "Dijon",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/10\n",
         "ISO": "160\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "120.0\n",
-        "Location": "Dijon",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "120.0\n"
     }
 ]

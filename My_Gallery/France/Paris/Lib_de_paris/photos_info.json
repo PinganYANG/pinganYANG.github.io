@@ -4,209 +4,281 @@
         "width": 6016,
         "height": 3384,
         "title": "DSC_3458.jpg",
+        "tags": [
+            "Warm",
+            "Muted",
+            "High Contrast",
+            "Red"
+        ],
+        "Location": "Lib_de_paris",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4\n",
         "ExposureTime": "1/25\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "24.0\n",
-        "Location": "Lib_de_paris",
-        "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
+        "FocalLength": "24.0\n"
     },
     {
         "filename": "DSC_3460.jpg",
         "width": 1720,
         "height": 2576,
         "title": "DSC_3460.jpg",
+        "tags": [
+            "Warm",
+            "Orange",
+            "Muted"
+        ],
+        "Location": "Lib_de_paris",
+        "Link": "https://www.google.com/maps?q=48.837336666666666,2.3735566666666665",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/200\n",
         "ISO": "100\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "200.0\n",
-        "Location": "Lib_de_paris",
-        "Link": "https://www.google.com/maps?q=48.837336666666666,2.3735566666666665"
+        "FocalLength": "200.0\n"
     },
     {
         "filename": "DSC_3474.jpg",
         "width": 5483,
         "height": 3084,
         "title": "DSC_3474.jpg",
+        "tags": [
+            "Warm",
+            "Muted",
+            "Red"
+        ],
+        "Location": "Lib_de_paris",
+        "Link": "https://www.google.com/maps?q=48.83659333333333,2.3743716666666668",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.6\n",
         "ExposureTime": "1/125\n",
         "ISO": "200\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "48.0\n",
-        "Location": "Lib_de_paris",
-        "Link": "https://www.google.com/maps?q=48.83659333333333,2.3743716666666668"
+        "FocalLength": "48.0\n"
     },
     {
         "filename": "DSC_3475.jpg",
         "width": 4740,
         "height": 3164,
         "title": "DSC_3475.jpg",
+        "tags": [
+            "Warm",
+            "Muted",
+            "Red"
+        ],
+        "Location": "Lib_de_paris",
+        "Link": "https://www.google.com/maps?q=48.83659333333333,2.3743716666666668",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.3\n",
         "ExposureTime": "1/160\n",
         "ISO": "200\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "44.0\n",
-        "Location": "Lib_de_paris",
-        "Link": "https://www.google.com/maps?q=48.83659333333333,2.3743716666666668"
+        "FocalLength": "44.0\n"
     },
     {
         "filename": "DSC_3491.jpg",
         "width": 3627,
         "height": 5434,
         "title": "DSC_3491.jpg",
+        "tags": [
+            "Monochrome",
+            "B&W"
+        ],
+        "Location": "Lib_de_paris",
+        "Link": "https://www.google.com/maps?q=48.83435,2.3757783333333333",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4.8\n",
         "ExposureTime": "1/320\n",
         "ISO": "200\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "32.0\n",
-        "Location": "Lib_de_paris",
-        "Link": "https://www.google.com/maps?q=48.83435,2.3757783333333333"
+        "FocalLength": "32.0\n"
     },
     {
         "filename": "DSC_3495.jpg",
         "width": 6016,
         "height": 4016,
         "title": "DSC_3495.jpg",
+        "tags": [
+            "Monochrome",
+            "B&W"
+        ],
+        "Location": "Lib_de_paris",
+        "Link": "https://www.google.com/maps?q=48.83435,2.3757783333333333",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.0\n",
         "ExposureTime": "1/250\n",
         "ISO": "200\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "72.0\n",
-        "Location": "Lib_de_paris",
-        "Link": "https://www.google.com/maps?q=48.83435,2.3757783333333333"
+        "FocalLength": "72.0\n"
     },
     {
         "filename": "DSC_3496.jpg",
         "width": 5951,
         "height": 3973,
         "title": "DSC_3496.jpg",
+        "tags": [
+            "Monochrome",
+            "B&W"
+        ],
+        "Location": "Lib_de_paris",
+        "Link": "https://www.google.com/maps?q=48.83435,2.3757783333333333",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/5.0\n",
         "ExposureTime": "1/640\n",
         "ISO": "200\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "38.0\n",
-        "Location": "Lib_de_paris",
-        "Link": "https://www.google.com/maps?q=48.83435,2.3757783333333333"
+        "FocalLength": "38.0\n"
     },
     {
         "filename": "DSC_3506.jpg",
         "width": 5747,
         "height": 3836,
         "title": "DSC_3506.jpg",
+        "tags": [
+            "Cool",
+            "Blue",
+            "Muted"
+        ],
+        "Location": "Lib_de_paris",
+        "Link": "https://www.google.com/maps?q=48.83435,2.3757783333333333",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4.5\n",
         "ExposureTime": "1/1000\n",
         "ISO": "200\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "31.5\n",
-        "Location": "Lib_de_paris",
-        "Link": "https://www.google.com/maps?q=48.83435,2.3757783333333333"
+        "FocalLength": "31.5\n"
     },
     {
         "filename": "DSC_3507.jpg",
         "width": 5104,
         "height": 3407,
         "title": "DSC_3507.jpg",
+        "tags": [
+            "Monochrome",
+            "B&W"
+        ],
+        "Location": "Lib_de_paris",
+        "Link": "https://www.google.com/maps?q=48.83435,2.3757783333333333",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4\n",
         "ExposureTime": "1/1250\n",
         "ISO": "200\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "24.0\n",
-        "Location": "Lib_de_paris",
-        "Link": "https://www.google.com/maps?q=48.83435,2.3757783333333333"
+        "FocalLength": "24.0\n"
     },
     {
         "filename": "DSC_3514.jpg",
         "width": 6016,
         "height": 4016,
         "title": "DSC_3514.jpg",
+        "tags": [
+            "Monochrome",
+            "B&W"
+        ],
+        "Location": "Lib_de_paris",
+        "Link": "https://www.google.com/maps?q=48.83435,2.3757783333333333",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4\n",
         "ExposureTime": "1/2500\n",
         "ISO": "200\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "24.0\n",
-        "Location": "Lib_de_paris",
-        "Link": "https://www.google.com/maps?q=48.83435,2.3757783333333333"
+        "FocalLength": "24.0\n"
     },
     {
         "filename": "DSC_3517.jpg",
         "width": 5983,
         "height": 3994,
         "title": "DSC_3517.jpg",
+        "tags": [
+            "Warm",
+            "Orange",
+            "Muted",
+            "High Contrast"
+        ],
+        "Location": "Lib_de_paris",
+        "Link": "https://www.google.com/maps?q=48.83435,2.3757783333333333",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4.8\n",
         "ExposureTime": "1/400\n",
         "ISO": "125\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "33.0\n",
-        "Location": "Lib_de_paris",
-        "Link": "https://www.google.com/maps?q=48.83435,2.3757783333333333"
+        "FocalLength": "33.0\n"
     },
     {
         "filename": "DSC_3518.jpg",
         "width": 4016,
         "height": 6016,
         "title": "DSC_3518.jpg",
+        "tags": [
+            "Warm",
+            "Orange",
+            "Muted",
+            "High Contrast"
+        ],
+        "Location": "Lib_de_paris",
+        "Link": "https://www.google.com/maps?q=48.83435,2.3757783333333333",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4\n",
         "ExposureTime": "1/500\n",
         "ISO": "125\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "24.0\n",
-        "Location": "Lib_de_paris",
-        "Link": "https://www.google.com/maps?q=48.83435,2.3757783333333333"
+        "FocalLength": "24.0\n"
     },
     {
         "filename": "DSC_3519.jpg",
         "width": 3724,
         "height": 5578,
         "title": "DSC_3519.jpg",
+        "tags": [
+            "Warm",
+            "Orange",
+            "High Contrast"
+        ],
+        "Location": "Lib_de_paris",
+        "Link": "https://www.google.com/maps?q=48.83435,2.3757783333333333",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4\n",
         "ExposureTime": "1/500\n",
         "ISO": "125\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "24.0\n",
-        "Location": "Lib_de_paris",
-        "Link": "https://www.google.com/maps?q=48.83435,2.3757783333333333"
+        "FocalLength": "24.0\n"
     },
     {
         "filename": "DSC_3523.jpg",
         "width": 5915,
         "height": 3327,
         "title": "DSC_3523.jpg",
+        "tags": [
+            "Monochrome",
+            "B&W"
+        ],
+        "Location": "Lib_de_paris",
+        "Link": "https://www.google.com/maps?q=48.83271666666667,2.376751666666667",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/4\n",
         "ExposureTime": "1/1250\n",
         "ISO": "125\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "24.0\n",
-        "Location": "Lib_de_paris",
-        "Link": "https://www.google.com/maps?q=48.83271666666667,2.376751666666667"
+        "FocalLength": "24.0\n"
     },
     {
         "filename": "DSC_3532.jpg",
         "width": 3744,
         "height": 2106,
         "title": "DSC_3532.jpg",
+        "tags": [
+            "Cool",
+            "Blue",
+            "Muted"
+        ],
+        "Location": "Lib_de_paris",
+        "Link": "https://www.google.com/maps?q=48.83271666666667,2.376751666666667",
         "CameraModel": "NIKON Z 5\n",
         "Aperture": "f/6.3\n",
         "ExposureTime": "1/250\n",
         "ISO": "125\n",
         "ExposureBiasValue": "0.0\n",
-        "FocalLength": "115.0\n",
-        "Location": "Lib_de_paris",
-        "Link": "https://www.google.com/maps?q=48.83271666666667,2.376751666666667"
+        "FocalLength": "115.0\n"
     }
 ]
