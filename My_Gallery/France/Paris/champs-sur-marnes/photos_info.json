@@ -1,58 +1,64 @@
 [
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\champs-sur-marnes\\DSC_0066.jpg_1702230508.0",
         "filename": "DSC_0066.jpg",
         "width": 6016,
         "height": 4016,
         "title": "DSC_0066.jpg",
         "tags": [
-            "Warm",
-            "Yellow"
+            "Yellow",
+            "Warm"
         ],
-        "Location": "champs-sur-marnes",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/400\n",
-        "ISO": "400\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "140.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "champs-sur-marnes"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\champs-sur-marnes\\DSC_0079.jpg_1702230510.0",
         "filename": "DSC_0079.jpg",
         "width": 4833,
         "height": 2936,
         "title": "DSC_0079.jpg",
         "tags": [
-            "Warm",
-            "Yellow"
+            "Yellow",
+            "Warm"
         ],
-        "Location": "champs-sur-marnes",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/500\n",
-        "ISO": "400\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "200.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "champs-sur-marnes"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\champs-sur-marnes\\DSC_0350.jpg_1702835178.0",
         "filename": "DSC_0350.jpg",
         "width": 4016,
         "height": 6016,
         "title": "DSC_0350.jpg",
         "tags": [
-            "Cool",
-            "Blue",
             "Muted",
-            "High Contrast"
+            "High Contrast",
+            "Blue",
+            "Cool"
         ],
-        "Location": "champs-sur-marnes",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/125\n",
-        "ISO": "1100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "130.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "champs-sur-marnes"
     }
 ]

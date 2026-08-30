@@ -1,98 +1,108 @@
 [
     {
+        "id": "D:\\LR\\My_Gallery\\Egypt\\Hurghada\\2024_05_06_DSCN0688.jpg_1737096020.0",
         "filename": "2024_05_06_DSCN0688.jpg",
         "width": 2160,
         "height": 1620,
         "title": "2024_05_06_DSCN0688.jpg",
         "tags": [
-            "Cool",
+            "High Contrast",
             "Blue",
-            "High Contrast"
+            "Cool"
         ],
-        "Location": "Hurghada",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "COOLPIX S8000\n",
-        "Aperture": "f/4.4\n",
-        "ExposureTime": "1/800\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "16.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Hurghada"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\Egypt\\Hurghada\\2024_05_06_DSCN0690.jpg_1737096020.0",
         "filename": "2024_05_06_DSCN0690.jpg",
         "width": 2160,
         "height": 1620,
         "title": "2024_05_06_DSCN0690.jpg",
         "tags": [
-            "Soft",
             "Vivid",
             "High Key",
+            "Soft",
             "Blue",
             "Cool"
         ],
-        "Location": "Hurghada",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "COOLPIX S8000\n",
-        "Aperture": "f/3.5\n",
-        "ExposureTime": "1/500\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "5.4\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Hurghada"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\Egypt\\Hurghada\\2024_05_06_DSCN0691.jpg_1737096020.0",
         "filename": "2024_05_06_DSCN0691.jpg",
         "width": 2160,
         "height": 1620,
         "title": "2024_05_06_DSCN0691.jpg",
         "tags": [
-            "Cool",
             "High Key",
-            "Blue"
+            "Blue",
+            "Cool"
         ],
-        "Location": "Hurghada",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "COOLPIX S8000\n",
-        "Aperture": "f/3.5\n",
-        "ExposureTime": "1/640\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "5.4\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Hurghada"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\Egypt\\Hurghada\\2024_05_06_DSCN0693.jpg_1737096020.0",
         "filename": "2024_05_06_DSCN0693.jpg",
         "width": 2160,
         "height": 1620,
         "title": "2024_05_06_DSCN0693.jpg",
         "tags": [
-            "Cool",
-            "Blue"
+            "Blue",
+            "Cool"
         ],
-        "Location": "Hurghada",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "COOLPIX S8000\n",
-        "Aperture": "f/4.4\n",
-        "ExposureTime": "1/800\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "16.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Hurghada"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\Egypt\\Hurghada\\2024_05_06_DSCN0694.jpg_1737096022.0",
         "filename": "2024_05_06_DSCN0694.jpg",
         "width": 2160,
         "height": 1620,
         "title": "2024_05_06_DSCN0694.jpg",
         "tags": [
-            "Warm",
             "High Contrast",
-            "Red"
+            "Red",
+            "Warm"
         ],
-        "Location": "Hurghada",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "COOLPIX S8000\n",
-        "Aperture": "f/4.6\n",
-        "ExposureTime": "1/200\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "20.9\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Hurghada"
     }
 ]

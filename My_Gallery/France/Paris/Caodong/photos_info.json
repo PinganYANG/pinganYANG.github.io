@@ -1,21 +1,23 @@
 [
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Caodong\\DSC_0316.jpg_1702678320.0",
         "filename": "DSC_0316.jpg",
         "width": 5284,
         "height": 2972,
         "title": "DSC_0316.jpg",
         "tags": [
-            "Warm",
             "High Contrast",
-            "Red"
+            "Red",
+            "Warm"
         ],
-        "Location": "Caodong",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/125\n",
-        "ISO": "900\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "80.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Caodong"
     }
 ]

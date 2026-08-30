@@ -1,115 +1,127 @@
 [
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\centre\\DSC_3363.jpg_1707041272.0",
         "filename": "DSC_3363.jpg",
         "width": 3811,
         "height": 5709,
         "title": "DSC_3363.jpg",
         "tags": [
-            "Cool",
+            "Muted",
             "Blue",
-            "Muted"
+            "Cool"
         ],
-        "Location": "centre",
-        "Link": "https://www.google.com/maps?q=48.876866666666665,2.22545",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/250\n",
-        "ISO": "500\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "200.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "centre"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\centre\\DSC_3365.jpg_1707041254.0",
         "filename": "DSC_3365.jpg",
         "width": 3045,
         "height": 4562,
         "title": "DSC_3365.jpg",
         "tags": [
-            "Monochrome",
-            "B&W"
+            "B&W",
+            "Monochrome"
         ],
-        "Location": "centre",
-        "Link": "https://www.google.com/maps?q=48.876866666666665,2.22545",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/250\n",
-        "ISO": "500\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "200.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "centre"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\centre\\DSC_3372.jpg_1707041268.0",
         "filename": "DSC_3372.jpg",
         "width": 4834,
         "height": 2719,
         "title": "DSC_3372.jpg",
         "tags": [
-            "Monochrome",
-            "B&W"
+            "B&W",
+            "Monochrome"
         ],
-        "Location": "centre",
-        "Link": "https://www.google.com/maps?q=48.876668333333335,2.2257883333333335",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/80\n",
-        "ISO": "125\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "170.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "centre"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\centre\\DSC_3374.jpg_1707041252.0",
         "filename": "DSC_3374.jpg",
         "width": 4342,
         "height": 2442,
         "title": "DSC_3374.jpg",
         "tags": [
-            "Cool",
-            "Blue",
             "Muted",
-            "High Contrast"
+            "High Contrast",
+            "Blue",
+            "Cool"
         ],
-        "Location": "centre",
-        "Link": "https://www.google.com/maps?q=48.876668333333335,2.2257883333333335",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/80\n",
-        "ISO": "125\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "200.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "centre"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\centre\\DSC_3375.jpg_1707041266.0",
         "filename": "DSC_3375.jpg",
         "width": 2358,
         "height": 3532,
         "title": "DSC_3375.jpg",
         "tags": [
-            "Cool",
-            "Blue",
             "Muted",
-            "High Contrast"
+            "High Contrast",
+            "Blue",
+            "Cool"
         ],
-        "Location": "centre",
-        "Link": "https://www.google.com/maps?q=48.876668333333335,2.2257883333333335",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/80\n",
-        "ISO": "125\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "165.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "centre"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\centre\\DSC_3384.jpg_1707041266.0",
         "filename": "DSC_3384.jpg",
         "width": 5350,
         "height": 3009,
         "title": "DSC_3384.jpg",
         "tags": [
-            "Cool",
-            "Blue"
+            "Blue",
+            "Cool"
         ],
-        "Location": "centre",
-        "Link": "https://www.google.com/maps?q=48.898923333333336,2.21432",
+        "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/4\n",
-        "ExposureTime": "1/15\n",
-        "ISO": "125\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "24.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "centre"
     }
 ]

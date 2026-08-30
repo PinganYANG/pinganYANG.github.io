@@ -1,519 +1,377 @@
-import os
+"""增量生成分层图库：只扫描一次源目录，只分析新增或变更的照片。"""
+
+from __future__ import annotations
+
+import argparse
+import html
 import json
-from PIL import Image, ExifTags
-from PIL.ExifTags import TAGS
-from PIL import Image
-from geopy.geocoders import Nominatim
-import time
-
-
-def list_all_files(root_folder):
-    files = []
-    for dirpath, dirnames, filenames in os.walk(root_folder):
-        for filename in filenames:
-            # 构建文件的完整路径
-            file_path = os.path.join(dirpath, filename)
-            files.append(file_path)
-    return files
-
-
-
-def get_exif_data(image_path):
-    image = Image.open(image_path)
-    exif_data = {}
-    if hasattr(image, '_getexif'):  # 检查图片是否包含EXIF数据
-        exif_info = image._getexif()
-        if exif_info is not None:
-            for tag, value in exif_info.items():
-                decoded_tag = TAGS.get(tag, tag)
-                exif_data[decoded_tag] = value
-    return exif_data
-def get_decimal_from_dms(dms, ref):
-    """ 将度分秒 (DMS) 格式转换为十进制格式 """
-    degrees, minutes, seconds = dms
-    decimal = degrees + (minutes / 60.0) + (seconds / 3600.0)
-    if ref in ['S', 'W']:
-        decimal = -decimal
-    return decimal
-
-def get_gps_coordinates(exif_data):
-    """ 从EXIF数据中获取GPS坐标 """
-    gps_info = exif_data.get('GPSInfo')  # 34853 is the tag for 
-    if gps_info:
-        gps_latitude = gps_info[2]
-        gps_latitude_ref = gps_info[1]
-        gps_longitude = gps_info[4]
-        gps_longitude_ref = gps_info[3]
-
-        lat = get_decimal_from_dms(gps_latitude, gps_latitude_ref)
-        lon = get_decimal_from_dms(gps_longitude, gps_longitude_ref)
-        
-        return lat, lon
-    else:
-        return None, None
-    
-def find_location(lat, lon):
-    """ 使用geopy来找出给定坐标的地理位置 """
-    geolocator = Nominatim(user_agent="geoapiExercises")
-    location = geolocator.reverse((lat, lon), language='en',addressdetails=False)
-    return location
 import os
-import json
-from PIL import Image  # 引入 Pillow 库用于读取图片尺寸
+from pathlib import Path
+from typing import Any
+from urllib.parse import quote
 
-# def create_json_files(folder_path, photos):
-#     photo_info_list = []
-    
-#     # 遍历照片文件夹中的文件
-#     for file in photos:
-#         # --- 新增部分：获取图片宽和高 ---
-#         try:
-#             # Image.open 是懒加载，只读取文件头获取尺寸，速度很快，不会加载整张图
-#             with Image.open(file) as img:
-#                 width, height = img.size
-#         except Exception as e:
-#             print(f"Error reading image size for {file}: {e}")
-#             width = 0
-#             height = 0
-#         # -----------------------------
-
-#         exif_metadata = get_exif_data(file) # 假设你已经有了这个函数
-#         lat, lon = get_gps_coordinates(exif_metadata) # 假设你已经有了这个函数
-        
-#         # 默认坐标处理
-#         if lat is None and lon is None:
-#             lat = 48.8481
-#             lon = 2.3958766666666667
-            
-#         # 路径处理 (处理 Windows 反斜杠)
-#         if len(folder_path.split("\\")) == 1:
-#             location = ""
-#         else:
-#             location = folder_path.split("\\")[-1]
-            
-#         filenames = file.split('\\')
-#         filename = filenames[-1]
-
-#         # 创建包含文件信息的字典
-#         if exif_metadata != {}:
-#             # 安全获取 EXIF 数据的辅助逻辑 (防止报错)
-#             model = exif_metadata.get("Model", "Unknown Camera")
-            
-#             # 光圈处理
-#             try:
-#                 aperture_val = exif_metadata.get("ApertureValue", 0)
-#                 aperture = f'f/{round(2 ** (aperture_val / 2), 1)}'
-#             except:
-#                 aperture = ""
-
-#             # 快门处理
-#             exp_time_raw = exif_metadata.get("ExposureTime", "")
-#             if hasattr(exp_time_raw, 'numerator') and hasattr(exp_time_raw, 'denominator'):
-#                 exposure_time = f'{exp_time_raw.numerator}/{exp_time_raw.denominator}'
-#             else:
-#                 exposure_time = str(exp_time_raw)
-
-#             photo_info = {
-#                 'filename': filename,
-#                 'width': width,   # <--- 新增
-#                 'height': height, # <--- 新增
-#                 'title': filename,
-#                 'CameraModel': f'{model}\n',
-#                 'Aperture': f'{aperture}\n',
-#                 'ExposureTime': f'{exposure_time}\n',
-#                 'ISO': f'{exif_metadata.get("ISOSpeedRatings", "")}\n',
-#                 'ExposureBiasValue': f'{exif_metadata.get("ExposureBiasValue", "")}\n',
-#                 'FocalLength': f'{exif_metadata.get("FocalLength", "")}\n',
-#                 'Location': f'{location}',
-#                 "Link": f"https://www.google.com/maps?q={lat},{lon}"
-#             }
-#         else:
-#             # 没有 EXIF 时的默认值
-#             photo_info = {
-#                 'filename': filename,
-#                 'width': width,   # <--- 新增
-#                 'height': height, # <--- 新增
-#                 'title': filename,
-#                 "CameraModel": "NIKON Z 5\n",
-#                 "Aperture": "f/4.8\n",
-#                 "ExposureTime": "1/10\n",
-#                 "ISO": "1250\n",
-#                 "ExposureBiasValue": "0.0\n",
-#                 "FocalLength": "33.0\n",
-#                 "Location": "Sweden",
-#                 "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
-#             }
-            
-#         # 将图片信息添加到列表中
-#         photo_info_list.append(photo_info)
-
-#     # 将图片信息列表保存为JSON文件
-#     json_filename = os.path.join(folder_path, 'photos_info.json')
-#     with open(json_filename, 'w', encoding='utf-8') as json_file: # 建议加上 encoding='utf-8'
-#         json.dump(photo_info_list, json_file, indent=4, ensure_ascii=False) # ensure_ascii=False 防止中文乱码
-
-#     print(f"JSON generated at: {json_filename}")
-
-import os
-import json
 import numpy as np
 from PIL import Image
+from PIL.ExifTags import TAGS
 
-# --- 1. 核心分析函数：生成颜色和氛围标签 ---
-def analyze_color_theme(image_path):
-    """
-    分析图片的色调、颜色倾向和氛围，返回标签列表。
-    例如: ['Blue', 'Cool', 'Dark', 'High Contrast']
-    """
-    tags = set()
-    
+
+PROJECT_ROOT = Path(__file__).resolve().parent
+DEFAULT_SOURCE = Path(r"D:\Lr\My_Gallery")
+DEFAULT_OUTPUT = PROJECT_ROOT / "My_Gallery"
+DEFAULT_MASTER = PROJECT_ROOT / "master_photos.json"
+DEFAULT_MENU = PROJECT_ROOT / "html_menu.txt"
+IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
+DEFAULT_COORDINATES = (48.8481, 2.3958)
+TAG_ORDER = (
+    "B&W", "Monochrome", "Muted", "Vivid", "High Key", "Low Key", "Dark",
+    "High Contrast", "Soft", "Red", "Orange", "Yellow", "Green", "Cyan",
+    "Blue", "Purple", "Magenta", "Cool", "Warm",
+)
+
+
+def file_id(path: Path) -> str:
+    """保持旧缓存 ID 格式，已有 master_photos.json 可直接复用。"""
+    return f"{os.path.abspath(path)}_{path.stat().st_mtime}"
+
+
+def load_cache(path: Path) -> dict[str, dict[str, Any]]:
+    if not path.exists():
+        return {}
     try:
-        # 读取并缩放图片 (加速计算)
-        img = Image.open(image_path).convert('RGB')
-        img_small = img.resize((100, 100)) 
-        
-        # 转换为 HSV (Hue, Saturation, Value) 方便颜色判断
-        # PIL 的 HSV 范围: H(0-255), S(0-255), V(0-255)
-        # 注意: H 在 PIL 中是 0-255，对应 0-360度
-        hsv_img = img_small.convert('HSV')
-        hsv_arr = np.array(hsv_img)
-        
-        h = hsv_arr[:,:,0]
-        s = hsv_arr[:,:,1]
-        v = hsv_arr[:,:,2]
-        
-        # 计算平均值
-        avg_s = np.mean(s)
-        avg_v = np.mean(v)
-        std_v = np.std(v) # 亮度标准差 = 对比度
-
-        # --- A. 饱和度判断 (B&W / Muted / Vivid) ---
-        if avg_s < 20: # 非常低饱和 -> 黑白
-            tags.add("B&W")
-            tags.add("Monochrome")
-            return list(tags) # 黑白照片不需要判断颜色，直接返回
-        elif avg_s < 60:
-            tags.add("Muted")   # 低饱和/淡雅
-        elif avg_s > 150:
-            tags.add("Vivid")   # 鲜艳
-
-        # --- B. 亮度/影调判断 (High Key / Low Key) ---
-        if avg_v > 180:
-            tags.add("High Key")    # 高调/明亮
-        elif avg_v < 80:
-            tags.add("Low Key")     # 低调/暗黑
-            tags.add("Dark")
-
-        # --- C. 对比度判断 ---
-        if std_v > 60:
-            tags.add("High Contrast") # 硬调
-        elif std_v < 30:
-            tags.add("Soft")          # 柔调
-
-        # --- D. 主色调判断 (核心逻辑) ---
-        # 我们只统计饱和度 > 40 的像素 (忽略灰色区域)
-        valid_pixels = (s > 40) & (v > 40)
-        if np.sum(valid_pixels) > 0:
-            valid_h = h[valid_pixels]
-            # 计算平均色相 (简单的平均法在环形空间可能有问题，但在单一主色调场景够用)
-            # 更严谨的做法是统计直方图峰值，这里用简单的区间判断
-            
-            # 统计各颜色区间的像素占比
-            # H (0-255) 映射到 360度: H * 360 / 255
-            # Red: 0-20, 235-255
-            # Orange: 20-40
-            # Yellow: 40-70
-            # Green: 70-105
-            # Cyan: 105-135
-            # Blue: 135-175
-            # Purple: 175-215
-            # Magenta: 215-235
-            
-            # 为了简化，我们直接用 numpy 统计区间
-            hist, bins = np.histogram(valid_h, bins=[0, 20, 40, 70, 105, 135, 175, 215, 235, 256])
-            # hist 对应: [Red1, Orange, Yellow, Green, Cyan, Blue, Purple, Magenta, Red2]
-            
-            # 把 Red1 和 Red2 合并
-            color_counts = {
-                'Red': hist[0] + hist[8],
-                'Orange': hist[1],
-                'Yellow': hist[2],
-                'Green': hist[3],
-                'Cyan': hist[4],
-                'Blue': hist[5],
-                'Purple': hist[6],
-                'Magenta': hist[7]
-            }
-            
-            # 找出占比最高的颜色
-            primary_color = max(color_counts, key=color_counts.get)
-            total_valid = np.sum(valid_pixels)
-            
-            # 只有当该颜色占比超过 25% 时才打标签，防止杂色干扰
-            if color_counts[primary_color] / total_valid > 0.25:
-                tags.add(primary_color)
-                
-                # 顺便打上冷暖标签
-                if primary_color in ['Blue', 'Cyan', 'Green', 'Purple']:
-                    tags.add('Cool')
-                elif primary_color in ['Red', 'Orange', 'Yellow']:
-                    tags.add('Warm')
-
-    except Exception as e:
-        print(f"Error analyzing color for {image_path}: {e}")
-
-    return list(tags)
+        with path.open("r", encoding="utf-8") as file:
+            data = json.load(file)
+    except (OSError, json.JSONDecodeError) as exc:
+        print(f"警告：缓存读取失败，将重新建立：{exc}")
+        return {}
+    items = data if isinstance(data, list) else data.values() if isinstance(data, dict) else []
+    cache = {
+        str(item["id"]): item
+        for item in items
+        if isinstance(item, dict) and item.get("id")
+    }
+    print(f"已加载 {len(cache)} 条照片缓存。")
+    return cache
 
 
-# --- 3. 主生成函数 ---
+def write_if_changed(path: Path, content: str, dry_run: bool = False) -> bool:
+    """内容不变就不刷新文件；需要写时使用原子替换。"""
+    try:
+        if path.exists() and path.read_text(encoding="utf-8") == content:
+            return False
+    except (OSError, UnicodeError):
+        pass
+    if dry_run:
+        return True
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_name(f".{path.name}.tmp")
+    temporary.write_text(content, encoding="utf-8", newline="\n")
+    os.replace(temporary, path)
+    return True
 
-def create_json_files(folder_path, photos):
-    photo_info_list = []
-    
-    print(f"开始处理 {len(photos)} 张照片...")
-    
-    for i, file in enumerate(photos):
-        filename = os.path.basename(file)
-        print(f"[{i+1}/{len(photos)}] 正在分析: {filename}")
-        
-        # 1. 获取宽高
-        width, height = 0, 0
-        try:
-            with Image.open(file) as img:
-                width, height = img.size
-        except: pass
 
-        # 2. 【核心】生成颜色标签
-        color_tags = analyze_color_theme(file)
-        # print(f"  -> Tags: {color_tags}") # 调试用
-        
-        # 3. 获取其他信息
-        exif_metadata = get_exif_data(file)
-        lat, lon = get_gps_coordinates(exif_metadata)
-        
-        if lat is None and lon is None:
-            lat = 48.8481
-            lon = 2.3958
-            
-        location = folder_path.split("\\")[-1] if len(folder_path.split("\\")) > 1 else ""
+def json_text(data: Any) -> str:
+    return json.dumps(data, indent=4, ensure_ascii=False) + "\n"
 
-        # 基础信息
-        base_info = {
-            'filename': filename,
-            'width': width,
-            'height': height,
-            'title': filename,
-            'tags': color_tags,  # <--- 写入颜色标签 (例如 ["Blue", "Cool", "Dark"])
-            'Location': location,
-            "Link": f"https://www.google.com/maps?q={lat},{lon}"
-        }
 
-        # 合并 EXIF 信息 (保持你之前的逻辑结构)
-        if exif_metadata:
-            model = exif_metadata.get("Model", "Unknown")
-            try:
-                aperture_val = exif_metadata.get("ApertureValue", 0)
-                aperture = f'f/{round(2 ** (aperture_val / 2), 1)}'
-            except: aperture = ""
+def scan_library(source: Path) -> dict[Path, list[Path]]:
+    """一次扫描建立层级索引；父目录自动包含所有后代目录的照片。"""
+    direct: dict[Path, list[Path]] = {}
+    for dirpath, dirnames, filenames in os.walk(source):
+        dirnames.sort(key=str.casefold)
+        filenames.sort(key=str.casefold)
+        folder = Path(dirpath)
+        relative = folder.relative_to(source)
+        direct[relative] = [
+            folder / name
+            for name in filenames
+            if Path(name).suffix.lower() in IMAGE_EXTENSIONS
+        ]
 
-            exp_time_raw = exif_metadata.get("ExposureTime", "")
-            if hasattr(exp_time_raw, 'numerator'):
-                exposure_time = f'{exp_time_raw.numerator}/{exp_time_raw.denominator}'
-            else: exposure_time = str(exp_time_raw)
+    recursive = {folder: [] for folder in direct}
+    for folder, images in direct.items():
+        ancestor = folder
+        while True:
+            recursive.setdefault(ancestor, []).extend(images)
+            if ancestor == Path("."):
+                break
+            ancestor = ancestor.parent
+    for images in recursive.values():
+        images.sort(key=lambda p: str(p.relative_to(source)).casefold())
+    return recursive
 
-            photo_info = {
-                **base_info,
-                'CameraModel': f'{model}\n',
-                'Aperture': f'{aperture}\n',
-                'ExposureTime': f'{exposure_time}\n',
-                'ISO': f'{exif_metadata.get("ISOSpeedRatings", "")}\n',
-                'ExposureBiasValue': f'{exif_metadata.get("ExposureBiasValue", "")}\n',
-                'FocalLength': f'{exif_metadata.get("FocalLength", "")}\n',
-            }
+
+def get_exif(path: Path) -> dict[str, Any]:
+    try:
+        with Image.open(path) as image:
+            return {TAGS.get(tag, tag): value for tag, value in image.getexif().items()}
+    except Exception as exc:
+        print(f"  EXIF 读取失败 {path.name}: {exc}")
+        return {}
+
+
+def dms_to_decimal(dms: Any, reference: Any) -> float:
+    degrees, minutes, seconds = (float(value) for value in dms)
+    decimal = degrees + minutes / 60 + seconds / 3600
+    if isinstance(reference, bytes):
+        reference = reference.decode(errors="ignore")
+    return -decimal if str(reference).upper() in {"S", "W"} else decimal
+
+
+def get_coordinates(exif: dict[str, Any]) -> tuple[float | None, float | None]:
+    try:
+        gps = exif.get("GPSInfo")
+        if not gps:
+            return None, None
+        get = gps.get if hasattr(gps, "get") else lambda key: gps[key]
+        values = get(2), get(1), get(4), get(3)
+        if not all(values):
+            return None, None
+        return dms_to_decimal(values[0], values[1]), dms_to_decimal(values[2], values[3])
+    except (KeyError, TypeError, ValueError, ZeroDivisionError):
+        return None, None
+
+
+def analyze_color(path: Path) -> list[str]:
+    """耗时的颜色分析只会对新照片或已修改照片执行。"""
+    tags: set[str] = set()
+    try:
+        with Image.open(path) as image:
+            image.thumbnail((100, 100))
+            hsv = np.asarray(image.convert("RGB").convert("HSV"))
+        hue, saturation, value = hsv[:, :, 0], hsv[:, :, 1], hsv[:, :, 2]
+        avg_s, avg_v, std_v = map(float, (np.mean(saturation), np.mean(value), np.std(value)))
+        if avg_s < 20:
+            tags.update(("B&W", "Monochrome"))
         else:
-            photo_info = {
-                **base_info,
-                "CameraModel": "NIKON Z 5\n",
-                "Aperture": "f/4.8\n",
-                "ExposureTime": "1/10\n",
-                "ISO": "1250\n",
-                "ExposureBiasValue": "0.0\n",
-                "FocalLength": "33.0\n",
-                "Location": "Sweden",
-                "Link": "https://www.google.com/maps?q=48.8481,2.3958766666666667"
-            }
+            if avg_s < 60:
+                tags.add("Muted")
+            elif avg_s > 150:
+                tags.add("Vivid")
+            if avg_v > 180:
+                tags.add("High Key")
+            elif avg_v < 80:
+                tags.update(("Low Key", "Dark"))
+            if std_v > 60:
+                tags.add("High Contrast")
+            elif std_v < 30:
+                tags.add("Soft")
 
-        photo_info_list.append(photo_info)
+            valid = (saturation > 40) & (value > 40)
+            count = int(np.sum(valid))
+            if count:
+                histogram, _ = np.histogram(
+                    hue[valid], bins=[0, 20, 40, 70, 105, 135, 175, 215, 235, 256]
+                )
+                counts = dict(zip(
+                    ("Orange", "Yellow", "Green", "Cyan", "Blue", "Purple", "Magenta"),
+                    map(int, histogram[1:8]),
+                ))
+                counts["Red"] = int(histogram[0] + histogram[8])
+                primary = max(counts, key=counts.get)
+                if counts[primary] / count > 0.25:
+                    tags.add(primary)
+                    tags.add("Cool" if primary in {"Blue", "Cyan", "Green", "Purple"} else "Warm")
+    except Exception as exc:
+        print(f"  颜色分析失败 {path.name}: {exc}")
+    return [tag for tag in TAG_ORDER if tag in tags]
 
-    # 保存 JSON
-    json_filename = os.path.join(folder_path, 'photos_info.json')
-    with open(json_filename, 'w', encoding='utf-8') as json_file:
-        json.dump(photo_info_list, json_file, indent=4, ensure_ascii=False)
-    
-    print(f"\n✅ 完成！JSON 已生成: {json_filename}")
 
-# --- 测试运行 (请根据实际情况取消注释) ---
-# folder = r"C:\Users\YourName\Pictures\Gallery"
-# files = [os.path.join(folder, f) for f in os.listdir(folder) if f.lower().endswith(('.jpg', '.jpeg', '.png'))]
-# create_json_files(folder, files)
+def exif_text(exif: dict[str, Any], key: str, default: str = "") -> str:
+    value = exif.get(key, default)
+    return str(value) if value not in (None, "") else default
 
 
+def aperture_text(exif: dict[str, Any]) -> str:
+    try:
+        if exif.get("FNumber"):
+            return f"f/{float(exif['FNumber']):g}"
+        if exif.get("ApertureValue") is not None:
+            return f"f/{2 ** (float(exif['ApertureValue']) / 2):.1f}"
+    except (TypeError, ValueError, ZeroDivisionError):
+        pass
+    return ""
 
 
+def analyze_photo(path: Path, current_id: str, previous: dict[str, Any] | None) -> dict[str, Any]:
+    print(f"  分析：{path.name}")
+    width = height = 0
+    try:
+        with Image.open(path) as image:
+            width, height = image.size
+    except Exception as exc:
+        print(f"  图片读取失败 {path.name}: {exc}")
+    exif = get_exif(path)
+    latitude, longitude = get_coordinates(exif)
+    latitude = DEFAULT_COORDINATES[0] if latitude is None else latitude
+    longitude = DEFAULT_COORDINATES[1] if longitude is None else longitude
+    return {
+        "id": current_id,
+        "filename": path.name,
+        "width": width,
+        "height": height,
+        "title": path.name,
+        "tags": analyze_color(path),
+        "Link": f"https://www.google.com/maps?q={latitude},{longitude}",
+        "CameraModel": f"{exif_text(exif, 'Model', 'Unknown Camera')}\n",
+        "ISO": f"{exif_text(exif, 'ISOSpeedRatings')}\n",
+        "FocalLength": f"{exif_text(exif, 'FocalLength')}\n",
+        "ExposureBiasValue": f"{exif_text(exif, 'ExposureBiasValue')}\n",
+        "Aperture": f"{aperture_text(exif)}\n",
+        "ExposureTime": f"{exif_text(exif, 'ExposureTime')}\n",
+        "ai_analysis": previous.get("ai_analysis") if previous else None,
+    }
 
-import os
 
-def create_index_htmls(photos,output_folder):
-    output_html = output_folder+"\\"+"index.html"
-    # 获取photos文件夹中所有的.jpg文件
-    image_files = [f.split("\\")[-1] for f in photos]
-
-    # 创建图片元素的HTML字符串
-    image_elements = '\n'.join(
-        f'<img src="{os.path.join(filename)}" alt="{filename}">'
-        for filename in image_files
+def index_html(images: list[Path]) -> str:
+    tags = "\n".join(
+        f'        <img src="{html.escape(p.name, quote=True)}" alt="{html.escape(p.name, quote=True)}">'
+        for p in images
     )
-
-    # 创建整个HTML页面的内容
-    html_content = f"""<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Photo Gallery</title>
-        <style>
-            body {{
-                margin: 0;
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }}
-            .gallery {{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 10px;
-                margin-top: 20px;
-            }}
-            .gallery img {{
-                max-width: 200px; /* Adjust the size as needed */
-                border: 1px solid #ccc;
-                padding: 5px;
-                background-color: #f8f8f8;
-            }}
-        </style>
-    </head>
-    <body>
-        <h1>Photo Gallery</h1>
-        <div class="gallery">
-            {image_elements}
-        </div>
-    </body>
-    </html>
-    """
-
-    # 将HTML内容写入到index.html文件
-    with open(output_html, 'w') as file:
-        file.write(html_content)
-
-
-
-def create_photo_htmls(photos,output_folder,level):
-    output_html = output_folder+"\\"+"photo.html"
-    folders = '/'.join(output_folder.split('\\'))
-    # 创建整个HTML页面的内容
-    
-    first = photos[0].split("\\")[-1]
-    location = output_folder.split('\\')[-1]
-    with open("html_menu.txt", 'r', encoding='utf-8') as file:
-        cat = file.read()
-    html_content = f"""<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="{level * "../"}img.css">
-        <link rel="stylesheet" type="text/css" href="{level * "../"}st.css">
-        <link rel="stylesheet" type="text/css" href="{level * "../"}menus.css">
-        
-        <link rel="stylesheet" type="text/css" href="{level * "../"}stylesheet.css">
-    <title>Photography Portfolio</title>
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
     <style>
-    
+        body {{ margin: 0; display: flex; flex-direction: column; align-items: center; }}
+        .gallery {{ display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px; }}
+        .gallery img {{ max-width: 200px; border: 1px solid #ccc; padding: 5px; background: #f8f8f8; }}
     </style>
-    </head>
-    {cat}
-
-
-
-    <body>
-
-    <div class="navbar">
-    <!-- 导航链接 -->
+</head>
+<body>
+    <h1>Photo Gallery</h1>
+    <div class="gallery">
+{tags}
     </div>
-    <div class="image-info">
-        <!-- 其它信息内容 -->
-        <a href="https://www.google.fr/maps" target="_blank">点击查看更多</a>
-    </div>
-    <div class="banner" style="background-image: url('{level * "../"}photos/{first}');">
-    <h1>Welcome to {location}</h1>
-    </div>
+</body>
+</html>
+"""
 
+
+def photo_html(images: list[Path], output_folder: Path, level: int, menu: str) -> str:
+    location = html.escape(output_folder.name)
+    prefix = "../" * level
+    first = quote(images[0].name)
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{prefix}img.css">
+    <link rel="stylesheet" href="{prefix}st.css">
+    <link rel="stylesheet" href="{prefix}menus.css">
+    <link rel="stylesheet" href="{prefix}stylesheet.css">
+    <title>{location} - Photography Portfolio</title>
+</head>
+<body>
+{menu}
+    <div class="navbar"></div>
+    <div class="image-info"><a href="https://www.google.fr/maps" target="_blank" rel="noopener">点击查看更多</a></div>
+    <div class="banner" style="background-image: url('{prefix}photos/{first}');">
+        <h1>Welcome to {location}</h1>
+    </div>
     <div id="myModal" class="modal">
-        <!-- 模态框内容 -->
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
-        <div id="caption"></div>
+        <span class="close">&times;</span><img class="modal-content" id="img01" alt=""><div id="caption"></div>
     </div>
-
-    <div class="gallery" id="gallery">
-    <!-- 初始图片 -->
-    </div>
-
-    <div id="loading">
-    <p>Loading more photos...</p>
-    </div>
-
-
-
-    <footer>
-    <!-- 页脚信息 -->
-    </footer>
-    <script>
-        const photosJsonUrl = 'https://pinganyang.github.io/{folders}/photos_info.json';
-    </script>
-    <script src="{level * "../"}img_random.js"></script>
-
-    
-
-    </body>
-    </html>
-
-    """
-
-    # 将HTML内容写入到index.html文件
-    with open(output_html, 'w', encoding='utf-8') as file:
-        file.write(html_content)
+    <div class="gallery" id="gallery"></div>
+    <div id="loading"><p>Loading more photos...</p></div>
+    <footer></footer>
+    <script>const photosJsonUrl = './photos_info.json';</script>
+    <script src="{prefix}img_random.js"></script>
+</body>
+</html>
+"""
 
 
+def build_gallery(
+    source: Path, output: Path, master: Path, menu_path: Path,
+    force: bool = False, dry_run: bool = False,
+) -> int:
+    source, output, master = source.resolve(), output.resolve(), master.resolve()
+    if not source.is_dir():
+        print(f"错误：源目录不存在：{source}")
+        return 2
+
+    old_cache = load_cache(master)
+    folders = scan_library(source)
+    all_images = folders.get(Path("."), [])
+    print(f"找到 {len(all_images)} 张照片、{len(folders)} 个目录。")
+
+    records: dict[Path, dict[str, Any]] = {}
+    new_cache: dict[str, dict[str, Any]] = {}
+    analyzed = cache_hits = 0
+    for image in all_images:
+        current_id = file_id(image)
+        cached = old_cache.get(current_id)
+        if cached is not None and not force:
+            record = cached
+            cache_hits += 1
+        else:
+            record = analyze_photo(image, current_id, cached)
+            analyzed += 1
+        records[image] = record
+        new_cache[current_id] = record
+
+    try:
+        menu = menu_path.read_text(encoding="utf-8") if menu_path.exists() else ""
+    except (OSError, UnicodeError) as exc:
+        print(f"警告：菜单读取失败：{exc}")
+        menu = ""
+
+    written = unchanged = processed = 0
+    order = sorted(folders, key=lambda p: (len(p.parts), str(p).casefold()))
+    for relative in order:
+        images = folders[relative]
+        if not images:
+            continue
+        processed += 1
+        destination = output if relative == Path(".") else output / relative
+        folder_records = []
+        for image in images:
+            record = records[image].copy()
+            record["Location"] = destination.name
+            folder_records.append(record)
+        files = {
+            destination / "photos_info.json": json_text(folder_records),
+            destination / "index.html": index_html(images),
+            destination / "photo.html": photo_html(images, destination, len(relative.parts) + 1, menu),
+        }
+        for path, content in files.items():
+            if write_if_changed(path, content, dry_run):
+                written += 1
+            else:
+                unchanged += 1
+
+    cache_list = [new_cache[key] for key in sorted(new_cache, key=str.casefold)]
+    if write_if_changed(master, json_text(cache_list), dry_run):
+        written += 1
+    else:
+        unchanged += 1
+
+    verb = "将写入" if dry_run else "写入"
+    print(
+        f"完成：处理 {processed} 个图库；缓存命中 {cache_hits} 张，新分析 {analyzed} 张；"
+        f"{verb} {written} 个文件，跳过 {unchanged} 个未变化文件。"
+    )
+    return 0
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--source", type=Path, default=DEFAULT_SOURCE, help="原始图库目录")
+    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT, help="网站图库输出目录")
+    parser.add_argument("--master", type=Path, default=DEFAULT_MASTER, help="照片缓存 JSON")
+    parser.add_argument("--menu", type=Path, default=DEFAULT_MENU, help="菜单 HTML 文件")
+    parser.add_argument("--force", action="store_true", help="忽略缓存，重新分析全部照片")
+    parser.add_argument("--dry-run", action="store_true", help="只报告变化，不写入文件")
+    return parser.parse_args()
 
 
-root_folder = "D:\\Lr\\My_Gallery"
-folder_name_dict = {}
-for dirpath, dirnames, filenames in os.walk(root_folder):
-    # 先打印当前目录
-    folder_names = dirpath.split("\\")
-    folder_name = "\\".join(folder_names[2:])
-    print(folder_name)
-    raw_folder = "\\".join(folder_names[:2])
-    if not os.path.exists(folder_name):
-        # 如果不存在，创建新目录
-        os.makedirs(folder_name)
-    files_lists = list_all_files(raw_folder+"\\"+folder_name)
-    create_json_files(folder_name,files_lists)
-    create_index_htmls(files_lists,folder_name)
-    level = len(folder_name.split("\\"))
-    create_photo_htmls(files_lists,folder_name,level)
+def main() -> int:
+    args = parse_args()
+    return build_gallery(args.source, args.output, args.master, args.menu, args.force, args.dry_run)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

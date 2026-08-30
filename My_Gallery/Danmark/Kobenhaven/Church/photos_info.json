@@ -1,99 +1,109 @@
 [
     {
+        "id": "D:\\LR\\My_Gallery\\Danmark\\Kobenhaven\\Church\\DSC_0693.jpg_1703800694.0",
         "filename": "DSC_0693.jpg",
         "width": 4016,
         "height": 6016,
         "title": "DSC_0693.jpg",
         "tags": [
-            "Cool",
             "Vivid",
-            "Blue"
+            "Blue",
+            "Cool"
         ],
-        "Location": "Church",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/4\n",
-        "ExposureTime": "1/25\n",
-        "ISO": "4000\n",
-        "ExposureBiasValue": "-1.3333333333333333\n",
-        "FocalLength": "24.5\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Church"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\Danmark\\Kobenhaven\\Church\\DSC_0695.jpg_1703800694.0",
         "filename": "DSC_0695.jpg",
         "width": 4016,
         "height": 6016,
         "title": "DSC_0695.jpg",
         "tags": [
-            "Cool",
             "Vivid",
-            "Blue"
+            "Blue",
+            "Cool"
         ],
-        "Location": "Church",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/4\n",
-        "ExposureTime": "1/25\n",
-        "ISO": "4500\n",
-        "ExposureBiasValue": "-1.3333333333333333\n",
-        "FocalLength": "24.5\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Church"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\Danmark\\Kobenhaven\\Church\\DSC_0700.jpg_1703800680.0",
         "filename": "DSC_0700.jpg",
         "width": 3538,
         "height": 5300,
         "title": "DSC_0700.jpg",
         "tags": [
-            "Cool",
             "Vivid",
-            "Blue"
+            "Blue",
+            "Cool"
         ],
-        "Location": "Church",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/4\n",
-        "ExposureTime": "1/25\n",
-        "ISO": "6400\n",
-        "ExposureBiasValue": "-1.6666666666666667\n",
-        "FocalLength": "24.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Church"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\Danmark\\Kobenhaven\\Church\\DSC_0702.jpg_1703800678.0",
         "filename": "DSC_0702.jpg",
         "width": 3468,
         "height": 5195,
         "title": "DSC_0702.jpg",
         "tags": [
-            "Low Key",
             "Vivid",
-            "Warm",
+            "Low Key",
             "Dark",
-            "Red"
+            "Red",
+            "Warm"
         ],
-        "Location": "Church",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/160\n",
-        "ISO": "11400\n",
-        "ExposureBiasValue": "-1.6666666666666667\n",
-        "FocalLength": "150.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Church"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\Danmark\\Kobenhaven\\Church\\DSC_1460.jpg_1703964510.0",
         "filename": "DSC_1460.jpg",
         "width": 3246,
         "height": 4863,
         "title": "DSC_1460.jpg",
         "tags": [
-            "Cool",
+            "High Contrast",
             "Blue",
-            "High Contrast"
+            "Cool"
         ],
-        "Location": "Church",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/4\n",
-        "ExposureTime": "1/250\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "24.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Church"
     }
 ]

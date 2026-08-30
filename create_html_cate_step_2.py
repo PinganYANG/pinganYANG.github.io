@@ -60,6 +60,8 @@ LOCATION_MAPPING = {
 'Belgrad':'贝尔格莱德',
 'Hungry':'匈牙利',
 'Budapest':'布达佩斯',
+'Austria':'奥地利',
+'Vienna':'维也纳',
 }
 
 def create_menu_item(path, name):

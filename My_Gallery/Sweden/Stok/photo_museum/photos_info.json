@@ -1,86 +1,93 @@
 [
     {
+        "id": "D:\\LR\\My_Gallery\\Sweden\\Stok\\photo_museum\\DSC_2597.jpg_1705848338.0",
         "filename": "DSC_2597.jpg",
         "width": 5500,
         "height": 3094,
         "title": "DSC_2597.jpg",
         "tags": [
             "Low Key",
-            "High Contrast",
-            "Vivid",
-            "Blue",
             "Dark",
+            "High Contrast",
+            "Blue",
             "Cool"
         ],
-        "Location": "photo_museum",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/5.6\n",
-        "ExposureTime": "1/8\n",
-        "ISO": "2000\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "24.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "photo_museum"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\Sweden\\Stok\\photo_museum\\DSC_2616.jpg_1705848396.0",
         "filename": "DSC_2616.jpg",
         "width": 3927,
         "height": 5882,
         "title": "DSC_2616.jpg",
         "tags": [
             "Vivid",
-            "Warm",
             "High Contrast",
-            "Red"
+            "Red",
+            "Warm"
         ],
-        "Location": "photo_museum",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/5.6\n",
-        "ExposureTime": "1/4\n",
-        "ISO": "640\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "44.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "photo_museum"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\Sweden\\Stok\\photo_museum\\DSC_2625.jpg_1705848388.0",
         "filename": "DSC_2625.jpg",
         "width": 3107,
         "height": 2074,
         "title": "DSC_2625.jpg",
         "tags": [
-            "Cool",
-            "Blue",
             "Low Key",
-            "Dark"
+            "Dark",
+            "Blue",
+            "Cool"
         ],
-        "Location": "photo_museum",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/5.6\n",
-        "ExposureTime": "1/8\n",
-        "ISO": "1250\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "24.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "photo_museum"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\Sweden\\Stok\\photo_museum\\DSC_2645.jpg_1705848774.0",
         "filename": "DSC_2645.jpg",
         "width": 4273,
         "height": 2852,
         "title": "DSC_2645.jpg",
         "tags": [
-            "Low Key",
-            "High Contrast",
             "Vivid",
-            "Warm",
+            "Low Key",
             "Dark",
-            "Red"
+            "High Contrast",
+            "Red",
+            "Warm"
         ],
-        "Location": "photo_museum",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/4\n",
-        "ExposureTime": "1/60\n",
-        "ISO": "640\n",
-        "ExposureBiasValue": "-1.0\n",
-        "FocalLength": "24.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "photo_museum"
     }
 ]

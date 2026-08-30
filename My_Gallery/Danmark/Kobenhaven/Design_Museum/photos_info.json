@@ -1,142 +1,156 @@
 [
     {
+        "id": "D:\\LR\\My_Gallery\\Danmark\\Kobenhaven\\Design_Museum\\DSC_0704.jpg_1703800692.0",
         "filename": "DSC_0704.jpg",
         "width": 4016,
         "height": 6016,
         "title": "DSC_0704.jpg",
         "tags": [
-            "Warm",
             "Low Key",
             "Dark",
-            "Red"
+            "Red",
+            "Warm"
         ],
-        "Location": "Design_Museum",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.0\n",
-        "ExposureTime": "1/80\n",
-        "ISO": "5000\n",
-        "ExposureBiasValue": "-1.3333333333333333\n",
-        "FocalLength": "65.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Design_Museum"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\Danmark\\Kobenhaven\\Design_Museum\\DSC_0711.jpg_1703800686.0",
         "filename": "DSC_0711.jpg",
         "width": 3293,
         "height": 4933,
         "title": "DSC_0711.jpg",
         "tags": [
             "Vivid",
+            "High Contrast",
             "Orange",
-            "Warm",
-            "High Contrast"
+            "Warm"
         ],
-        "Location": "Design_Museum",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/13.0\n",
-        "ExposureTime": "1/25\n",
-        "ISO": "450\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "24.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Design_Museum"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\Danmark\\Kobenhaven\\Design_Museum\\DSC_0723.jpg_1703800668.0",
         "filename": "DSC_0723.jpg",
         "width": 3701,
         "height": 5544,
         "title": "DSC_0723.jpg",
         "tags": [
-            "Warm",
             "High Key",
-            "Yellow"
+            "Yellow",
+            "Warm"
         ],
-        "Location": "Design_Museum",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/8\n",
-        "ExposureTime": "1/40\n",
-        "ISO": "6400\n",
-        "ExposureBiasValue": "1.3333333333333333\n",
-        "FocalLength": "24.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Design_Museum"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\Danmark\\Kobenhaven\\Design_Museum\\DSC_0729.jpg_1703800686.0",
         "filename": "DSC_0729.jpg",
         "width": 5574,
         "height": 3135,
         "title": "DSC_0729.jpg",
         "tags": [
             "Vivid",
+            "High Contrast",
             "Orange",
-            "Warm",
-            "High Contrast"
+            "Warm"
         ],
-        "Location": "Design_Museum",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/8\n",
-        "ExposureTime": "1/100\n",
-        "ISO": "6400\n",
-        "ExposureBiasValue": "-1.0\n",
-        "FocalLength": "24.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Design_Museum"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\Danmark\\Kobenhaven\\Design_Museum\\DSC_0732.jpg_1703800676.0",
         "filename": "DSC_0732.jpg",
         "width": 3960,
         "height": 5932,
         "title": "DSC_0732.jpg",
         "tags": [
-            "Warm",
+            "High Contrast",
             "Orange",
-            "High Contrast"
+            "Warm"
         ],
-        "Location": "Design_Museum",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/8\n",
-        "ExposureTime": "1/6400\n",
-        "ISO": "6400\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "24.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Design_Museum"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\Danmark\\Kobenhaven\\Design_Museum\\DSC_0741.jpg_1703800696.0",
         "filename": "DSC_0741.jpg",
         "width": 6016,
         "height": 4016,
         "title": "DSC_0741.jpg",
         "tags": [
             "Vivid",
-            "Orange",
-            "Warm",
-            "High Contrast"
+            "High Contrast",
+            "Red",
+            "Warm"
         ],
-        "Location": "Design_Museum",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/8\n",
-        "ExposureTime": "1/50\n",
-        "ISO": "10000\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "42.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Design_Museum"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\Danmark\\Kobenhaven\\Design_Museum\\DSC_0746.jpg_1703800684.0",
         "filename": "DSC_0746.jpg",
         "width": 3841,
         "height": 5754,
         "title": "DSC_0746.jpg",
         "tags": [
-            "Low Key",
-            "High Contrast",
             "Vivid",
-            "Warm",
+            "Low Key",
             "Dark",
-            "Red"
+            "High Contrast",
+            "Red",
+            "Warm"
         ],
-        "Location": "Design_Museum",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/8\n",
-        "ExposureTime": "1/100\n",
-        "ISO": "6400\n",
-        "ExposureBiasValue": "-0.6666666666666666\n",
-        "FocalLength": "43.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Design_Museum"
     }
 ]

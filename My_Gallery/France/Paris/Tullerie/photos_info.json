@@ -1,77 +1,85 @@
 [
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Tullerie\\DSC_0505.jpg_1703539744.0",
         "filename": "DSC_0505.jpg",
         "width": 4016,
         "height": 6016,
         "title": "DSC_0505.jpg",
         "tags": [
-            "Warm",
+            "High Contrast",
             "Orange",
-            "High Contrast"
+            "Warm"
         ],
-        "Location": "Tullerie",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/400\n",
-        "ISO": "400\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "155.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Tullerie"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Tullerie\\DSC_0509.jpg_1703539738.0",
         "filename": "DSC_0509.jpg",
         "width": 6016,
         "height": 4016,
         "title": "DSC_0509.jpg",
         "tags": [
-            "Cool",
             "Muted",
-            "Cyan"
+            "Cyan",
+            "Cool"
         ],
-        "Location": "Tullerie",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/250\n",
-        "ISO": "250\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "95.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Tullerie"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Tullerie\\DSC_0511.jpg_1703539736.0",
         "filename": "DSC_0511.jpg",
         "width": 3019,
         "height": 3019,
         "title": "DSC_0511.jpg",
         "tags": [
-            "Cool",
             "Soft",
-            "Cyan"
+            "Cyan",
+            "Cool"
         ],
-        "Location": "Tullerie",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/5.6\n",
-        "ExposureTime": "1/250\n",
-        "ISO": "200\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "32.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Tullerie"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Tullerie\\DSC_0514.jpg_1703539740.0",
         "filename": "DSC_0514.jpg",
         "width": 2999,
         "height": 4492,
         "title": "DSC_0514.jpg",
         "tags": [
-            "Warm",
-            "Orange"
+            "Orange",
+            "Warm"
         ],
-        "Location": "Tullerie",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/250\n",
-        "ISO": "500\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "160.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Tullerie"
     }
 ]

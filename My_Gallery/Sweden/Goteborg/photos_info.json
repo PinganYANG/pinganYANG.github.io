@@ -1,79 +1,87 @@
 [
     {
+        "id": "D:\\LR\\My_Gallery\\Sweden\\Goteborg\\DSC_1617.jpg_1704184120.0",
         "filename": "DSC_1617.jpg",
         "width": 6016,
         "height": 4016,
         "title": "DSC_1617.jpg",
         "tags": [
-            "Warm",
             "Soft",
-            "Red"
+            "Red",
+            "Warm"
         ],
-        "Location": "Goteborg",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.0\n",
-        "ExposureTime": "1/25\n",
-        "ISO": "200\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "77.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Goteborg"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\Sweden\\Goteborg\\DSC_1620.jpg_1704184110.0",
         "filename": "DSC_1620.jpg",
         "width": 3012,
         "height": 4016,
         "title": "DSC_1620.jpg",
         "tags": [
-            "Warm",
             "Soft",
-            "Red"
+            "Red",
+            "Warm"
         ],
-        "Location": "Goteborg",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/4\n",
-        "ExposureTime": "1/25\n",
-        "ISO": "200\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "24.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Goteborg"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\Sweden\\Goteborg\\DSC_1765.jpg_1705428016.0",
         "filename": "DSC_1765.jpg",
         "width": 3195,
         "height": 1797,
         "title": "DSC_1765.jpg",
         "tags": [
             "Low Key",
+            "Dark",
             "High Contrast",
             "Blue",
-            "Dark",
             "Cool"
         ],
-        "Location": "Goteborg",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/4.8\n",
-        "ExposureTime": "1/10\n",
-        "ISO": "1250\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "33.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Goteborg"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\Sweden\\Goteborg\\DSC_1786.jpg_1705419430.0",
         "filename": "DSC_1786.jpg",
         "width": 6016,
         "height": 3384,
         "title": "DSC_1786.jpg",
         "tags": [
-            "Cool",
-            "Blue"
+            "Blue",
+            "Cool"
         ],
-        "Location": "Goteborg",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/30\n",
-        "ISO": "1250\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "130.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Goteborg"
     }
 ]

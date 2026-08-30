@@ -1,79 +1,88 @@
 [
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Parc_floral\\DSC_5030.jpg_1712328730.0",
         "filename": "DSC_5030.jpg",
         "width": 429,
         "height": 643,
         "title": "DSC_5030.jpg",
         "tags": [
-            "Cool",
             "Muted",
             "Soft",
-            "Cyan"
+            "Cyan",
+            "Cool"
         ],
-        "Location": "Parc_floral",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/2500\n",
-        "ISO": "640\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "24.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Parc_floral"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Parc_floral\\DSC_5040.jpg_1712328730.0",
         "filename": "DSC_5040.jpg",
         "width": 1202,
         "height": 1801,
         "title": "DSC_5040.jpg",
         "tags": [
-            "Cool",
-            "Blue"
+            "Blue",
+            "Cool"
         ],
-        "Location": "Parc_floral",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/800\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "135.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Parc_floral"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Parc_floral\\DSC_5045.jpg_1712328730.0",
         "filename": "DSC_5045.jpg",
         "width": 1273,
         "height": 716,
         "title": "DSC_5045.jpg",
         "tags": [
-            "Warm",
-            "Orange"
+            "Orange",
+            "Warm"
         ],
-        "Location": "Parc_floral",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/800\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "73.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Parc_floral"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Parc_floral\\DSC_5046.jpg_1712328730.0",
         "filename": "DSC_5046.jpg",
         "width": 1372,
         "height": 771,
         "title": "DSC_5046.jpg",
         "tags": [
-            "Cool",
-            "Cyan"
+            "Cyan",
+            "Cool"
         ],
-        "Location": "Parc_floral",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/30\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "110.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Parc_floral"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Parc_floral\\DSC_5048.jpg_1712328732.0",
         "filename": "DSC_5048.jpg",
         "width": 2005,
         "height": 1128,
@@ -82,109 +91,121 @@
             "Green",
             "Cool"
         ],
-        "Location": "Parc_floral",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/125\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "50.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Parc_floral"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Parc_floral\\DSC_5057.jpg_1712328732.0",
         "filename": "DSC_5057.jpg",
         "width": 2005,
         "height": 1128,
         "title": "DSC_5057.jpg",
         "tags": [
-            "Cool",
-            "Cyan"
+            "Cyan",
+            "Cool"
         ],
-        "Location": "Parc_floral",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/125\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "63.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Parc_floral"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Parc_floral\\DSC_5060.jpg_1712328732.0",
         "filename": "DSC_5060.jpg",
         "width": 1469,
         "height": 826,
         "title": "DSC_5060.jpg",
         "tags": [
+            "High Contrast",
             "Cyan",
-            "Cool",
-            "High Contrast"
+            "Cool"
         ],
-        "Location": "Parc_floral",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/160\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "79.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Parc_floral"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Parc_floral\\DSC_5062.jpg_1712328732.0",
         "filename": "DSC_5062.jpg",
         "width": 1074,
         "height": 604,
         "title": "DSC_5062.jpg",
         "tags": [
-            "Cool",
-            "Cyan"
+            "Cyan",
+            "Cool"
         ],
-        "Location": "Parc_floral",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/25\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "200.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Parc_floral"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Parc_floral\\DSC_5076.jpg_1712328732.0",
         "filename": "DSC_5076.jpg",
         "width": 2005,
         "height": 1128,
         "title": "DSC_5076.jpg",
         "tags": [
             "Vivid",
+            "High Contrast",
             "Cyan",
-            "Cool",
-            "High Contrast"
+            "Cool"
         ],
-        "Location": "Parc_floral",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/80\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "120.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Parc_floral"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Parc_floral\\DSC_5084.jpg_1712328734.0",
         "filename": "DSC_5084.jpg",
         "width": 1338,
         "height": 1338,
         "title": "DSC_5084.jpg",
         "tags": [
-            "Cool",
-            "Cyan"
+            "Cyan",
+            "Cool"
         ],
-        "Location": "Parc_floral",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/100\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "103.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Parc_floral"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Parc_floral\\DSC_5090.jpg_1712328734.0",
         "filename": "DSC_5090.jpg",
         "width": 1338,
         "height": 1338,
@@ -194,54 +215,60 @@
             "Green",
             "Cool"
         ],
-        "Location": "Parc_floral",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/125\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "49.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Parc_floral"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Parc_floral\\DSC_5094.jpg_1712328734.0",
         "filename": "DSC_5094.jpg",
         "width": 2005,
         "height": 1128,
         "title": "DSC_5094.jpg",
         "tags": [
-            "Cool",
-            "Cyan"
+            "Cyan",
+            "Cool"
         ],
-        "Location": "Parc_floral",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/60\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "175.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Parc_floral"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Parc_floral\\DSC_5100.jpg_1712328734.0",
         "filename": "DSC_5100.jpg",
         "width": 1782,
         "height": 1002,
         "title": "DSC_5100.jpg",
         "tags": [
             "Vivid",
-            "Yellow",
             "Soft",
+            "Yellow",
             "Warm"
         ],
-        "Location": "Parc_floral",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/160\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "200.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Parc_floral"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Parc_floral\\DSC_5119.jpg_1712328734.0",
         "filename": "DSC_5119.jpg",
         "width": 729,
         "height": 410,
@@ -251,91 +278,101 @@
             "Orange",
             "Warm"
         ],
-        "Location": "Parc_floral",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/160\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "160.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Parc_floral"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Parc_floral\\DSC_5121.jpg_1712328734.0",
         "filename": "DSC_5121.jpg",
         "width": 1036,
         "height": 1036,
         "title": "DSC_5121.jpg",
         "tags": [
-            "Cool",
+            "High Contrast",
             "Blue",
-            "High Contrast"
+            "Cool"
         ],
-        "Location": "Parc_floral",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/320\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "160.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Parc_floral"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Parc_floral\\DSC_5132.jpg_1712328736.0",
         "filename": "DSC_5132.jpg",
         "width": 1338,
         "height": 2005,
         "title": "DSC_5132.jpg",
         "tags": [
-            "Warm",
-            "Yellow",
-            "Muted"
+            "Muted",
+            "Green",
+            "Cool"
         ],
-        "Location": "Parc_floral",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/100\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "88.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Parc_floral"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Parc_floral\\DSC_5160.jpg_1712328736.0",
         "filename": "DSC_5160.jpg",
         "width": 1164,
         "height": 1164,
         "title": "DSC_5160.jpg",
         "tags": [
-            "Cool",
+            "High Contrast",
             "Blue",
-            "High Contrast"
+            "Cool"
         ],
-        "Location": "Parc_floral",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/200\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "90.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Parc_floral"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Parc_floral\\DSC_5169.jpg_1712328736.0",
         "filename": "DSC_5169.jpg",
         "width": 734,
         "height": 734,
         "title": "DSC_5169.jpg",
         "tags": [
-            "Warm",
-            "Yellow"
+            "Yellow",
+            "Warm"
         ],
-        "Location": "Parc_floral",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/200\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "200.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Parc_floral"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Parc_floral\\DSC_5175.jpg_1712328736.0",
         "filename": "DSC_5175.jpg",
         "width": 1434,
         "height": 806,
@@ -345,31 +382,34 @@
             "Orange",
             "Warm"
         ],
-        "Location": "Parc_floral",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/200\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "200.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Parc_floral"
     },
     {
+        "id": "D:\\LR\\My_Gallery\\France\\Paris\\Parc_floral\\DSC_5178.jpg_1712328736.0",
         "filename": "DSC_5178.jpg",
         "width": 1265,
         "height": 711,
         "title": "DSC_5178.jpg",
         "tags": [
-            "Monochrome",
-            "B&W"
+            "B&W",
+            "Monochrome"
         ],
-        "Location": "Parc_floral",
         "Link": "https://www.google.com/maps?q=48.8481,2.3958",
         "CameraModel": "NIKON Z 5\n",
-        "Aperture": "f/6.3\n",
-        "ExposureTime": "1/80\n",
-        "ISO": "100\n",
-        "ExposureBiasValue": "0.0\n",
-        "FocalLength": "83.0\n"
+        "ISO": "\n",
+        "FocalLength": "\n",
+        "ExposureBiasValue": "\n",
+        "Aperture": "\n",
+        "ExposureTime": "\n",
+        "ai_analysis": null,
+        "Location": "Parc_floral"
     }
 ]
